@@ -1,0 +1,12 @@
+{
+  "name": "lit-rugby-tenant-mockup",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx wrangler dev --local --port 8787",
+    "check": "node --check public/app.js && node --check src/worker.js",
+    "build": "npm run check",
+    "test": "npm run check"
+  }
+}
