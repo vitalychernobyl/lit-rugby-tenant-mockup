@@ -11,202 +11,798 @@ const icons = {
 };
 
 const links = {
+  worldRugby: "https://www.world.rugby/tournaments/fixtures-results?lang=en",
+  svns: "https://www.svns.com/",
+  nationsChampionship: "https://nationschampionshiprugby.com/",
+  usaClub: "https://usaclub.rugby/",
   litHome: "https://www.lit7s.com/",
-  super7sTickets: "https://ticketpass.org/event/EWDVGH/lit-super-sevens-series-2026-team-entry",
-  super7sTeamEntry: "https://ticketpass.org/event/EXWVIX/lit-super-7s-series-team-entries",
-  floridaRegistration: "https://app.eventconnect.io/events/36742/registration-type/create?nav=hidden",
-  floridaHotels: "https://app.eventconnect.io/events/36742/hotels?nav=hidden",
-  imgCheckout: "https://www.lit7s.com/img-camp-checkout/",
-  litCamp: "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/",
-  imgExperience: "https://www.lit7s.com/the-img-experience-lit-rugby-sevens-camp-usa/",
-  floridaTerms: "https://www.lit7s.com/lit-florida-international-7s-terms-conditions/",
-  london7s: "https://www.lit7s.com/lit-7s-london7s/",
-  super7s: "https://www.super7sseries.com",
-  super7sRules: "https://www.super7sseries.com/rules",
-  super7sEliteRules: "https://www.super7sseries.com/elite-series-rules",
-  super7sOpenSocialRules: "https://www.super7sseries.com/open-and-social-rules",
-  super7sTournamentApp: "https://www.super7sseries.com/tournament-app",
-  super7sTeams2026: "https://www.super7sseries.com/copy-of-2025-1",
-  super7sFixtures2026: "https://www.super7sseries.com/copy-of-2024-1",
-  super7sStandings2026: "https://www.super7sseries.com/copy-of-2024-2",
-  super7sAlbums: "https://www.facebook.com/LIT7s/photos_albums",
-  super7sContact: "https://www.super7sseries.com/contact",
-  tournamentInformation: "https://www.lit7s.com/tournament-information/",
-  schedule: "https://www.lit7s.com/schedule/",
-  whatToPack: "https://www.lit7s.com/what-to-pack/",
-  vipTickets: "https://www.lit7s.com/vip-tickets/",
-  teamRegistrationInfo: "https://www.lit7s.com/team-registration/",
-  competitions: "https://www.lit7s.com/sevens-competitions/",
-  prizesAwards: "https://www.lit7s.com/prizes-and-awards/",
-  sevensRules: "https://www.lit7s.com/sevens-rules/",
-  media: "https://www.lit7s.com/lit7s-media/",
-  contact: "https://www.lit7s.com/contact-us/",
-  partners: "https://www.lit7s.com/partners-2/",
-  becomePartner: "https://www.lit7s.com/sponsor-or-partner-with-lit7s/",
-  jobs: "https://www.lit7s.com/jobs/",
-  instagram: "https://www.instagram.com/LIT7s/",
-  facebook: "https://www.facebook.com/lit7s",
-  youtube: "https://www.youtube.com/channel/UCBcTEJS7_GPoL27Srp3ftBw",
-  googleMapsWasps: "https://maps.app.goo.gl/rhXD7UExSMua12pB6",
+  litLondon: "https://www.lit7s.com/lit-7s-london7s/",
+  litTickets: "https://ticketpass.org/event/EWDVGH/lit-super-sevens-series-2026-team-entry",
+  litSeries: "https://www.super7sseries.com",
+  sixNations: "https://www.sixnationsrugby.com/en/m6n",
+  womensSixNations: "https://www.sixnationsrugby.com/en/w6n",
+  rugbyChampionship: "https://super.rugby/therugbychampionship/",
+  superRugby: "https://super.rugby/superrugby/",
+  epcr: "https://www.epcrugby.com/",
+  urc: "https://www.unitedrugby.com/",
+  premiership: "https://www.premiershiprugby.com/",
+  top14: "https://www.lnr.fr/rugby-top-14",
+  japanLeagueOne: "https://league-one.jp/en/",
+  mlr: "https://www.majorleague.rugby/",
 };
 
-const tournaments = [
+const competitions = [
   {
-    slug: "lit-florida-international-7s",
-    name: "LIT Florida International 7s",
-    scope: "National",
-    region: "United States",
-    city: "Bradenton, Florida",
-    venue: "Premier Sports Campus",
-    date: "2025-11-29",
-    status: "Registration reference",
-    format: "Tournament",
-    divisions: ["Men's Elite", "Women's Elite", "Open", "Social", "U23", "U18", "U16"],
-    teamCount: 48,
-    source: "Verified from LIT7s.com",
-    score: 96,
+    slug: "mens-rugby-world-cup-2027",
+    name: "Men's Rugby World Cup 2027",
+    code: "15s",
+    scope: "Global",
+    level: "International",
+    region: "World Rugby",
+    city: "Australia host cities",
+    venue: "National stadium network",
+    date: "2027 season",
+    status: "Future global flagship",
+    gender: "Men",
+    divisions: ["Men's international", "National teams", "Knockout rugby"],
+    source: "World Rugby official ecosystem",
     summary:
-      "First LIT7s tournament in the United States, staged at Premier Sports Campus with adult and youth divisions, livestream, photographers, social media presenters, food, bars, and entertainment.",
+      "The top men's 15s tournament profile, modeled for fixtures, national-team pages, travel, ticket demand, pools, knockouts, media, and official source handoff.",
     ctas: [
-      ["Register team", links.floridaRegistration],
-      ["Book hotels", links.floridaHotels],
+      ["World Rugby fixtures", links.worldRugby],
+      ["Follow tournament", "/events/mens-rugby-world-cup-2027"],
     ],
+    score: 100,
+  },
+  {
+    slug: "womens-rugby-world-cup",
+    name: "Women's Rugby World Cup",
+    code: "15s",
+    scope: "Global",
+    level: "International",
+    region: "World Rugby",
+    city: "Global hosts",
+    venue: "Host venues",
+    date: "World Rugby cycle",
+    status: "World championship",
+    gender: "Women",
+    divisions: ["Women's international", "National teams"],
+    source: "World Rugby official ecosystem",
+    summary:
+      "Global women's 15s profile for national-team discovery, fixtures, event guides, media proof, fan routes, and future ticketing integrations.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Women's profiles", "/players"],
+    ],
+    score: 99,
+  },
+  {
+    slug: "hsbc-svns-world-series",
+    name: "HSBC SVNS World Series",
+    code: "7s",
+    scope: "Global",
+    level: "International",
+    region: "World Rugby",
+    city: "Dubai, Cape Town, Singapore, Vancouver, Hong Kong, Valladolid, Bordeaux",
+    venue: "World Rugby SVNS host venues",
+    date: "2026 calendar",
+    status: "Global sevens series",
+    gender: "Men and women",
+    divisions: ["Men's international", "Women's international", "Core teams", "SVNS 2 and SVNS 3"],
+    source: "SVNS and World Rugby official sources",
+    summary:
+      "Global sevens series directory profile with destination pages, national-team rosters, standings, travel, tickets, broadcast links, and social media proof.",
+    ctas: [
+      ["SVNS official site", links.svns],
+      ["Browse sevens", "/sevens"],
+    ],
+    score: 98,
+  },
+  {
+    slug: "world-rugby-nations-championship",
+    name: "World Rugby Nations Championship",
+    code: "15s",
+    scope: "Global",
+    level: "International",
+    region: "Northern and Southern Hemisphere",
+    city: "Multi-country",
+    venue: "International windows",
+    date: "2026 launch cycle",
+    status: "New elite international model",
+    gender: "Men",
+    divisions: ["Tier one nations", "Cross-hemisphere fixtures"],
+    source: "Nations Championship official site",
+    summary:
+      "Elite 15s tournament model for the biggest international unions, built for fixtures, nation pages, rivalry content, tickets, media, and season-long standings.",
+    ctas: [
+      ["Official site", links.nationsChampionship],
+      ["Nation pages", "/nations"],
+    ],
+    score: 97,
+  },
+  {
+    slug: "six-nations",
+    name: "Six Nations Championship",
+    code: "15s",
+    scope: "International",
+    level: "International",
+    region: "Europe",
+    city: "England, France, Ireland, Italy, Scotland, Wales",
+    venue: "National stadiums",
+    date: "Annual championship",
+    status: "Annual international tournament",
+    gender: "Men",
+    divisions: ["Men's international", "European nations"],
+    source: "Official competition site",
+    summary:
+      "European international 15s profile for fixtures, tables, tickets, historic rivalries, fan travel, media, and national-team communities.",
+    ctas: [
+      ["Official site", links.sixNations],
+      ["Nation index", "/nations"],
+    ],
+    score: 96,
+  },
+  {
+    slug: "womens-six-nations",
+    name: "Women's Six Nations",
+    code: "15s",
+    scope: "International",
+    level: "International",
+    region: "Europe",
+    city: "European national venues",
+    venue: "National stadiums",
+    date: "Annual championship",
+    status: "Women's international tournament",
+    gender: "Women",
+    divisions: ["Women's international", "European nations"],
+    source: "Official competition site",
+    summary:
+      "Women's European 15s tournament profile for schedules, national-team pages, player spotlights, social proof, and fan conversion.",
+    ctas: [
+      ["Official site", links.womensSixNations],
+      ["Women's profiles", "/players"],
+    ],
+    score: 95,
+  },
+  {
+    slug: "rugby-championship",
+    name: "The Rugby Championship",
+    code: "15s",
+    scope: "International",
+    level: "International",
+    region: "Southern Hemisphere",
+    city: "Argentina, Australia, New Zealand, South Africa",
+    venue: "National stadiums",
+    date: "Annual championship",
+    status: "Elite international tournament",
+    gender: "Men",
+    divisions: ["Men's international", "Southern Hemisphere"],
+    source: "SANZAAR / Super Rugby official ecosystem",
+    summary:
+      "Southern Hemisphere national-team championship profile with fixtures, tables, match hubs, nation pages, broadcast links, and ticket routes.",
+    ctas: [
+      ["Official site", links.rugbyChampionship],
+      ["Nation index", "/nations"],
+    ],
+    score: 94,
+  },
+  {
+    slug: "pacific-nations-cup",
+    name: "Pacific Nations Cup",
+    code: "15s",
+    scope: "International",
+    level: "International",
+    region: "Pacific",
+    city: "Pacific and North American host cities",
+    venue: "Rotating venues",
+    date: "Annual cycle",
+    status: "International pathway",
+    gender: "Men",
+    divisions: ["Pacific unions", "National teams", "Pathway rugby"],
+    source: "World Rugby tournament ecosystem",
+    summary:
+      "Regional international 15s profile for Pacific unions, fixtures, development pathways, travel, and nation-to-player discovery.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Browse nations", "/nations"],
+    ],
+    score: 90,
+  },
+  {
+    slug: "wxv",
+    name: "WXV",
+    code: "15s",
+    scope: "Global",
+    level: "International",
+    region: "World Rugby",
+    city: "Rotating host markets",
+    venue: "International host venues",
+    date: "Women's global cycle",
+    status: "Women's international competition",
+    gender: "Women",
+    divisions: ["Women's international", "Global tiers"],
+    source: "World Rugby tournament ecosystem",
+    summary:
+      "Women's global 15s competition profile for standings, fixtures, nation pages, player profiles, and tournament media.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Media hub", "/media"],
+    ],
+    score: 92,
+  },
+  {
+    slug: "rugby-europe-championship",
+    name: "Rugby Europe Championship",
+    code: "15s",
+    scope: "Continental",
+    level: "International",
+    region: "Europe",
+    city: "European host nations",
+    venue: "National and regional stadiums",
+    date: "Annual cycle",
+    status: "Continental international tournament",
+    gender: "Men",
+    divisions: ["European nations", "Pathway rugby"],
+    source: "Federation directory seed",
+    summary:
+      "Continental 15s competition profile for unions outside the Six Nations, supporting fixtures, ranking context, and fan discovery.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Submit update", "/submit"],
+    ],
+    score: 86,
+  },
+  {
+    slug: "asia-rugby-championship",
+    name: "Asia Rugby Championship",
+    code: "15s",
+    scope: "Continental",
+    level: "International",
+    region: "Asia",
+    city: "Asian host nations",
+    venue: "Rotating venues",
+    date: "Annual cycle",
+    status: "Continental international tournament",
+    gender: "Men and women",
+    divisions: ["Asian unions", "Men's", "Women's", "Pathway rugby"],
+    source: "Federation directory seed",
+    summary:
+      "Asian continental rugby profile built for national teams, qualification pathways, local hosts, media, and union source updates.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Submit update", "/submit"],
+    ],
+    score: 84,
+  },
+  {
+    slug: "rugby-africa-cup",
+    name: "Rugby Africa Cup",
+    code: "15s",
+    scope: "Continental",
+    level: "International",
+    region: "Africa",
+    city: "African host nations",
+    venue: "Rotating venues",
+    date: "Annual cycle",
+    status: "Continental international tournament",
+    gender: "Men and women",
+    divisions: ["African unions", "Qualification pathway"],
+    source: "Federation directory seed",
+    summary:
+      "African continental profile for national-team discovery, qualification routes, match centers, local media, and federation updates.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Submit update", "/submit"],
+    ],
+    score: 83,
+  },
+  {
+    slug: "sudamerica-rugby-championship",
+    name: "Sudamerica Rugby Championship",
+    code: "15s",
+    scope: "Continental",
+    level: "International",
+    region: "South America",
+    city: "South American host nations",
+    venue: "Rotating venues",
+    date: "Annual cycle",
+    status: "Continental international tournament",
+    gender: "Men and women",
+    divisions: ["South American unions", "Qualification pathway"],
+    source: "Federation directory seed",
+    summary:
+      "South American rugby profile for international fixtures, union pages, regional rivalries, standings, and media coverage.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Submit update", "/submit"],
+    ],
+    score: 82,
+  },
+  {
+    slug: "world-rugby-u20-championship",
+    name: "World Rugby U20 Championship",
+    code: "15s",
+    scope: "Global",
+    level: "Youth",
+    region: "World Rugby",
+    city: "Rotating host",
+    venue: "Tournament host venues",
+    date: "Annual cycle",
+    status: "Age-grade world championship",
+    gender: "Men",
+    divisions: ["U20", "National teams", "Talent pathway"],
+    source: "World Rugby tournament ecosystem",
+    summary:
+      "Age-grade global championship profile that connects national programs, scouts, players, media, fixtures, and pathway stories.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Player profiles", "/players"],
+    ],
+    score: 88,
+  },
+  {
+    slug: "olympic-rugby-sevens",
+    name: "Olympic Rugby Sevens",
+    code: "7s",
+    scope: "Global",
+    level: "International",
+    region: "Olympic movement",
+    city: "Olympic host city",
+    venue: "Olympic venue",
+    date: "Olympic cycle",
+    status: "Olympic tournament",
+    gender: "Men and women",
+    divisions: ["Men's national teams", "Women's national teams", "Qualification"],
+    source: "World Rugby and Olympic ecosystem",
+    summary:
+      "Olympic sevens profile for qualification, national teams, athlete profiles, fan travel, media, and social conversation.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Sevens index", "/sevens"],
+    ],
+    score: 93,
+  },
+  {
+    slug: "rugby-world-cup-sevens",
+    name: "Rugby World Cup Sevens",
+    code: "7s",
+    scope: "Global",
+    level: "International",
+    region: "World Rugby",
+    city: "Rotating host",
+    venue: "World Cup Sevens venue",
+    date: "World Cup cycle",
+    status: "World sevens championship",
+    gender: "Men and women",
+    divisions: ["Men's national teams", "Women's national teams"],
+    source: "World Rugby tournament ecosystem",
+    summary:
+      "Knockout-style global sevens championship profile for teams, brackets, tickets, broadcast, highlights, and fan communities.",
+    ctas: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Sevens index", "/sevens"],
+    ],
+    score: 91,
+  },
+  {
+    slug: "dubai-7s",
+    name: "Dubai 7s",
+    code: "7s",
+    scope: "Global",
+    level: "Community",
+    region: "United Arab Emirates",
+    city: "Dubai",
+    venue: "The Sevens Stadium",
+    date: "Annual festival",
+    status: "Tournament and festival",
+    gender: "Men and women",
+    divisions: ["Elite", "Open", "Social", "Youth", "Invitational"],
+    source: "Global sevens directory seed",
+    summary:
+      "Large sevens festival profile for elite, invitational, club, social, youth, travel, entertainment, tickets, and team registration pathways.",
+    ctas: [
+      ["Browse sevens", "/sevens"],
+      ["Submit team interest", "/register"],
+    ],
+    score: 87,
+  },
+  {
+    slug: "lit7s-london",
+    name: "LIT 7s London",
+    code: "7s",
+    scope: "Local",
+    level: "Community",
+    region: "United Kingdom",
+    city: "West London",
+    venue: "Wasps Rugby Club",
+    date: "July 18, 2026",
+    status: "Tickets and parking live",
+    gender: "Men and women",
+    divisions: ["Elite", "Men's Open", "Men's Social", "Women's Open", "Women's Social"],
+    source: "LIT7s official event family",
+    summary:
+      "LIT's flagship London sevens event, now presented as one strong operator profile inside a broader global rugby tournament directory.",
+    ctas: [
+      ["Buy tickets", links.litTickets],
+      ["LIT7s event page", links.litLondon],
+      ["Event details", "/events/lit7s-london-2026"],
+    ],
+    score: 89,
   },
   {
     slug: "lit-super-7s-series",
     name: "LIT Super 7s Series",
+    code: "7s",
     scope: "National",
+    level: "Community",
     region: "United Kingdom",
-    city: "UK multi-stop",
+    city: "Multi-stop UK",
     venue: "Series venues",
-    date: "2026-05-01",
-    status: "Team entry link live",
-    format: "Series",
-    divisions: ["Open", "Social", "Men's", "Women's"],
-    teamCount: 70,
-    source: "Verified from LIT7s.com navigation",
-    score: 94,
+    date: "2026 season",
+    status: "Series entries",
+    gender: "Men and women",
+    divisions: ["Elite", "Open", "Social", "Men's", "Women's"],
+    source: "LIT7s official event family",
     summary:
-      "A UK sevens series profile for repeat events, standings, rules, rolling substitutions, 7 minute halves, tiebreakers, and multi-event team points.",
+      "UK sevens series profile for teams, fixtures, standings, rules, registration, albums, repeat attendance, and season momentum.",
     ctas: [
-      ["Enter your team", links.super7sTickets],
-      ["Series site", links.super7s],
+      ["Series site", links.litSeries],
+      ["Enter team", links.litTickets],
+      ["Series profile", "/events/lit-super-7s-series-2026"],
     ],
-  },
-  {
-    slug: "london-7s",
-    name: "LIT 7s London",
-    scope: "Local",
-    region: "United Kingdom",
-    city: "London",
-    venue: "WASPS Rugby Club, West London",
-    date: "2026-07-18",
-    status: "Spectator tickets and parking",
-    format: "Tournament",
-    divisions: ["Elite", "Men's Open", "Men's Social", "Women's Open", "Women's Social"],
-    teamCount: 70,
-    source: "Verified from current LIT7s.com home",
-    score: 91,
-    summary:
-      "The 14th annual LIT7s event in West London, positioned around elite and amateur teams, an all-day bar, live music, DJ, food, cheerleaders, and tournament-party energy.",
-    ctas: [
-      ["Buy tickets and parking", links.super7sTickets],
-      ["VIP tickets", links.vipTickets],
-      ["London 7s page", links.london7s],
-    ],
-  },
-  {
-    slug: "lit-olympic-experience-camp",
-    name: "The Olympic Experience LIT Rugby Sevens Camp USA",
-    scope: "National",
-    region: "United States",
-    city: "Chula Vista, California",
-    venue: "Olympic Training Center",
-    date: "2026-02-27",
-    status: "Camp reference",
-    format: "Camp",
-    divisions: ["Youth 13+", "Adult Men", "Adult Women", "Youth Boys", "Youth Girls"],
-    teamCount: 120,
-    source: "Verified from LIT7s.com",
     score: 88,
-    summary:
-      "A three-day sevens camp profile for advanced athletes, with Olympian and USA Rugby coaching, technical sessions, fitness testing, and take-home player feedback.",
-    ctas: [
-      ["Reserve spot", links.imgCheckout],
-      ["Camp page", "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/"],
-    ],
   },
   {
-    slug: "world-rugby-svns",
-    name: "World Rugby SVNS Directory",
-    scope: "Global",
-    region: "Global",
-    city: "Multi-city",
-    venue: "International host cities",
-    date: "2026-12-01",
-    status: "Directory profile",
-    format: "Series",
-    divisions: ["Men's international", "Women's international"],
-    teamCount: 24,
-    source: "Extrapolated global search profile",
-    score: 86,
-    summary:
-      "Global tournament discovery profile for international sevens series research, national teams, standings, event travel, broadcast, and team pages.",
-    ctas: [["View source", "https://www.world.rugby/sevens-series"]],
-  },
-  {
-    slug: "usa-national-sevens",
-    name: "USA Club Sevens Directory",
+    slug: "usa-club-sevens-national-championships",
+    name: "USA Club 7s National Championships",
+    code: "7s",
     scope: "National",
+    level: "Club",
     region: "United States",
     city: "Rotating host",
     venue: "Qualifier and championship venues",
-    date: "2026-08-08",
-    status: "Directory profile",
-    format: "Championship",
-    divisions: ["Men's club", "Women's club", "Qualifier"],
-    teamCount: 32,
-    source: "Extrapolated national search profile",
-    score: 82,
+    date: "Annual club season",
+    status: "National club pathway",
+    gender: "Men and women",
+    divisions: ["Men's club", "Women's club", "Qualifiers"],
+    source: "USA Club Rugby official ecosystem",
     summary:
-      "National championship search profile for qualifying pathways, club standings, roster checks, and local-to-national progression.",
-    ctas: [["Research pathway", "https://usa.rugby/"]],
+      "US club sevens pathway profile for qualifiers, national championships, club pages, rosters, standings, and local-to-national progression.",
+    ctas: [
+      ["USA Club Rugby", links.usaClub],
+      ["Club index", "/clubs"],
+    ],
+    score: 86,
   },
   {
-    slug: "nyc-summer-sevens",
-    name: "NYC Summer Sevens",
-    scope: "Local",
+    slug: "epcr-champions-cup",
+    name: "Investec Champions Cup",
+    code: "15s",
+    scope: "Continental",
+    level: "Club",
+    region: "Europe and South Africa",
+    city: "Multi-country",
+    venue: "Qualified club venues",
+    date: "Club season",
+    status: "Elite club championship",
+    gender: "Men",
+    divisions: ["Professional clubs", "Knockout rugby"],
+    source: "EPCR official ecosystem",
+    summary:
+      "Top cross-border club 15s competition profile for fixtures, team pages, tickets, pools, knockouts, and supporter travel.",
+    ctas: [
+      ["EPCR official", links.epcr],
+      ["Club index", "/clubs"],
+    ],
+    score: 95,
+  },
+  {
+    slug: "epcr-challenge-cup",
+    name: "EPCR Challenge Cup",
+    code: "15s",
+    scope: "Continental",
+    level: "Club",
+    region: "Europe and South Africa",
+    city: "Multi-country",
+    venue: "Qualified club venues",
+    date: "Club season",
+    status: "European club competition",
+    gender: "Men",
+    divisions: ["Professional clubs", "Knockout rugby"],
+    source: "EPCR official ecosystem",
+    summary:
+      "European club tournament profile for competitive club discovery, fixtures, tables, ticket links, and supporter communities.",
+    ctas: [
+      ["EPCR official", links.epcr],
+      ["Club index", "/clubs"],
+    ],
+    score: 90,
+  },
+  {
+    slug: "united-rugby-championship",
+    name: "United Rugby Championship",
+    code: "15s",
+    scope: "Continental",
+    level: "Club",
+    region: "Ireland, Italy, Scotland, South Africa, Wales",
+    city: "Multi-country",
+    venue: "Club grounds",
+    date: "Club season",
+    status: "Professional league",
+    gender: "Men",
+    divisions: ["Professional clubs", "League and playoffs"],
+    source: "URC official ecosystem",
+    summary:
+      "Cross-border professional club league profile for fixtures, club pages, standings, tickets, media, and fan communities.",
+    ctas: [
+      ["URC official", links.urc],
+      ["Club index", "/clubs"],
+    ],
+    score: 94,
+  },
+  {
+    slug: "premiership-rugby",
+    name: "Premiership Rugby",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "England",
+    city: "England",
+    venue: "Club grounds",
+    date: "Club season",
+    status: "Professional league",
+    gender: "Men",
+    divisions: ["Professional clubs", "League and playoffs"],
+    source: "Premiership Rugby official ecosystem",
+    summary:
+      "England's top professional club league profile for club pages, fixtures, tickets, news, tables, media, and supporter groups.",
+    ctas: [
+      ["Official site", links.premiership],
+      ["Club index", "/clubs"],
+    ],
+    score: 93,
+  },
+  {
+    slug: "top-14",
+    name: "Top 14",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "France",
+    city: "France",
+    venue: "Club grounds",
+    date: "Club season",
+    status: "Professional league",
+    gender: "Men",
+    divisions: ["Professional clubs", "League and playoffs"],
+    source: "LNR official ecosystem",
+    summary:
+      "French professional 15s league profile for club pages, tickets, fixtures, standings, media, and regional fan communities.",
+    ctas: [
+      ["Official site", links.top14],
+      ["Club index", "/clubs"],
+    ],
+    score: 93,
+  },
+  {
+    slug: "super-rugby-pacific",
+    name: "Super Rugby Pacific",
+    code: "15s",
+    scope: "Regional",
+    level: "Club",
+    region: "Australia, New Zealand, Fiji, Pacific",
+    city: "Pacific region",
+    venue: "Club and franchise venues",
+    date: "Club season",
+    status: "Professional regional league",
+    gender: "Men",
+    divisions: ["Professional franchises", "Pacific rugby"],
+    source: "Super Rugby official ecosystem",
+    summary:
+      "Pacific professional 15s league profile for franchises, fixtures, tickets, standings, media, and regional supporter pages.",
+    ctas: [
+      ["Official site", links.superRugby],
+      ["Club index", "/clubs"],
+    ],
+    score: 92,
+  },
+  {
+    slug: "japan-rugby-league-one",
+    name: "Japan Rugby League One",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "Japan",
+    city: "Japan",
+    venue: "Club grounds",
+    date: "Club season",
+    status: "Professional league",
+    gender: "Men",
+    divisions: ["Professional clubs", "Divisions"],
+    source: "Japan Rugby League One official ecosystem",
+    summary:
+      "Japanese professional 15s profile for club pages, fixtures, standings, tickets, foreign players, media, and fan discovery.",
+    ctas: [
+      ["Official site", links.japanLeagueOne],
+      ["Club index", "/clubs"],
+    ],
+    score: 91,
+  },
+  {
+    slug: "major-league-rugby",
+    name: "Major League Rugby",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "United States and Canada",
+    city: "North America",
+    venue: "Club grounds",
+    date: "Club season",
+    status: "Professional league",
+    gender: "Men",
+    divisions: ["Professional clubs", "North American rugby"],
+    source: "MLR official ecosystem",
+    summary:
+      "North American professional 15s league profile for teams, fixtures, tickets, standings, player profiles, media, and local fan groups.",
+    ctas: [
+      ["Official site", links.mlr],
+      ["Club index", "/clubs"],
+    ],
+    score: 90,
+  },
+  {
+    slug: "currie-cup",
+    name: "Currie Cup",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "South Africa",
+    city: "South Africa",
+    venue: "Provincial venues",
+    date: "Domestic season",
+    status: "Provincial championship",
+    gender: "Men",
+    divisions: ["Provincial teams", "Domestic championship"],
+    source: "Global directory seed",
+    summary:
+      "South African provincial championship profile for historic teams, fixtures, standings, media, and regional supporter communities.",
+    ctas: [
+      ["Club index", "/clubs"],
+      ["Submit update", "/submit"],
+    ],
+    score: 86,
+  },
+  {
+    slug: "npc",
+    name: "New Zealand NPC",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "New Zealand",
+    city: "New Zealand",
+    venue: "Provincial venues",
+    date: "Domestic season",
+    status: "Provincial championship",
+    gender: "Men",
+    divisions: ["Provincial unions", "Domestic championship"],
+    source: "Global directory seed",
+    summary:
+      "New Zealand provincial competition profile for unions, fixtures, standings, local fans, player development, and media.",
+    ctas: [
+      ["Club index", "/clubs"],
+      ["Submit update", "/submit"],
+    ],
+    score: 85,
+  },
+  {
+    slug: "farah-palmer-cup",
+    name: "Farah Palmer Cup",
+    code: "15s",
+    scope: "National",
+    level: "Club",
+    region: "New Zealand",
+    city: "New Zealand",
+    venue: "Provincial venues",
+    date: "Domestic season",
+    status: "Women's provincial championship",
+    gender: "Women",
+    divisions: ["Women's provincial unions", "Domestic championship"],
+    source: "Global directory seed",
+    summary:
+      "Women's provincial 15s profile for teams, fixtures, standings, player stories, regional fans, and media proof.",
+    ctas: [
+      ["Women's profiles", "/players"],
+      ["Submit update", "/submit"],
+    ],
+    score: 84,
+  },
+  {
+    slug: "shute-shield",
+    name: "Shute Shield",
+    code: "15s",
+    scope: "Regional",
+    level: "Community",
+    region: "Sydney, Australia",
+    city: "Sydney",
+    venue: "Club grounds",
+    date: "Local club season",
+    status: "Premier community club competition",
+    gender: "Men",
+    divisions: ["Premier clubs", "Community rugby"],
+    source: "Community directory seed",
+    summary:
+      "Premier local club competition profile for fixtures, clubs, grounds, player discovery, local supporters, and social proof.",
+    ctas: [
+      ["Community index", "/community"],
+      ["Submit update", "/submit"],
+    ],
+    score: 80,
+  },
+  {
+    slug: "usa-club-xvs-national-championships",
+    name: "USA Club Rugby XVs National Championships",
+    code: "15s",
+    scope: "National",
+    level: "Club",
     region: "United States",
-    city: "New York, New York",
-    venue: "Metro rugby complex",
-    date: "2026-06-20",
-    status: "Mock local profile",
-    format: "Tournament",
-    divisions: ["Men's Open", "Women's Open", "Social"],
-    teamCount: 20,
-    source: "Extrapolated local marketplace entry",
-    score: 75,
+    city: "Rotating host",
+    venue: "Championship venue",
+    date: "Annual club season",
+    status: "National club championship",
+    gender: "Men and women",
+    divisions: ["Men's club", "Women's club", "Division I", "Division II", "Division III"],
+    source: "USA Club Rugby official ecosystem",
     summary:
-      "A local discovery card showing how Mobilis-style tenant search could surface nearby tournaments, clubs, ticketing, and registration status.",
-    ctas: [["Start inquiry", "mailto:admin@lit7s.com?subject=NYC%20Summer%20Sevens%20interest"]],
+      "US club 15s national championship profile for qualification, divisions, team pages, rosters, results, and local-to-national storytelling.",
+    ctas: [
+      ["USA Club Rugby", links.usaClub],
+      ["Club index", "/clubs"],
+    ],
+    score: 85,
   },
   {
-    slug: "toronto-invitational-7s",
-    name: "Toronto Invitational 7s",
+    slug: "bingham-cup",
+    name: "Bingham Cup",
+    code: "15s",
     scope: "Global",
-    region: "Canada",
-    city: "Toronto, Ontario",
-    venue: "Regional sports park",
-    date: "2026-07-11",
-    status: "Mock invitational",
-    format: "Invitational",
-    divisions: ["Elite", "Open", "University"],
-    teamCount: 28,
-    source: "Extrapolated global marketplace entry",
-    score: 78,
+    level: "Community",
+    region: "Global host rotation",
+    city: "Rotating host city",
+    venue: "Tournament host venues",
+    date: "Tournament cycle",
+    status: "Inclusive community tournament",
+    gender: "Open and inclusive",
+    divisions: ["Inclusive rugby", "Community clubs"],
+    source: "Community directory seed",
     summary:
-      "A cross-border invitational profile for team managers comparing travel windows, eligibility, roster rules, and accommodation links.",
-    ctas: [["Invite request", "mailto:admin@lit7s.com?subject=Toronto%20Invitational%20request"]],
+      "Global inclusive rugby tournament profile for teams, travel, community groups, registration, media, and social proof.",
+    ctas: [
+      ["Community index", "/community"],
+      ["Submit update", "/submit"],
+    ],
+    score: 81,
+  },
+  {
+    slug: "sanix-world-rugby-youth",
+    name: "Sanix World Rugby Youth Tournament",
+    code: "15s",
+    scope: "Global",
+    level: "Youth",
+    region: "Japan",
+    city: "Fukuoka region",
+    venue: "Youth tournament venues",
+    date: "Annual youth cycle",
+    status: "Youth invitational",
+    gender: "Boys and girls",
+    divisions: ["School teams", "Youth invitational"],
+    source: "Youth directory seed",
+    summary:
+      "International youth tournament profile for schools, scouting, travel, player profiles, safeguarding notes, and media.",
+    ctas: [
+      ["Player profiles", "/players"],
+      ["Submit update", "/submit"],
+    ],
+    score: 79,
   },
 ];
 
@@ -216,259 +812,329 @@ const events = [
     title: "LIT 7s London 2026",
     day: "18",
     month: "Jul",
-    location: "WASPS Rugby Club, West London",
+    location: "Wasps Rugby Club, West London",
     date: "July 18, 2026",
-    label: "14th annual LIT7s",
+    label: "Featured 7s event",
+    tournamentSlug: "lit7s-london",
     summary:
-      "The flagship UK tournament profile for 70+ elite and amateur teams, spectator tickets, parking, VIP packages, live music, DJ, food, bars, and media.",
-    link: links.london7s,
-    tournamentSlug: "london-7s",
+      "A live LIT operator event inside the global directory, with spectator tickets, parking, team registration routes, VIP, media, and event-day information.",
     actions: [
-      ["Buy tickets and parking", links.super7sTickets],
-      ["VIP tickets", links.vipTickets],
-      ["Official page", links.london7s],
+      ["Buy tickets", links.litTickets],
+      ["LIT7s event page", links.litLondon],
+      ["Register interest", "/register"],
     ],
-    modules: ["Ticketing", "VIP", "Parking", "Media", "Schedule"],
+    modules: ["Tickets", "Parking", "VIP", "Team entry", "Media"],
   },
   {
-    slug: "florida-2025",
-    title: "LIT Florida International 7s",
-    day: "29",
-    month: "Nov",
-    location: "Premier Sports Campus, Bradenton",
-    date: "November 29, 2025",
-    label: "Men's, women's, youth 7s",
-    summary:
-      "USA tournament entry with EventConnect registration, accommodation flow, youth and adult divisions, and stadium-campus operations.",
-    link: links.floridaRegistration,
-    tournamentSlug: "lit-florida-international-7s",
-    actions: [
-      ["Team registration", links.floridaRegistration],
-      ["Book hotels", links.floridaHotels],
-      ["Terms", links.floridaTerms],
-    ],
-    modules: ["Registration", "Hotels", "Youth divisions", "Livestream"],
-  },
-  {
-    slug: "super-series-2026",
-    title: "LIT Super 7s Series",
+    slug: "hsbc-svns-2026",
+    title: "HSBC SVNS 2026",
     day: "2026",
-    month: "Series",
-    location: "United Kingdom",
-    date: "2026 season",
-    label: "Series standings and entries",
+    month: "SVNS",
+    location: "Global destination series",
+    date: "2026 calendar",
+    label: "Global sevens",
+    tournamentSlug: "hsbc-svns-world-series",
     summary:
-      "Team entry, spectator tickets, parking, standings, rules, and multi-event points modeled for repeat competition operations.",
-    link: links.super7sTickets,
-    tournamentSlug: "lit-super-7s-series",
+      "Global sevens destination page model covering official fixtures, national teams, host cities, ticket links, broadcast, and travel planning.",
     actions: [
-      ["Enter your team", links.super7sTickets],
-      ["Spectator tickets", links.super7sTickets],
-      ["Series site", links.super7s],
+      ["SVNS official site", links.svns],
+      ["Browse 7s", "/sevens"],
     ],
-    modules: ["Series standings", "Team points", "Rules", "Tickets"],
+    modules: ["Destination pages", "Teams", "Standings", "Travel", "Media"],
   },
   {
-    slug: "olympic-experience-2026",
-    title: "LIT Rugby Sevens Camp USA",
-    day: "27",
-    month: "Feb",
-    location: "Chula Vista, California",
-    date: "February 27 to March 1, 2026",
-    label: "Olympic Experience",
+    slug: "world-rugby-nations-2026",
+    title: "Nations Championship 2026",
+    day: "2026",
+    month: "15s",
+    location: "International windows",
+    date: "2026 launch cycle",
+    label: "Elite 15s",
+    tournamentSlug: "world-rugby-nations-championship",
     summary:
-      "Three-day sevens camp profile for advanced athletes, Olympian coaches, fitness testing, and personal feedback.",
-    link: "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/",
-    tournamentSlug: "lit-olympic-experience-camp",
+      "Future-facing 15s competition hub for nation pages, fixture windows, standings, ticket demand, and official source links.",
     actions: [
-      ["Reserve spot", links.imgCheckout],
-      ["Camp page", "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/"],
-      ["IMG experience", "https://www.lit7s.com/the-img-experience-lit-rugby-sevens-camp-usa/"],
+      ["Official site", links.nationsChampionship],
+      ["Nation pages", "/nations"],
     ],
-    modules: ["Athlete intake", "Coach profiles", "Fitness testing", "Feedback"],
+    modules: ["Fixtures", "Nation pages", "Rivalries", "Tickets", "Media"],
+  },
+  {
+    slug: "mens-rugby-world-cup-2027",
+    title: "Men's Rugby World Cup 2027",
+    day: "2027",
+    month: "RWC",
+    location: "Australia",
+    date: "2027 season",
+    label: "World 15s",
+    tournamentSlug: "mens-rugby-world-cup-2027",
+    summary:
+      "Global flagship 15s event page model for pools, teams, travel, tickets, schedule, media, and supporter communities.",
+    actions: [
+      ["World Rugby fixtures", links.worldRugby],
+      ["Browse nations", "/nations"],
+    ],
+    modules: ["Pools", "Fixtures", "Tickets", "Travel", "Media"],
+  },
+  {
+    slug: "usa-club-rugby-nationals",
+    title: "USA Club Rugby Nationals",
+    day: "Club",
+    month: "USA",
+    location: "United States",
+    date: "Annual club season",
+    label: "Club pathway",
+    tournamentSlug: "usa-club-xvs-national-championships",
+    summary:
+      "Club pathway event model for XVs and 7s nationals, qualifiers, divisions, rosters, local clubs, and official USA Club Rugby handoff.",
+    actions: [
+      ["USA Club Rugby", links.usaClub],
+      ["Club index", "/clubs"],
+    ],
+    modules: ["Qualifiers", "Divisions", "Rosters", "Results", "Club pages"],
   },
 ];
 
-const upcomingEventSlugs = ["lit7s-london-2026", "super-series-2026"];
+const upcomingEventSlugs = [
+  "lit7s-london-2026",
+  "hsbc-svns-2026",
+  "world-rugby-nations-2026",
+  "mens-rugby-world-cup-2027",
+  "usa-club-rugby-nationals",
+];
 
 const pastEvents = [
   {
-    slug: "lit7s-2024-winners",
-    title: "2024 LIT7s winners",
-    date: "July 2024",
-    location: "Wasps Rugby Club, West London",
-    label: "Winner proof",
+    slug: "lit7s-archive",
+    title: "LIT7s London archives",
+    date: "Annual event history",
+    location: "West London",
+    label: "Operator proof",
     summary:
-      "A proof page for published LIT7s winner history, showing how the tenant can convert previous results into credibility for the next event.",
-    proof: [
-      "Shogun Rugby - Men's Open Cup winners",
-      "Wild Dogs Alpha Pack - Women's Open winners",
-      "CNCF 7s - Men's Open Plate winners",
-      "Surrey Exiles - Men's Social Cup winners",
-    ],
+      "LIT remains visible as proof that the directory supports real tournament operators with ticketing, media, winners, teams, and repeat-event momentum.",
+    proof: ["Winner history", "Media galleries", "Team registration links", "Recurring event operations"],
     actions: [
-      ["Awards mockup", "/info/prizes-and-awards"],
+      ["LIT7s official", links.litHome],
+      ["Event details", "/events/lit7s-london-2026"],
       ["Media hub", "/media"],
-      ["Official LIT7s", links.litHome],
     ],
   },
   {
-    slug: "lit-florida-2025-archive",
-    title: "LIT Florida International 7s archive",
-    date: "November 29, 2025",
-    location: "Premier Sports Campus, Bradenton",
-    label: "USA expansion",
+    slug: "world-rugby-proof",
+    title: "World Rugby source coverage",
+    date: "Current official ecosystem",
+    location: "Global",
+    label: "Source proof",
     summary:
-      "A past-event archive model for the US tournament: adult and youth divisions, team registration, hotels, livestream, photographers, and entertainment.",
-    proof: [
-      "Adult and youth division structure",
-      "EventConnect registration and hotel workflow",
-      "Premier Sports Campus event profile",
-      "USA market pathway for future LIT7s events",
-    ],
+      "World Rugby fixtures and tournament pages anchor the international layer, while federation, league, and organizer links fill in club and community coverage.",
+    proof: ["International fixtures", "Men's and women's 15s", "Sevens destinations", "Tournament calendars"],
     actions: [
-      ["Archive details", "/events/florida-2025"],
-      ["Registration reference", links.floridaRegistration],
-      ["Hotel reference", links.floridaHotels],
+      ["World Rugby fixtures", links.worldRugby],
+      ["SVNS official", links.svns],
+      ["Global index", "/tournaments"],
     ],
   },
   {
-    slug: "olympic-camp-2026-archive",
-    title: "LIT Rugby Sevens Camp USA archive",
-    date: "February 27 to March 1, 2026",
-    location: "Chula Vista, California",
-    label: "Training proof",
+    slug: "community-proof",
+    title: "Community tournament memory",
+    date: "Always-on archive",
+    location: "Local clubs and unions",
+    label: "Social proof",
     summary:
-      "A camp archive model showing how LIT7s can present athlete development, Olympian coaches, testing, feedback, and future camp registration.",
-    proof: [
-      "Olympian coach profiles connected to player pages",
-      "Athlete intake and training modules",
-      "Feedback and development story for parents and players",
-      "Future camp registration and checkout handoff",
-    ],
+      "The MiGente-style community layer gives each tournament a persistent home for teams, photos, testimonials, forum prompts, and future registrations.",
+    proof: ["Past winners", "Team pages", "Player spotlights", "Media and comments"],
     actions: [
-      ["Camp details", "/events/olympic-experience-2026"],
-      ["Coach profiles", "/players"],
-      ["Official camp", links.litCamp],
-    ],
-  },
-  {
-    slug: "super-7s-2026-series-proof",
-    title: "2026 Super 7s Series proof",
-    date: "May to July 2026",
-    location: "United Kingdom",
-    label: "Series momentum",
-    summary:
-      "A season-proof model for repeat events, fixtures, standings, teams, media albums, and tournament app links that keep the public site alive between event days.",
-    proof: [
-      "Five-event series model",
-      "Elite, open, and social competitions",
-      "Fixtures, teams, standings, and albums",
-      "Season finale connection to LIT 7s at Wasps",
-    ],
-    actions: [
-      ["Series details", "/events/super-series-2026"],
-      ["Standings", links.super7sStandings2026],
-      ["Series albums", links.super7sAlbums],
+      ["Community hub", "/community"],
+      ["Submit tournament", "/submit"],
+      ["Team profiles", "/teams"],
     ],
   },
 ];
 
-const companyPillars = [
-  ["Upcoming event conversion", "Make registration, spectator tickets, parking, VIP, and event details visible before users have to ask."],
-  ["Past event proof", "Turn winners, archives, galleries, and camp content into evidence that the LIT7s calendar keeps moving."],
-  ["Clear event support", "Answer team, parent, sponsor, media, travel, and rules questions through visible linked pages."],
-  ["Media and partner momentum", "Keep social channels, albums, highlights, partners, and company contact paths close to every event."],
+const teams = [
+  {
+    slug: "fiji-7s",
+    name: "Fiji 7s",
+    base: "Fiji",
+    level: "International 7s",
+    record: "Global sevens profile",
+    roster: "National squad",
+    tournament: "HSBC SVNS World Series",
+    summary:
+      "Example national sevens team card connected to SVNS, Olympic sevens, Rugby World Cup Sevens, player profiles, and fan communities.",
+  },
+  {
+    slug: "black-ferns",
+    name: "Black Ferns",
+    base: "New Zealand",
+    level: "Women's international 15s",
+    record: "World rugby profile",
+    roster: "National squad",
+    tournament: "Women's Rugby World Cup",
+    summary:
+      "Women's national-team profile model for fixtures, players, media, social proof, ticketing, and fan discovery.",
+  },
+  {
+    slug: "toulouse-rugby",
+    name: "Toulouse Rugby",
+    base: "France",
+    level: "Professional club",
+    record: "European club profile",
+    roster: "Pro squad",
+    tournament: "Investec Champions Cup",
+    summary:
+      "Professional club profile showing how EPCR, Top 14, tickets, supporters, players, and media can connect across competitions.",
+  },
+  {
+    slug: "seattle-seawolves",
+    name: "Seattle Seawolves",
+    base: "United States",
+    level: "Professional club",
+    record: "North American club profile",
+    roster: "Pro squad",
+    tournament: "Major League Rugby",
+    summary:
+      "North American club profile for MLR schedule, local supporters, player cards, tickets, media, and community rugby pathways.",
+  },
+  {
+    slug: "lit-london-selects",
+    name: "LIT London Selects",
+    base: "United Kingdom",
+    level: "Community 7s",
+    record: "Operator event profile",
+    roster: "Tournament roster",
+    tournament: "LIT 7s London",
+    summary:
+      "LIT operator team profile used to demonstrate registration, event history, player media, and local tournament proof.",
+  },
+  {
+    slug: "midwest-club-xv",
+    name: "Midwest Club XV",
+    base: "United States",
+    level: "Community 15s",
+    record: "Mock club form",
+    roster: "Club roster",
+    tournament: "USA Club Rugby XVs National Championships",
+    summary:
+      "Mock community club card for local-to-national progression, division fit, roster state, registration, and member activity.",
+  },
+];
+
+const people = [
+  {
+    slug: "naya-tapper",
+    name: "Naya Tapper",
+    initials: "NT",
+    role: "Coach",
+    team: "LIT London Selects",
+    type: "Verified LIT coach reference",
+    position: "Olympian mentor",
+    stats: ["Olympic sevens", "Camp mentor", "Community inspiration"],
+    bio:
+      "Coach profile pattern for a global directory: verified operator profiles can anchor camps, player pathways, media, and social proof.",
+  },
+  {
+    slug: "ellaine-gelman",
+    name: "Ellaine Gelman",
+    initials: "EG",
+    role: "Organizer",
+    team: "LIT London Selects",
+    type: "Verified LIT organizer reference",
+    position: "Tournament operator",
+    stats: ["LIT7s operator", "Event director", "Community builder"],
+    bio:
+      "Organizer profile pattern showing how tournament owners can be represented alongside events, teams, media, and registration routes.",
+  },
+  {
+    slug: "maya-thompson",
+    name: "Maya Thompson",
+    initials: "MT",
+    role: "Player",
+    team: "Black Ferns",
+    type: "Mock player",
+    position: "Outside back",
+    stats: ["15s profile", "Media clips", "Fan follows"],
+    bio:
+      "Illustrative women's 15s player card for profile discovery, tournament history, social content, and team connections.",
+  },
+  {
+    slug: "ari-blake",
+    name: "Ari Blake",
+    initials: "AB",
+    role: "Player",
+    team: "Fiji 7s",
+    type: "Mock player",
+    position: "Sweeper",
+    stats: ["7s profile", "Try highlights", "SVNS history"],
+    bio:
+      "Illustrative sevens athlete card showing how player discovery can span SVNS, Olympic sevens, World Cup Sevens, and local tournaments.",
+  },
+  {
+    slug: "joel-reid",
+    name: "Joel Reid",
+    initials: "JR",
+    role: "Player",
+    team: "Midwest Club XV",
+    type: "Mock player",
+    position: "Back row",
+    stats: ["Club XVs", "Regional finals", "Volunteer coach"],
+    bio:
+      "Community rugby profile model for local players, clubs, history, registration, photos, and member conversation.",
+  },
 ];
 
 const faqItems = [
   {
-    q: "How do I register a team?",
+    q: "Is this only for LIT7s?",
     a:
-      "Use the registration page to pick an event, division, manager contact, roster size, and notes. Official public registration links stay visible for the current LIT7s checkout or EventConnect handoff.",
+      "No. LIT7s is now one featured operator inside a global rugby directory covering sevens and fifteens across international, pro club, national, regional, youth, women, and community rugby.",
     links: [
-      ["Register team", "/register"],
-      ["Team registration info", "/info/team-registration-info"],
-      ["Series team entry", links.super7sTickets],
+      ["Global index", "/tournaments"],
+      ["LIT event", "/events/lit7s-london-2026"],
     ],
   },
   {
-    q: "How do spectators buy tickets or parking?",
+    q: "How would every tournament in the world get listed?",
     a:
-      "The ticketing page groups spectator, parking, VIP, and team-entry actions by event. LIT 7s London currently points to the public Ticketpass flow surfaced from LIT7s.com.",
+      "The mockup shows the coverage model: official sources, federation and league feeds, organizer submissions, community updates, owner review, and source labels. Static demo data seeds the product with major competitions and representative local entries.",
     links: [
-      ["Ticketing preview", "/tickets"],
-      ["VIP tickets", "/info/vip-tickets"],
-      ["Public Ticketpass", links.super7sTickets],
+      ["Submit tournament", "/submit"],
+      ["Operations model", "/ops"],
     ],
   },
   {
-    q: "Which LIT7s events are upcoming?",
+    q: "Can users find both 7s and 15s?",
     a:
-      "As of July 8, 2026, the mockup treats LIT 7s London on July 18, 2026 and the 2026 Super 7s Series path as the main upcoming conversion routes.",
+      "Yes. The global index, sevens page, fifteens page, search bar, filters, event cards, teams, and player profiles all carry rugby code as a first-class field.",
     links: [
-      ["Upcoming events", "/events"],
-      ["London event", "/events/lit7s-london-2026"],
-      ["Series event", "/events/super-series-2026"],
+      ["Browse 7s", "/sevens"],
+      ["Browse 15s", "/fifteens"],
     ],
   },
   {
-    q: "Which divisions are available?",
+    q: "Where do ticketing and registration links go?",
     a:
-      "The event models include men's and women's elite, open, social, youth, and camp pathways. Each tournament page can show the exact division mix before a team registers.",
+      "Each event or tournament card can expose ticket, team registration, travel, official source, and contact links. The static mockup opens verified public links when available and otherwise uses a draft owner-review flow.",
     links: [
-      ["Competitions", "/info/sevens-competitions"],
-      ["Tournament search", "/tournaments"],
-      ["Rules", "/info/sevens-rules"],
-    ],
-  },
-  {
-    q: "Where is LIT 7s London held?",
-    a:
-      "The public LIT7s page places the 2026 LIT 7s event at Wasps Rugby Club in West London, with the venue address and travel notes handled through the tournament information route.",
-    links: [
-      ["Tournament information", "/info/tournament-information"],
-      ["Google Maps", links.googleMapsWasps],
-      ["London 7s official page", links.london7s],
-    ],
-  },
-  {
-    q: "What should teams bring?",
-    a:
-      "Players, managers, youth teams, and spectators each get a checklist route so pre-event emails can link to one clean source before match day.",
-    links: [
-      ["What to pack", "/info/what-to-pack"],
-      ["Schedule", "/schedule"],
-      ["Contact", "/contact"],
-    ],
-  },
-  {
-    q: "Where can I see past events, winners, and media?",
-    a:
-      "The past-events and media routes turn previous winners, archives, galleries, highlight clips, and social channels into proof that the event series is active and credible.",
-    links: [
-      ["Past events", "/past-events"],
-      ["Media", "/media"],
-      ["Awards", "/info/prizes-and-awards"],
-    ],
-  },
-  {
-    q: "Is this mockup processing real payments?",
-    a:
-      "No. This static preview captures only local draft state. Any real purchase, team entry, VIP, hotel, or registration action opens the public external provider or official LIT7s page.",
-    links: [
-      ["Operations notes", "/ops"],
       ["Tickets", "/tickets"],
-      ["Contact LIT7s", "/contact"],
+      ["Register team", "/register"],
     ],
   },
   {
-    q: "How do sponsors, partners, or media contact LIT7s?",
+    q: "What makes it MiGente-like?",
     a:
-      "The company, partners, and contact pages route sponsorship, media, jobs, and operational questions into clear inquiry paths with official LIT7s links.",
+      "The site is structured around community discovery: public profiles, groups, event memory, media, source labels, member submissions, and search across people, teams, tournaments, and places.",
     links: [
-      ["Company", "/company"],
-      ["Partners", "/partners"],
+      ["Community hub", "/community"],
+      ["Media", "/media"],
+    ],
+  },
+  {
+    q: "Can local clubs and organizers submit events?",
+    a:
+      "Yes. The submit page mocks a tournament intake form for organizer name, source URL, rugby code, level, location, divisions, and owner-review status.",
+    links: [
+      ["Submit tournament", "/submit"],
       ["Contact", "/contact"],
     ],
   },
@@ -476,406 +1142,70 @@ const faqItems = [
 
 const mediaCollections = [
   {
-    title: "Event galleries",
-    summary: "Photo albums grouped by tournament, division, pitch, finals, awards, and team profiles.",
+    title: "Tournament photo streams",
+    summary: "Galleries grouped by competition, club, venue, pitch, finals, awards, and player tags.",
     actions: [
-      ["Official media", links.media],
-      ["Series albums", links.super7sAlbums],
+      ["Past proof", "/past-events"],
+      ["Submit media", "/submit"],
     ],
   },
   {
-    title: "Video and livestream",
-    summary: "Highlight reels, livestream clips, coach videos, and social-first moments connected to events and players.",
+    title: "Team and player profiles",
+    summary: "Community profiles make tournaments feel active before, during, and after the event.",
     actions: [
-      ["YouTube", links.youtube],
-      ["Super 7s app", links.super7sTournamentApp],
+      ["Teams", "/teams"],
+      ["Players", "/players"],
     ],
   },
   {
-    title: "Social proof",
-    summary: "Instagram, Facebook, and YouTube links surfaced as public proof without pulling private account data into the mock.",
+    title: "Official source trail",
+    summary: "Every major profile can carry source labels and official links so users know what is verified.",
     actions: [
-      ["Instagram", links.instagram],
-      ["Facebook", links.facebook],
+      ["World Rugby", links.worldRugby],
+      ["SVNS", links.svns],
     ],
   },
   {
-    title: "Press and partners",
-    summary: "Media requests, sponsor deliverables, award moments, and post-event packages routed into company pages.",
+    title: "Social proof loops",
+    summary: "Past winners, photos, clips, organizer pages, and local comments route people back to registration.",
     actions: [
-      ["Contact", "/contact"],
-      ["Partners", "/partners"],
-    ],
-  },
-];
-
-const infoPages = [
-  {
-    slug: "tournament-information",
-    title: "Tournament Information",
-    nav: "Info",
-    source: links.tournamentInformation,
-    summary:
-      "A tenant-ready overview page for venue details, arrival guidance, day-of operations, spectator expectations, and source-backed event notes.",
-    sections: [
-      ["Venue", "WASPS Rugby Club in West London, with a mapped venue link and future embedded travel guidance."],
-      ["Public transport", "Surface train, Underground, bus, and disruption notices before match day."],
-      ["Timings", "Doors, pool matches, finals, award windows, live music, DJ, and after-party moments."],
-      ["Parking", "Advance parking inventory tied to ticketing, carpool guidance, and sold-out messaging."],
-    ],
-    actions: [
-      ["Official information", links.tournamentInformation],
-      ["Google Maps", links.googleMapsWasps],
-      ["Schedule", "/schedule"],
-    ],
-  },
-  {
-    slug: "schedule",
-    title: "Schedule",
-    nav: "Schedule",
-    source: links.schedule,
-    summary:
-      "A mocked schedule surface for pools, knockout rounds, finals, prize moments, media calls, and party programming.",
-    sections: [
-      ["Pools", "Team managers can scan fixtures by pitch, division, and bracket stage."],
-      ["Knockouts", "Quarterfinals, semifinals, finals, and plate games can be promoted as live result routes."],
-      ["Awards", "Prize and player-of-the-tournament moments are surfaced beside media and social prompts."],
-      ["Entertainment", "Live music, DJ, food, bar, and cheerleader programming can sit in the same day view."],
-    ],
-    actions: [
-      ["Official schedule", links.schedule],
-      ["Tickets", links.super7sTickets],
-      ["Tournament details", "/events/lit7s-london-2026"],
-    ],
-  },
-  {
-    slug: "what-to-pack",
-    title: "What to Pack",
-    nav: "Pack",
-    source: links.whatToPack,
-    summary:
-      "A practical checklist for players, managers, families, and spectators, suitable for future pre-event messaging.",
-    sections: [
-      ["Players", "Boots, mouthguard, tape, recovery gear, spare kit, water bottle, and weather layers."],
-      ["Managers", "Roster list, eligibility documents, wristband collection plan, and emergency contact notes."],
-      ["Spectators", "Tickets, parking pass, sun/rain gear, charging battery, and food/bar payment method."],
-      ["Youth teams", "Consent, guardian contacts, medical notes, and safeguarding confirmations."],
-    ],
-    actions: [
-      ["Official packing page", links.whatToPack],
-      ["Register team", "/register"],
-      ["Contact LIT7s", "/contact"],
-    ],
-  },
-  {
-    slug: "vip-tickets",
-    title: "VIP Tickets",
-    nav: "VIP",
-    source: links.vipTickets,
-    summary:
-      "A premium ticketing mockup for hospitality packages, reserved areas, team sponsor guests, and owner review states.",
-    sections: [
-      ["Hospitality", "VIP packages can show inventory, benefits, sponsor allocation, and fulfillment status."],
-      ["Guest list", "Owner-managed tables, guest names, and ticket-pass handoff state."],
-      ["Perks", "Priority access, viewing area, drinks, food, media moments, and post-event hospitality."],
-      ["Controls", "Mock-only checkout preview with external public LIT7s ticket links."],
-    ],
-    actions: [
-      ["Official VIP tickets", links.vipTickets],
-      ["Buy tickets", links.super7sTickets],
-      ["Ticketing preview", "/tickets"],
-    ],
-  },
-  {
-    slug: "team-registration-info",
-    title: "Team Registration Info",
-    nav: "Team registration",
-    source: links.teamRegistrationInfo,
-    summary:
-      "A source-labeled registration guide for team managers, roster limits, division choice, payment handoff, and review states.",
-    sections: [
-      ["Team pack", "Team pack pickup, tickets, wristbands, match details, schedule updates, and manager responsibilities."],
-      ["Roster", "Public LIT7s team references include manager and player capacity rules; the mockup keeps roster writes local."],
-      ["Divisions", "Men's, women's, elite, open, social, U23, U18, and U16 surfaces can be filtered before registration."],
-      ["Review", "Tenant owner review happens before any future provider write, payment, or roster lock."],
-    ],
-    actions: [
-      ["Official registration info", links.teamRegistrationInfo],
-      ["Register team", "/register"],
-      ["Florida registration", links.floridaRegistration],
-    ],
-  },
-  {
-    slug: "sevens-competitions",
-    title: "Sevens Competitions",
-    nav: "Competitions",
-    source: links.competitions,
-    summary:
-      "A division and competition explainer for teams comparing elite, open, social, youth, and camp pathways.",
-    sections: [
-      ["Elite", "High-level competition cards can expose eligibility, prizes, featured teams, and media coverage."],
-      ["Open", "Club and invitational sides can compare event fit, roster readiness, and travel needs."],
-      ["Social", "Participation-first divisions can emphasize team experience, scheduling, and post-event content."],
-      ["Youth", "Youth divisions can show safeguarding, waivers, age bands, and guardian requirements."],
-    ],
-    actions: [
-      ["Official competitions", links.competitions],
-      ["Search tournaments", "/tournaments"],
-      ["Sevens rules", "/info/sevens-rules"],
-    ],
-  },
-  {
-    slug: "prizes-and-awards",
-    title: "Prizes and Awards",
-    nav: "Awards",
-    source: links.prizesAwards,
-    summary:
-      "A mocked awards board for tournament winners, social winners, player awards, prize money, trophies, and sponsor moments.",
-    sections: [
-      ["Open winners", "Cash, medals, trophies, and featured media slots can be shown beside final results."],
-      ["Social winners", "Trophies, social prizes, and team-photo moments can be promoted after finals."],
-      ["Players", "Player-of-the-tournament awards can connect directly into profile pages."],
-      ["Sponsors", "Sponsor-backed awards can carry logo slots and partner links in a future tenant build."],
-    ],
-    actions: [
-      ["Official awards", links.prizesAwards],
-      ["Player profiles", "/players"],
-      ["Become a partner", links.becomePartner],
-    ],
-  },
-  {
-    slug: "sevens-rules",
-    title: "Sevens Rules",
-    nav: "Rules",
-    source: links.sevensRules,
-    summary:
-      "A rules reference mockup for match length, substitutions, roster limits, tiebreakers, and series-points interpretation.",
-    sections: [
-      ["Roster rules", "Surface player limits, team manager notes, and division-specific constraints."],
-      ["Match format", "Seven-minute halves, pool play, knockout flow, and rest windows can become structured fields."],
-      ["Substitutions", "Rolling substitutions and match-day management notes become manager reminders."],
-      ["Tiebreakers", "Series and tournament tiebreakers can be displayed as ordered rules with source labels."],
-    ],
-    actions: [
-      ["Official rules", links.sevensRules],
-      ["Series profile", "/tournaments/lit-super-7s-series"],
-      ["Register team", "/register"],
-    ],
-  },
-  {
-    slug: "media",
-    title: "Media",
-    nav: "Media",
-    source: links.media,
-    summary:
-      "A media hub mockup for photo galleries, highlight clips, social embeds, presenter schedules, and team/player content.",
-    sections: [
-      ["Photo galleries", "Event galleries can be grouped by tournament, pitch, division, and team."],
-      ["Video", "Highlight reels and livestream clips can connect to event and player profiles."],
-      ["Social", "Instagram, Facebook, and YouTube can be surfaced without bundling private account data."],
-      ["Approvals", "Owner review can manage featured media before publishing to public pages."],
-    ],
-    actions: [
-      ["Official media", links.media],
-      ["Instagram", links.instagram],
-      ["YouTube", links.youtube],
-    ],
-  },
-  {
-    slug: "contact",
-    title: "Contact LIT7s",
-    nav: "Contact",
-    source: links.contact,
-    summary:
-      "A contact and inquiry mockup for team managers, sponsors, partners, media, jobs, and event operations.",
-    sections: [
-      ["Team inquiries", "Route team questions to registration, division, roster, and accommodation prompts."],
-      ["Partners", "Route sponsorship interest to partner packages and event inventory."],
-      ["Media", "Route photographer, livestream, and press requests into an owner-review queue."],
-      ["Jobs", "Surface opportunities and staffing links as future owner-managed listings."],
-    ],
-    actions: [
-      ["Official contact", links.contact],
-      ["Partners", "/partners"],
-      ["Opportunities", links.jobs],
-    ],
-  },
-  {
-    slug: "partners",
-    title: "Partners and Sponsorship",
-    nav: "Partners",
-    source: links.partners,
-    summary:
-      "A partner-facing mockup for sponsor packages, venue activations, media placements, team support, and future CRM handoffs.",
-    sections: [
-      ["Partner directory", "Official and future partners can be grouped by category, event, entitlement, and renewal state."],
-      ["Sponsorship packages", "Packages can expose visibility, pitch-side inventory, VIP allocation, and media deliverables."],
-      ["Activation plan", "On-site banners, social posts, awards, hospitality, and team experiences can be tracked by status."],
-      ["Owner workflow", "Partner inquiries stay draft-only until approved by the tenant owner and connected to a real CRM."],
-    ],
-    actions: [
-      ["Official partners", links.partners],
-      ["Become a partner", links.becomePartner],
-      ["Contact LIT7s", "/contact"],
+      ["Community", "/community"],
+      ["Register", "/register"],
     ],
   },
 ];
 
 const quickLinks = [
+  ["Global Index", "/tournaments"],
+  ["Rugby 7s", "/sevens"],
+  ["Rugby 15s", "/fifteens"],
+  ["Nations", "/nations"],
+  ["Clubs", "/clubs"],
+  ["Community", "/community"],
   ["Upcoming Events", "/events"],
-  ["Register", "/register"],
-  ["Tickets and Parking", "/tickets"],
-  ["Past Events", "/past-events"],
+  ["Register Team", "/register"],
+  ["Tickets", "/tickets"],
+  ["Past Proof", "/past-events"],
   ["FAQ", "/faq"],
-  ["Tournament Information", "/info/tournament-information"],
-  ["Schedule", "/schedule"],
-  ["What to Pack", "/info/what-to-pack"],
-  ["VIP Tickets", "/info/vip-tickets"],
-  ["Team Registration Info", "/info/team-registration-info"],
-  ["Sevens Competitions", "/info/sevens-competitions"],
-  ["Prizes and Awards", "/info/prizes-and-awards"],
-  ["Sevens Rules", "/info/sevens-rules"],
   ["Media", "/media"],
-  ["Company", "/company"],
-  ["Contact", "/contact"],
-  ["Partners", "/partners"],
-];
-
-const teams = [
-  {
-    slug: "lit-usa-7s",
-    name: "LIT USA 7s",
-    base: "United States",
-    level: "Elite pathway",
-    record: "6-1 mock form",
-    roster: 15,
-    tournament: "LIT Florida International 7s",
-    summary:
-      "Future tenant flagship team profile for tournament entry, roster compliance, hotel blocks, coach notes, and player visibility.",
-  },
-  {
-    slug: "london-royals",
-    name: "London Royals RFC",
-    base: "London, UK",
-    level: "Men's Open",
-    record: "4-2 mock form",
-    roster: 14,
-    tournament: "London 7s",
-    summary:
-      "Competitive club-side profile designed for schedule search, player stats, manager tasks, and media highlights.",
-  },
-  {
-    slug: "bradenton-wave",
-    name: "Bradenton Wave",
-    base: "Florida, US",
-    level: "Women's Open",
-    record: "5-2 mock form",
-    roster: 15,
-    tournament: "LIT Florida International 7s",
-    summary:
-      "Local host-market team profile with registration status, division placement, player availability, and fan ticketing links.",
-  },
-  {
-    slug: "global-selects",
-    name: "Global Selects",
-    base: "International",
-    level: "Invitational",
-    record: "3-3 mock form",
-    roster: 13,
-    tournament: "Toronto Invitational 7s",
-    summary:
-      "International invitational side showing how cross-border rosters, visas, contacts, and player profiles could be surfaced.",
-  },
-];
-
-const people = [
-  {
-    slug: "perry-baker",
-    name: "Perry Baker",
-    initials: "PB",
-    role: "Head Coach",
-    team: "LIT Rugby Sevens Camp USA",
-    type: "Verified coach",
-    position: "Olympian mentor",
-    stats: ["3 x Olympian", "2 x World Rugby Sevens Player of the Year", "Camp head coach"],
-    bio:
-      "Camp profile based on LIT7s.com coach listing. In the tenant, verified coaches can anchor training pages, testimonials, and player development content.",
-  },
-  {
-    slug: "naya-tapper",
-    name: "Naya Tapper",
-    initials: "NT",
-    role: "Coach",
-    team: "LIT Rugby Sevens Camp USA",
-    type: "Verified coach",
-    position: "Olympian mentor",
-    stats: ["2 x Olympian", "Olympic bronze medal winner", "Skills coach"],
-    bio:
-      "Coach profile based on LIT7s.com camp listing, presented as a discoverable mentor card for athlete registration flows.",
-  },
-  {
-    slug: "ellaine-gelman",
-    name: "Ellaine Gelman",
-    initials: "EG",
-    role: "CEO and Director of Rugby",
-    team: "LIT USA 7s",
-    type: "Verified organizer",
-    position: "Director",
-    stats: ["LIT7s CEO", "Director of Rugby of LIT USA 7s", "Tournament operator"],
-    bio:
-      "Organizer profile based on LIT7s.com camp listing, mapped to tenant ownership, content approval, and event operations surfaces.",
-  },
-  {
-    slug: "maya-thompson",
-    name: "Maya Thompson",
-    initials: "MT",
-    role: "Player",
-    team: "Bradenton Wave",
-    type: "Mock player",
-    position: "Playmaker",
-    stats: ["14 tries", "22 conversions", "91% tackle completion"],
-    bio:
-      "Illustrative player profile for stats, eligibility, recruitment notes, media clips, and tournament participation history.",
-  },
-  {
-    slug: "ari-blake",
-    name: "Ari Blake",
-    initials: "AB",
-    role: "Player",
-    team: "LIT USA 7s",
-    type: "Mock player",
-    position: "Sweeper",
-    stats: ["11 tries", "8 line breaks", "4 player awards"],
-    bio:
-      "Illustrative elite-pathway athlete card showing how players can be searched across local, national, and global tournaments.",
-  },
-  {
-    slug: "joel-reid",
-    name: "Joel Reid",
-    initials: "JR",
-    role: "Player",
-    team: "London Royals RFC",
-    type: "Mock player",
-    position: "Forward",
-    stats: ["19 restarts won", "6 tries", "12 offloads"],
-    bio:
-      "Illustrative club-player profile for team pages, match previews, coach notes, and fan-facing tournament content.",
-  },
+  ["Submit Tournament", "/submit"],
+  ["Operations", "/ops"],
 ];
 
 const opsItems = [
-  ["Tenant routing", "Public `/lit` tenant surface, future auth gates, ownership metadata, and no secret-backed live writes in this mockup."],
-  ["Event intake", "Registration, ticketing, roster, hotel, division, and compliance state modeled for LIT7s tournament operations."],
-  ["Search index", "Local, national, and global rugby tournament entities normalized for fast filtering and detail routes."],
-  ["Review states", "Mobilis/MiGente-style publishing posture: draft, verified, featured, needs source, and ready for owner review."],
-  ["Messaging handoff", "Future WhatsApp, email, and calendar handoff slots are visible as ops modules without enabling provider sends."],
-  ["Evidence trail", "Official LIT7s links, source labels, and extrapolated sample entries are separated in the interface and docs."],
+  ["Global tournament index", "Normalize code, country, level, date, divisions, source, ticketing, registration, and owner-review state."],
+  ["Community graph", "Connect tournaments to people, teams, organizers, media, comments, groups, and recurring event memory."],
+  ["Source labels", "Separate official federation links, organizer links, verified listings, community suggestions, and mock data."],
+  ["Registration handoff", "Open team, ticket, VIP, travel, and contact links without creating real payments or provider writes in the static demo."],
+  ["Future data feeds", "World Rugby, federations, unions, leagues, organizer submissions, and moderation queues can feed a live database later."],
+  ["Tenant readiness", "The same shell can support LIT, club unions, event operators, and a broader rugby marketplace under one route."],
 ];
 
 const state = {
   query: "",
   scope: "All",
-  format: "All",
+  code: "All",
+  level: "All",
   division: "All",
   ticketSelection: "LIT 7s London",
 };
@@ -887,7 +1217,7 @@ const toast = document.querySelector("[data-toast]");
 
 function toRoute(path) {
   if (!path || path === "/") return `${BASE_PATH}/`;
-  if (path.startsWith("http")) return path;
+  if (path.startsWith("http") || path.startsWith("mailto:")) return path;
   if (path.startsWith(BASE_PATH)) return path;
   return `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
 }
@@ -899,8 +1229,7 @@ function stripBase(pathname) {
 }
 
 function navigate(path) {
-  const target = toRoute(path);
-  history.pushState({}, "", target);
+  history.pushState({}, "", toRoute(path));
   render();
 }
 
@@ -935,27 +1264,20 @@ function setNavCurrent(pathname) {
 function button(label, href, variant = "primary") {
   const external = href.startsWith("http") || href.startsWith("mailto:");
   const attrs = external ? 'target="_blank" rel="noreferrer"' : "data-route";
-  const target = external ? href : toRoute(href);
-  return `<a class="button ${variant}" href="${safe(target)}" ${attrs}>${safe(label)} ${icons.arrow}</a>`;
+  return `<a class="button ${variant}" href="${safe(toRoute(href))}" ${attrs}>${safe(label)} ${icons.arrow}</a>`;
 }
 
 function navLink(label, href, className = "text-link") {
   const external = href.startsWith("http") || href.startsWith("mailto:");
   const attrs = external ? 'target="_blank" rel="noreferrer"' : "data-route";
-  const target = external ? href : toRoute(href);
-  return `<a class="${safe(className)}" href="${safe(target)}" ${attrs}>${safe(label)}</a>`;
+  return `<a class="${safe(className)}" href="${safe(toRoute(href))}" ${attrs}>${safe(label)}</a>`;
 }
 
 function quickLinkList(items = quickLinks) {
   return html`
     <div class="quick-links">
       ${items
-        .map(([label, href]) => {
-          const external = href.startsWith("http") || href.startsWith("mailto:");
-          const attrs = external ? 'target="_blank" rel="noreferrer"' : "data-route";
-          const target = external ? href : toRoute(href);
-          return `<a class="quick-link" href="${safe(target)}" ${attrs}><span>${safe(label)}</span>${icons.arrow}</a>`;
-        })
+        .map(([label, href]) => `<a class="quick-link" href="${safe(toRoute(href))}" ${href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : "data-route"}><span>${safe(label)}</span>${icons.arrow}</a>`)
         .join("")}
     </div>
   `;
@@ -969,31 +1291,35 @@ function metaList(items) {
   return `<ul class="meta-list">${items.map(([icon, text]) => `<li>${icon}<span>${safe(text)}</span></li>`).join("")}</ul>`;
 }
 
-function tournamentMatches(tournament) {
+function competitionMatches(item) {
   const haystack = [
-    tournament.name,
-    tournament.scope,
-    tournament.region,
-    tournament.city,
-    tournament.venue,
-    tournament.format,
-    tournament.status,
-    tournament.summary,
-    tournament.divisions.join(" "),
+    item.name,
+    item.code,
+    item.scope,
+    item.level,
+    item.region,
+    item.city,
+    item.venue,
+    item.status,
+    item.gender,
+    item.summary,
+    item.source,
+    item.divisions.join(" "),
   ]
     .join(" ")
     .toLowerCase();
-  const q = state.query.trim().toLowerCase();
+  const query = state.query.trim().toLowerCase();
   return (
-    (!q || haystack.includes(q)) &&
-    (state.scope === "All" || tournament.scope === state.scope) &&
-    (state.format === "All" || tournament.format === state.format) &&
-    (state.division === "All" || tournament.divisions.some((division) => division.includes(state.division)))
+    (!query || haystack.includes(query)) &&
+    (state.scope === "All" || item.scope === state.scope) &&
+    (state.code === "All" || item.code === state.code || (state.code === "Mixed" && item.gender === "Men and women")) &&
+    (state.level === "All" || item.level === state.level) &&
+    (state.division === "All" || item.divisions.some((division) => division.toLowerCase().includes(state.division.toLowerCase())) || item.gender.toLowerCase().includes(state.division.toLowerCase()))
   );
 }
 
-function filteredTournaments() {
-  return tournaments.filter(tournamentMatches).sort((a, b) => b.score - a.score);
+function filteredCompetitions() {
+  return competitions.filter(competitionMatches).sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
 }
 
 function eventMini(event) {
@@ -1010,7 +1336,6 @@ function eventMini(event) {
 }
 
 function eventCard(event, light = false) {
-  const actions = event.actions ?? [["Official link", event.link]];
   return html`
     <article class="card ${light ? "light-card" : ""}">
       <div class="card-body">
@@ -1024,11 +1349,61 @@ function eventCard(event, light = false) {
         ])}
         <div class="button-row">
           ${button("Event details", `/events/${event.slug}`, light ? "dark small" : "secondary small")}
-          ${actions
-            .slice(0, 2)
-            .map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small"))
-            .join("")}
+          ${event.actions.slice(0, 2).map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small")).join("")}
         </div>
+      </div>
+    </article>
+  `;
+}
+
+function competitionCard(item, light = false) {
+  return html`
+    <article class="card ${light ? "light-card" : ""}">
+      <div class="media-frame ${item.code === "15s" ? "fifteens-frame" : "sevens-frame"}"></div>
+      <div class="card-body">
+        <div class="tag-row">
+          <span class="tag green">${safe(item.code)}</span>
+          <span class="tag orange">${safe(item.level)}</span>
+          <span class="tag">${safe(item.scope)}</span>
+        </div>
+        <h3>${safe(item.name)}</h3>
+        <p>${safe(item.summary)}</p>
+        ${metaList([
+          [icons.pin, `${item.city} - ${item.region}`],
+          [icons.calendar, item.date],
+          [icons.shield, item.status],
+        ])}
+        ${tagList(item.divisions.slice(0, 5))}
+        <div class="button-row">
+          ${button("Details", `/tournaments/${item.slug}`, light ? "dark small" : "secondary small")}
+          ${item.ctas.slice(0, 2).map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small")).join("")}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function resultRow(item) {
+  return html`
+    <article class="result-row">
+      <div class="score-tile code-tile"><span>${safe(item.level)}</span><strong>${safe(item.code)}</strong></div>
+      <div>
+        <div class="tag-row">
+          <span class="tag green">${safe(item.code)}</span>
+          <span class="tag orange">${safe(item.level)}</span>
+          <span class="tag">${safe(item.source)}</span>
+        </div>
+        <h3>${safe(item.name)}</h3>
+        <p>${safe(item.summary)}</p>
+        ${metaList([
+          [icons.pin, `${item.city} - ${item.venue}`],
+          [icons.calendar, item.date],
+          [icons.team, item.divisions.join(", ")],
+        ])}
+      </div>
+      <div class="row-actions">
+        ${button("Details", `/tournaments/${item.slug}`, "dark small")}
+        ${item.ctas[0] ? button(item.ctas[0][0], item.ctas[0][1], "light small") : ""}
       </div>
     </article>
   `;
@@ -1048,12 +1423,8 @@ function pastEventCard(item, light = false) {
           [icons.calendar, item.date],
           [icons.pin, item.location],
         ])}
-        <ul class="check-list">
-          ${item.proof.slice(0, 4).map((proof) => `<li>${safe(proof)}</li>`).join("")}
-        </ul>
-        <div class="button-row">
-          ${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small")).join("")}
-        </div>
+        <ul class="check-list">${item.proof.map((proof) => `<li>${safe(proof)}</li>`).join("")}</ul>
+        <div class="button-row">${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small")).join("")}</div>
       </div>
     </article>
   `;
@@ -1064,67 +1435,8 @@ function faqCard(item, open = false) {
     <details class="faq-item" ${open ? "open" : ""}>
       <summary>${safe(item.q)}</summary>
       <p>${safe(item.a)}</p>
-      <div class="button-row">
-        ${item.links.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}
-      </div>
+      <div class="button-row">${item.links.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}</div>
     </details>
-  `;
-}
-
-function tournamentCard(tournament, light = false) {
-  const ctas = tournament.ctas
-    .slice(0, 2)
-    .map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small"))
-    .join("");
-  return html`
-    <article class="card ${light ? "light-card" : ""}">
-      <div class="media-frame"></div>
-      <div class="card-body">
-        <div class="tag-row">
-          <span class="tag orange">${safe(tournament.scope)}</span>
-          <span class="tag green">${safe(tournament.format)}</span>
-          <span class="tag">${safe(tournament.source)}</span>
-        </div>
-        <h3>${safe(tournament.name)}</h3>
-        <p>${safe(tournament.summary)}</p>
-        ${metaList([
-          [icons.pin, `${tournament.venue}, ${tournament.city}`],
-          [icons.calendar, tournament.date],
-          [icons.team, `${tournament.teamCount}+ team capacity profile`],
-        ])}
-        ${tagList(tournament.divisions.slice(0, 5))}
-        <div class="button-row">
-          ${button("View details", `/tournaments/${tournament.slug}`, light ? "dark small" : "secondary small")}
-          ${ctas}
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-function resultRow(tournament) {
-  return html`
-    <article class="result-row">
-      <div class="score-tile"><span>Match</span><strong>${tournament.score}</strong></div>
-      <div>
-        <div class="tag-row">
-          <span class="tag orange">${safe(tournament.scope)}</span>
-          <span class="tag green">${safe(tournament.format)}</span>
-          <span class="tag">${safe(tournament.status)}</span>
-        </div>
-        <h3>${safe(tournament.name)}</h3>
-        <p>${safe(tournament.summary)}</p>
-        ${metaList([
-          [icons.pin, `${tournament.city} - ${tournament.venue}`],
-          [icons.calendar, tournament.date],
-          [icons.shield, tournament.divisions.join(", ")],
-        ])}
-      </div>
-      <div class="row-actions">
-        ${button("Details", `/tournaments/${tournament.slug}`, "dark small")}
-        ${tournament.ctas[0] ? button(tournament.ctas[0][0], tournament.ctas[0][1], "light small") : ""}
-      </div>
-    </article>
   `;
 }
 
@@ -1141,107 +1453,120 @@ function pageHero(title, copy, action = "") {
 }
 
 function homePage() {
-  const upcomingEvents = upcomingEventSlugs.map((slug) => events.find((event) => event.slug === slug)).filter(Boolean);
-  const featuredSearch = tournaments.slice(0, 3).map((tournament) => tournamentCard(tournament)).join("");
+  const featuredEvents = upcomingEventSlugs.map((slug) => events.find((event) => event.slug === slug)).filter(Boolean);
+  const featuredCompetitions = competitions.slice(0, 6);
   return html`
     <div class="page">
-      <section class="hero">
+      <section class="hero community-hero">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Upcoming LIT7s events and registration</h1>
+            <div class="eyebrow">MiGente-style rugby community directory</div>
+            <h1>The rugby world in one searchable index</h1>
             <p>
-              Find the next LIT7s tournament or series entry, buy spectator tickets and parking,
-              register a team, review past event proof, and get answers before event day.
+              Discover rugby 7s and 15s tournaments across world cups, national teams, professional clubs,
+              youth pathways, local festivals, and community operators. Search by code, country, level,
+              division, date, team, player, or source.
             </p>
             <div class="hero-actions">
-              ${button("View upcoming events", "/events", "primary")}
-              ${button("Register a team", "/register", "secondary")}
-              ${button("Read FAQ", "/faq", "ghost")}
+              ${button("Search global index", "/tournaments", "primary")}
+              ${button("Browse rugby 7s", "/sevens", "secondary")}
+              ${button("Submit tournament", "/submit", "ghost")}
             </div>
             <div class="search-deck" role="search">
               <div class="search-bar">
-                <input class="search-input" data-home-search placeholder="Search London tickets, Super 7s, parking, youth, women's open..." value="${safe(
-                  state.query,
-                )}" />
+                <input class="search-input" data-home-search placeholder="Search SVNS, Six Nations, Top 14, MLR, LIT 7s, youth, women..." value="${safe(state.query)}" />
                 <button class="button primary" data-home-search-submit type="button">${icons.search} Search</button>
               </div>
-              <div class="filter-strip" aria-label="Search scope">
-                ${["All", "Local", "National", "Global"]
-                  .map((scope) => `<button class="chip" data-home-scope="${scope}" aria-pressed="${state.scope === scope}">${scope}</button>`)
+              <div class="filter-strip" aria-label="Quick browse">
+                ${[
+                  ["All rugby", "all"],
+                  ["7s", "7s"],
+                  ["15s", "15s"],
+                  ["Nations", "nations"],
+                  ["Clubs", "clubs"],
+                  ["Community", "community"],
+                ]
+                  .map(([label, preset]) => `<button class="chip" data-home-preset="${preset}" type="button">${safe(label)}</button>`)
                   .join("")}
               </div>
             </div>
           </div>
           <aside class="hero-panel">
             <div class="panel-head">
-              <h2>Next actions</h2>
-              <span>Register or attend</span>
+              <h2>Directory feed</h2>
+              <span>Upcoming and active</span>
             </div>
-            <div class="event-stack">${upcomingEvents.map(eventMini).join("")}</div>
+            <div class="event-stack">${featuredEvents.slice(0, 4).map(eventMini).join("")}</div>
             <div class="panel-foot">
-              <h3>Fast links</h3>
+              <h3>Community surfaces</h3>
               ${quickLinkList([
-                ["Team registration", "/register"],
-                ["Tickets and parking", "/tickets"],
-                ["VIP tickets", "/info/vip-tickets"],
-                ["What to pack", "/info/what-to-pack"],
-                ["Contact LIT7s", "/contact"],
+                ["Teams", "/teams"],
+                ["Players", "/players"],
+                ["Media", "/media"],
+                ["FAQ", "/faq"],
               ])}
             </div>
           </aside>
         </div>
       </section>
 
+      <section class="section light">
+        <div class="section-head">
+          <h2>Browse all rugby by pathway</h2>
+          <p>The first screen is the product: tournament discovery, official links, community profiles, registration, tickets, and source labels.</p>
+        </div>
+        <div class="resource-grid wide">
+          ${[
+            ["Rugby 7s", "SVNS, Olympics, World Cup Sevens, LIT7s, USA Club 7s, social festivals, youth and invitational tournaments.", "/sevens"],
+            ["Rugby 15s", "World Cups, Six Nations, Rugby Championship, pro clubs, provincial rugby, schools, national championships.", "/fifteens"],
+            ["Nations", "National-team competitions, international windows, continental championships, and player spotlights.", "/nations"],
+            ["Clubs", "Premiership, Top 14, URC, Super Rugby, MLR, Japan League One, provincial competitions, and club nationals.", "/clubs"],
+            ["Community", "Local tournaments, inclusive rugby, youth events, past winners, media, team pages, and organizer profiles.", "/community"],
+            ["Submit", "Organizer intake for tournaments that need to be added, corrected, verified, or promoted.", "/submit"],
+          ]
+            .map(
+              ([title, copy, href]) => html`
+                <article class="mini-card pathway-card">
+                  <h3>${safe(title)}</h3>
+                  <p>${safe(copy)}</p>
+                  <div class="button-row">${button("Open", href, "dark small")}</div>
+                </article>
+              `,
+            )
+            .join("")}
+        </div>
+      </section>
+
       <section class="section">
         <div class="section-head">
-          <h2>Upcoming events to register for</h2>
-          <p>Each event card pushes the user toward the right next step: team entry, spectator tickets, VIP, parking, schedule, or official details.</p>
+          <h2>Featured upcoming and active events</h2>
+          <p>Each event routes users to registration, tickets, official source pages, teams, travel, media, and tournament detail pages.</p>
         </div>
-        <div class="grid two">${upcomingEvents.map((event) => eventCard(event)).join("")}</div>
+        <div class="grid three">${featuredEvents.slice(0, 3).map((event) => eventCard(event)).join("")}</div>
+        <div class="section-actions">${button("All upcoming events", "/events", "primary")}${button("Tickets and registration", "/tickets", "secondary")}</div>
       </section>
 
       <section class="section light">
         <div class="section-head">
-          <h2>Past events show this is a continuing series</h2>
-          <p>Archives, winners, camps, and Super 7s season content create social proof and keep LIT7s useful after the final whistle.</p>
+          <h2>Global rugby tournament index</h2>
+          <p>Seeded with major world, international, continental, pro club, national, youth, women, and community competitions.</p>
         </div>
-        <div class="grid two">${pastEvents.slice(0, 2).map((item) => pastEventCard(item, true)).join("")}</div>
-        <div class="section-actions">${button("See past events", "/past-events", "dark")}${button("Open media hub", "/media", "light")}</div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Questions answered before event day</h2>
-          <p>Teams, spectators, parents, sponsors, and media get route-level answers instead of hunting through scattered links.</p>
-        </div>
-        <div class="faq-list preview">
-          ${faqItems.slice(0, 4).map((item, index) => faqCard(item, index === 0)).join("")}
-        </div>
-        <div class="section-actions">${button("Open full FAQ", "/faq", "primary")}${button("Contact LIT7s", "/contact", "secondary")}</div>
-      </section>
-
-      <section class="section light">
-        <div class="section-head">
-          <h2>Search still covers the wider rugby market</h2>
-          <p>Local, national, and global discovery remains available for the future tenant while the main conversion path stays focused on LIT7s events.</p>
-        </div>
-        <div class="grid three">${featuredSearch}</div>
+        <div class="grid three">${featuredCompetitions.map((item) => competitionCard(item, true)).join("")}</div>
+        <div class="section-actions">${button("Open index", "/tournaments", "dark")}${button("Submit missing tournament", "/submit", "light")}</div>
       </section>
 
       <section class="section green-band">
         <div class="section-head">
-          <h2>Company, media, and event information are linked</h2>
-          <p>Official menu items become tenant-ready pages for schedule, rules, media, FAQ, partners, company info, and manager workflows.</p>
+          <h2>Built like a community network</h2>
+          <p>People, teams, events, photos, questions, and source links sit together so the site feels alive before and after match day.</p>
         </div>
         ${quickLinkList([
-          ["Company overview", "/company"],
-          ["Media hub", "/media"],
-          ["FAQ", "/faq"],
-          ["Past events", "/past-events"],
-          ["Tournament information", "/info/tournament-information"],
-          ["Series standings", links.super7sStandings2026],
-          ["Teams directory", "/teams"],
+          ["Community hub", "/community"],
+          ["Team profiles", "/teams"],
           ["Player profiles", "/players"],
+          ["Past proof", "/past-events"],
+          ["Media", "/media"],
+          ["Submit tournament", "/submit"],
         ])}
       </section>
     </div>
@@ -1249,16 +1574,20 @@ function homePage() {
 }
 
 function tournamentFilters() {
-  const formats = ["All", ...new Set(tournaments.map((item) => item.format))];
-  const divisions = ["All", "Elite", "Open", "Social", "U23", "U18", "U16", "Women's", "Men's"];
+  const scopes = ["All", ...new Set(competitions.map((item) => item.scope))];
+  const levels = ["All", ...new Set(competitions.map((item) => item.level))];
+  const divisions = ["All", "Men", "Women", "Youth", "National", "Club", "Open", "Social", "Elite", "Inclusive"];
   return html`
     <div class="toolbar">
-      <input data-filter-query value="${safe(state.query)}" placeholder="Search by event, city, division, venue..." />
-      <select data-filter-scope>
-        ${["All", "Local", "National", "Global"].map((scope) => `<option ${state.scope === scope ? "selected" : ""}>${scope}</option>`).join("")}
+      <input data-filter-query value="${safe(state.query)}" placeholder="Search tournament, country, team, source, division..." />
+      <select data-filter-code>
+        ${["All", "7s", "15s"].map((code) => `<option ${state.code === code ? "selected" : ""}>${code}</option>`).join("")}
       </select>
-      <select data-filter-format>
-        ${formats.map((format) => `<option ${state.format === format ? "selected" : ""}>${format}</option>`).join("")}
+      <select data-filter-scope>
+        ${scopes.map((scope) => `<option ${state.scope === scope ? "selected" : ""}>${scope}</option>`).join("")}
+      </select>
+      <select data-filter-level>
+        ${levels.map((level) => `<option ${state.level === level ? "selected" : ""}>${level}</option>`).join("")}
       </select>
       <select data-filter-division>
         ${divisions.map((division) => `<option ${state.division === division ? "selected" : ""}>${division}</option>`).join("")}
@@ -1268,62 +1597,109 @@ function tournamentFilters() {
 }
 
 function tournamentsPage() {
-  const results = filteredTournaments();
+  const results = filteredCompetitions();
   return html`
     ${pageHero(
-      "Tournament search",
-      "Filter rugby sevens tournaments across local, national, and global scopes. Verified LIT7s pages and extrapolated tenant entries are source-labeled in every result.",
-      button("Add team inquiry", "/register", "primary"),
+      "Global rugby tournament index",
+      "Search rugby 7s and 15s across world, international, continental, national, club, youth, women, and community competitions. Each result shows source posture and next actions.",
+      button("Submit missing tournament", "/submit", "primary") + button("Browse community", "/community", "secondary"),
     )}
     <section class="section light">
       ${tournamentFilters()}
-      <div class="results-meta">${results.length} results matching current filters</div>
-      <div class="list">
-        ${results.length ? results.map(resultRow).join("") : '<div class="empty">No tournaments match these filters.</div>'}
-      </div>
+      <div class="results-meta">${results.length} matching profiles in this static seed set</div>
+      <div class="list">${results.length ? results.map(resultRow).join("") : '<div class="empty">No tournaments match these filters.</div>'}</div>
     </section>
   `;
 }
 
-function tournamentDetail(slug) {
-  const tournament = tournaments.find((item) => item.slug === slug);
-  if (!tournament) return notFoundPage();
-  const relatedTeams = teams.filter((team) => team.tournament === tournament.name || tournament.summary.includes(team.base));
+function competitionCollectionPage(title, copy, predicate, actions = "") {
+  const items = competitions.filter(predicate).sort((a, b) => b.score - a.score);
   return html`
-    ${pageHero(tournament.name, tournament.summary, button(tournament.ctas[0]?.[0] ?? "Register", tournament.ctas[0]?.[1] ?? "/register", "primary"))}
+    ${pageHero(title, copy, actions || button("Open global index", "/tournaments", "primary") + button("Submit tournament", "/submit", "secondary"))}
+    <section class="section light">
+      <div class="grid three">${items.map((item) => competitionCard(item, true)).join("")}</div>
+    </section>
+  `;
+}
+
+function sevensPage() {
+  return competitionCollectionPage(
+    "Rugby 7s worldwide",
+    "A browse page for SVNS, Olympic sevens, World Cup Sevens, LIT7s, national club sevens, social festivals, youth sevens, and invitational events.",
+    (item) => item.code === "7s",
+    button("Register a sevens team", "/register", "primary") + button("Tickets", "/tickets", "secondary"),
+  );
+}
+
+function fifteensPage() {
+  return competitionCollectionPage(
+    "Rugby 15s worldwide",
+    "A browse page for World Cups, Six Nations, Rugby Championship, professional clubs, provincial competitions, club nationals, schools, youth, and inclusive rugby.",
+    (item) => item.code === "15s",
+    button("Browse clubs", "/clubs", "primary") + button("Browse nations", "/nations", "secondary"),
+  );
+}
+
+function nationsPage() {
+  return competitionCollectionPage(
+    "National team rugby",
+    "International rugby discovery across world championships, annual tournaments, regional pathways, sevens, fifteens, men, women, and youth.",
+    (item) => item.level === "International",
+    button("World Rugby fixtures", links.worldRugby, "primary") + button("Global index", "/tournaments", "secondary"),
+  );
+}
+
+function clubsPage() {
+  return competitionCollectionPage(
+    "Club and provincial rugby",
+    "Professional, provincial, national, and community club rugby across Europe, the Pacific, North America, South Africa, Japan, New Zealand, and local unions.",
+    (item) => item.level === "Club" || item.level === "Community",
+    button("Team profiles", "/teams", "primary") + button("Submit club tournament", "/submit", "secondary"),
+  );
+}
+
+function tournamentDetail(slug) {
+  const item = competitions.find((competition) => competition.slug === slug);
+  if (!item) return notFoundPage();
+  const relatedTeams = teams.filter((team) => team.tournament === item.name || item.summary.includes(team.base) || item.region.includes(team.base));
+  return html`
+    ${pageHero(item.name, item.summary, button(item.ctas[0]?.[0] ?? "Official source", item.ctas[0]?.[1] ?? "/submit", "primary"))}
     <section class="section light">
       <div class="detail-layout">
         <article class="detail-main">
           <div class="tag-row">
-            <span class="tag orange">${safe(tournament.scope)}</span>
-            <span class="tag green">${safe(tournament.format)}</span>
-            <span class="tag">${safe(tournament.source)}</span>
+            <span class="tag green">${safe(item.code)}</span>
+            <span class="tag orange">${safe(item.level)}</span>
+            <span class="tag">${safe(item.source)}</span>
           </div>
-          <h2>${safe(tournament.name)}</h2>
-          <p>${safe(tournament.summary)}</p>
+          <h2>${safe(item.name)}</h2>
+          <p>${safe(item.summary)}</p>
           <div class="matrix">
-            <div class="matrix-item"><strong>Venue</strong><span>${safe(tournament.venue)}, ${safe(tournament.city)}</span></div>
-            <div class="matrix-item"><strong>Date</strong><span>${safe(tournament.date)}</span></div>
-            <div class="matrix-item"><strong>Capacity profile</strong><span>${safe(tournament.teamCount)} teams</span></div>
-            <div class="matrix-item"><strong>Status</strong><span>${safe(tournament.status)}</span></div>
+            <div class="matrix-item"><strong>Rugby code</strong><span>${safe(item.code)}</span></div>
+            <div class="matrix-item"><strong>Level</strong><span>${safe(item.level)} - ${safe(item.scope)}</span></div>
+            <div class="matrix-item"><strong>Region</strong><span>${safe(item.region)}</span></div>
+            <div class="matrix-item"><strong>Date model</strong><span>${safe(item.date)}</span></div>
+            <div class="matrix-item"><strong>Venue model</strong><span>${safe(item.venue)}</span></div>
+            <div class="matrix-item"><strong>Status</strong><span>${safe(item.status)}</span></div>
           </div>
-          <h3>Divisions</h3>
-          ${tagList(tournament.divisions, "green")}
-          <h3>Related teams</h3>
+          <h3>Divisions and tags</h3>
+          ${tagList(item.divisions, "green")}
+          <h3>Connected community</h3>
           <div class="grid two">${(relatedTeams.length ? relatedTeams : teams.slice(0, 2)).map(teamCard).join("")}</div>
         </article>
         <aside class="detail-aside">
           <h3>Actions</h3>
-          <div class="button-row">
-            ${tournament.ctas.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "dark")).join("")}
-            ${button("Team registration", "/register", "light")}
+          <div class="button-row stacked">
+            ${item.ctas.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}
+            ${button("Register a team", "/register", "light")}
+            ${button("Submit correction", "/submit", "light")}
           </div>
-          <h3>Event ops path</h3>
+          <h3>Listing workflow</h3>
           <ul class="timeline">
-            <li>Publish tournament profile and source label.</li>
-            <li>Open team registration and ticket inventory.</li>
-            <li>Collect roster, waiver, hotel, and division state.</li>
-            <li>Feature teams, coaches, players, media, and results.</li>
+            <li>Source or organizer submits competition data.</li>
+            <li>Moderator verifies official links, dates, divisions, and location.</li>
+            <li>Teams, players, tickets, registration, media, and past proof attach to the profile.</li>
+            <li>Event archive stays live after the tournament to support future registration.</li>
           </ul>
         </aside>
       </div>
@@ -1333,42 +1709,30 @@ function tournamentDetail(slug) {
 
 function eventsPage() {
   const upcoming = upcomingEventSlugs.map((slug) => events.find((event) => event.slug === slug)).filter(Boolean);
-  const archive = events.filter((event) => !upcomingEventSlugs.includes(event.slug));
   return html`
     ${pageHero(
-      "Upcoming events and registration",
-      "The main user path is simple: pick the next LIT7s event, choose team registration or spectator tickets, then use FAQ, schedule, media, and contact pages when questions come up.",
-      button("Register a team", "/register", "primary") + button("Tickets and parking", "/tickets", "secondary"),
+      "Upcoming and active rugby events",
+      "Featured global, national, club, and community events with next-step actions for tickets, registration, official sources, teams, media, and travel.",
+      button("Register team", "/register", "primary") + button("Tickets", "/tickets", "secondary"),
     )}
     <section class="section">
-      <div class="section-head">
-        <h2>Open conversion paths</h2>
-        <p>LIT 7s London and the 2026 Super 7s Series are treated as the priority event routes for registration, tickets, and event-day information.</p>
-      </div>
-      <div class="grid three">
-        ${upcoming.map((event) => eventCard(event)).join("")}
-      </div>
+      <div class="grid three">${upcoming.map((event) => eventCard(event)).join("")}</div>
     </section>
     <section class="section light">
       <div class="section-head">
-        <h2>Archive and support routes</h2>
-        <p>Past or reference event profiles stay discoverable for proof, media, coach profiles, hotels, and future follow-up campaigns.</p>
+        <h2>What every event page should answer</h2>
+        <p>Users should know what it is, who can play, how to register, how to attend, who else is going, and why the event is credible.</p>
       </div>
-      <div class="grid two">${archive.map((event) => eventCard(event, true)).join("")}</div>
-    </section>
-    <section class="section green-band">
-      <div class="section-head">
-        <h2>Common pre-event tasks</h2>
-        <p>Every operational question should route to a clear page before someone has to email the organizer.</p>
+      <div class="resource-grid wide">
+        ${[
+          ["Register", "Team entry, division fit, roster, manager contact, waivers, hotels, and eligibility."],
+          ["Attend", "Spectator tickets, parking, VIP, travel, schedule, venue rules, food, and accessibility."],
+          ["Trust", "Past winners, photos, clips, teams, operator profile, official source, and community comments."],
+          ["Share", "Team pages, player cards, media, social links, and post-event proof that brings people back."],
+        ]
+          .map(([title, copy]) => `<article class="mini-card"><h3>${safe(title)}</h3><p>${safe(copy)}</p></article>`)
+          .join("")}
       </div>
-      ${quickLinkList([
-        ["Schedule", "/schedule"],
-        ["What to pack", "/info/what-to-pack"],
-        ["Sevens rules", "/info/sevens-rules"],
-        ["FAQ", "/faq"],
-        ["Media", "/media"],
-        ["Contact", "/contact"],
-      ])}
     </section>
   `;
 }
@@ -1376,10 +1740,9 @@ function eventsPage() {
 function eventDetail(slug) {
   const event = events.find((item) => item.slug === slug);
   if (!event) return notFoundPage();
-  const tournament = tournaments.find((item) => item.slug === event.tournamentSlug);
-  const actions = event.actions ?? [["Official link", event.link]];
+  const competition = competitions.find((item) => item.slug === event.tournamentSlug);
   return html`
-    ${pageHero(event.title, event.summary, button(actions[0][0], actions[0][1], "primary"))}
+    ${pageHero(event.title, event.summary, button(event.actions[0][0], event.actions[0][1], "primary"))}
     <section class="section light">
       <div class="detail-layout">
         <article class="detail-main">
@@ -1392,192 +1755,26 @@ function eventDetail(slug) {
           <div class="matrix">
             <div class="matrix-item"><strong>Date</strong><span>${safe(event.date)}</span></div>
             <div class="matrix-item"><strong>Location</strong><span>${safe(event.location)}</span></div>
-            <div class="matrix-item"><strong>Tenant modules</strong><span>${safe(event.modules.join(", "))}</span></div>
-            <div class="matrix-item"><strong>Source posture</strong><span>Official link plus tenant preview</span></div>
+            <div class="matrix-item"><strong>Modules</strong><span>${safe(event.modules.join(", "))}</span></div>
+            <div class="matrix-item"><strong>Source state</strong><span>Official links plus directory preview</span></div>
           </div>
-          <h3>What users need before event day</h3>
+          <h3>Event modules</h3>
           <div class="resource-grid">
-            ${[
-              ["Registration", "Team managers need event, division, roster size, manager contact, and payment handoff clarity."],
-              ["Spectator plan", "Fans need ticket, parking, venue, public transport, schedule, food, bar, and VIP information."],
-              ["Proof", "Past winners, media, team profiles, and social channels help prove this is a continuing event series."],
-              ["Support", "FAQ, contact, and partner pages answer sponsor, media, parent, and travel questions quickly."],
-            ]
-              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
-              .join("")}
+            ${event.modules.map((module) => `<article class="mini-card"><strong>${safe(module)}</strong><span>Clickable route or owner-review state for this event.</span></article>`).join("")}
           </div>
-          <h3>Event modules mocked</h3>
-          <div class="resource-grid">
-            ${event.modules
-              .map((module) => `<article class="mini-card"><strong>${safe(module)}</strong><span>Owner-review surface ready for this event.</span></article>`)
-              .join("")}
-          </div>
-          ${
-            tournament
-              ? html`
-                  <h3>Connected tournament</h3>
-                  <div class="grid two">${tournamentCard(tournament, true)}</div>
-                `
-              : ""
-          }
-        </article>
-        <aside class="detail-aside">
-          <h3>Clickable actions</h3>
-          <div class="button-row stacked">${actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}</div>
-          <h3>Related LIT7s pages</h3>
-          ${quickLinkList([
-            ["Register", "/register"],
-            ["Tournament information", "/info/tournament-information"],
-            ["Schedule", "/schedule"],
-            ["Tickets", "/tickets"],
-            ["Media", "/media"],
-            ["FAQ", "/faq"],
-            ["Past events", "/past-events"],
-          ])}
-        </aside>
-      </div>
-    </section>
-  `;
-}
-
-function infoIndexPage() {
-  return html`
-    ${pageHero(
-      "LIT7s information hub",
-      "Official LIT7s menu items are mocked as tenant-ready pages with clear source links, owner-review states, and internal workflows.",
-      button("Open registration", "/register", "primary"),
-    )}
-    <section class="section light">
-      <div class="resource-grid wide">
-        ${infoPages
-          .map(
-            (page) => html`
-              <article class="mini-card">
-                <div class="tag-row"><span class="tag green">${safe(page.nav)}</span></div>
-                <h3>${safe(page.title)}</h3>
-                <p>${safe(page.summary)}</p>
-                <div class="button-row">
-                  ${button("Mock page", `/info/${page.slug}`, "dark small")}
-                  ${button("Official source", page.source, "light small")}
-                </div>
-              </article>
-            `,
-          )
-          .join("")}
-      </div>
-    </section>
-  `;
-}
-
-function infoDetail(slug) {
-  const page = infoPages.find((item) => item.slug === slug);
-  if (!page) return notFoundPage();
-  return html`
-    ${pageHero(page.title, page.summary, button(page.actions[0][0], page.actions[0][1], "primary"))}
-    <section class="section light">
-      <div class="detail-layout">
-        <article class="detail-main">
-          <div class="tag-row">
-            <span class="tag green">Mocked tenant page</span>
-            <span class="tag">${safe(page.nav)}</span>
-          </div>
-          <h2>${safe(page.title)}</h2>
-          <p>${safe(page.summary)}</p>
-          <div class="resource-grid">
-            ${page.sections
-              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
-              .join("")}
-          </div>
-          <h3>Source and workflow notes</h3>
-          <div class="matrix">
-            <div class="matrix-item"><strong>Official source</strong><span>${navLink("Open source", page.source)}</span></div>
-            <div class="matrix-item"><strong>Tenant status</strong><span>Mocked, linked, no live provider writes</span></div>
-            <div class="matrix-item"><strong>Owner review</strong><span>Ready for content approval and route hardening</span></div>
-            <div class="matrix-item"><strong>Next integration</strong><span>CMS data, ticket inventory, media, or CRM based on page type</span></div>
-          </div>
+          ${competition ? `<h3>Connected tournament profile</h3><div class="grid two">${competitionCard(competition, true)}</div>` : ""}
         </article>
         <aside class="detail-aside">
           <h3>Actions</h3>
-          <div class="button-row stacked">
-            ${page.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}
-          </div>
-          <h3>More pages</h3>
-          ${quickLinkList(quickLinks.filter(([label]) => label !== page.title).slice(0, 7))}
-        </aside>
-      </div>
-    </section>
-  `;
-}
-
-function schedulePage() {
-  return infoDetail("schedule");
-}
-
-function pastEventsPage() {
-  return html`
-    ${pageHero(
-      "Past events and social proof",
-      "Previous winners, archives, camps, series content, and media routes make the site feel like an active event company rather than a one-off registration form.",
-      button("View upcoming events", "/events", "primary") + button("Open media hub", "/media", "secondary"),
-    )}
-    <section class="section light">
-      <div class="grid two">${pastEvents.map((item) => pastEventCard(item, true)).join("")}</div>
-    </section>
-    <section class="section">
-      <div class="section-head">
-        <h2>Proof that supports registration</h2>
-        <p>These are the proof blocks a future tenant can keep adding after each event: winners, galleries, attendance notes, sponsors, standings, and testimonials.</p>
-      </div>
-      <div class="resource-grid wide">
-        ${[
-          ["Winners and awards", "Publish finals, cup, plate, social, and player-of-the-tournament winners with shareable links.", "/info/prizes-and-awards"],
-          ["Media galleries", "Keep photos, livestreams, highlight reels, and social posts connected to the event archive.", "/media"],
-          ["Team credibility", "Let future teams inspect who has played before, which divisions fit, and how rosters are presented.", "/teams"],
-          ["Series momentum", "Connect Super 7s teams, fixtures, standings, and albums so the season does not disappear between event days.", links.super7sStandings2026],
-          ["Partner proof", "Show sponsor activations, hospitality, awards, and venue moments for future partner sales.", "/partners"],
-          ["Organizer credibility", "Make company, contact, and FAQ pages visible for parents, managers, sponsors, and media.", "/company"],
-        ]
-          .map(
-            ([title, copy, href]) => html`
-              <article class="mini-card">
-                <h3>${safe(title)}</h3>
-                <p>${safe(copy)}</p>
-                <div class="button-row">${button("Open", href, "dark small")}</div>
-              </article>
-            `,
-          )
-          .join("")}
-      </div>
-    </section>
-  `;
-}
-
-function faqPage() {
-  return html`
-    ${pageHero(
-      "LIT7s FAQ",
-      "Answers for team managers, spectators, parents, sponsors, partners, and media before they register, buy tickets, travel, or contact the organizer.",
-      button("Register team", "/register", "primary") + button("Tickets and parking", "/tickets", "secondary"),
-    )}
-    <section class="section light">
-      <div class="faq-layout">
-        <div class="faq-list">${faqItems.map((item, index) => faqCard(item, index < 2)).join("")}</div>
-        <aside class="detail-aside">
-          <h3>Most useful links</h3>
+          <div class="button-row stacked">${event.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}</div>
+          <h3>Useful routes</h3>
           ${quickLinkList([
-            ["Upcoming events", "/events"],
-            ["Register", "/register"],
+            ["Register team", "/register"],
             ["Tickets", "/tickets"],
-            ["What to pack", "/info/what-to-pack"],
-            ["Schedule", "/schedule"],
-            ["Contact", "/contact"],
-          ])}
-          <h3>Official sources</h3>
-          ${quickLinkList([
-            ["LIT7s.com", links.litHome],
-            ["London 7s page", links.london7s],
-            ["Super 7s Series", links.super7s],
-            ["Ticketpass", links.super7sTickets],
+            ["Team profiles", "/teams"],
+            ["Player profiles", "/players"],
+            ["Media", "/media"],
+            ["FAQ", "/faq"],
           ])}
         </aside>
       </div>
@@ -1585,112 +1782,197 @@ function faqPage() {
   `;
 }
 
-function mediaPage() {
+function ticketsPage() {
+  const options = competitions.filter((item) => item.ctas.length);
+  const selected = options.find((item) => item.name === state.ticketSelection) ?? competitions.find((item) => item.slug === "lit7s-london") ?? options[0];
   return html`
     ${pageHero(
-      "Media and event proof",
-      "A dedicated media hub for galleries, highlight clips, livestream references, social channels, partner deliverables, and post-event proof that supports the next registration push.",
-      button("Official media", links.media, "primary") + button("Past events", "/past-events", "secondary"),
+      "Tickets, registration, and official handoffs",
+      "A global ticketing surface where each tournament can expose spectator tickets, team entry, parking, VIP, travel, official source links, and organizer contact.",
+      button("Register team", "/register", "primary") + button("Submit tournament", "/submit", "secondary"),
     )}
     <section class="section light">
-      <div class="resource-grid wide">
-        ${mediaCollections
-          .map(
+      <div class="ticket-panel">
+        <div class="list">
+          ${options.slice(0, 12).map(
             (item) => html`
-              <article class="mini-card">
-                <h3>${safe(item.title)}</h3>
-                <p>${safe(item.summary)}</p>
-                <div class="button-row">
-                  ${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}
+              <article class="result-row">
+                <div class="score-tile code-tile"><span>${safe(item.level)}</span><strong>${safe(item.code)}</strong></div>
+                <div>
+                  <h3>${safe(item.name)}</h3>
+                  <p>${safe(item.summary)}</p>
+                  ${metaList([
+                    [icons.ticket, item.status],
+                    [icons.pin, item.city],
+                  ])}
+                </div>
+                <div class="row-actions">
+                  <button class="button dark small" type="button" data-select-ticket="${safe(item.name)}">Select</button>
+                  ${button(item.ctas[0][0], item.ctas[0][1], "light small")}
                 </div>
               </article>
             `,
-          )
-          .join("")}
+          ).join("")}
+        </div>
+        <aside class="checkout">
+          <h2>Handoff preview</h2>
+          <p>${safe(selected.name)}</p>
+          <div class="checkout-line"><span>Rugby code</span><strong>${safe(selected.code)}</strong></div>
+          <div class="checkout-line"><span>Level</span><strong>${safe(selected.level)}</strong></div>
+          <div class="checkout-line"><span>Status</span><strong>${safe(selected.status)}</strong></div>
+          <div class="button-row">${selected.ctas.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "secondary")).join("")}</div>
+          <h3>Useful links</h3>
+          ${quickLinkList([
+            ["Register team", "/register"],
+            ["FAQ", "/faq"],
+            ["Media", "/media"],
+            ["Submit correction", "/submit"],
+          ])}
+        </aside>
       </div>
-    </section>
-    <section class="section">
-      <div class="section-head">
-        <h2>Event media should drive the next event</h2>
-        <p>Each post-event asset can point back to tickets, registration, teams, players, partners, and proof pages.</p>
-      </div>
-      <div class="grid two">
-        ${pastEvents.slice(0, 2).map((item) => pastEventCard(item)).join("")}
-      </div>
-    </section>
-    <section class="section green-band">
-      <div class="section-head">
-        <h2>Social and official channels</h2>
-        <p>Public channels are reachable from the tenant without pretending to ingest private data.</p>
-      </div>
-      ${quickLinkList([
-        ["Instagram", links.instagram],
-        ["Facebook", links.facebook],
-        ["YouTube", links.youtube],
-        ["Series albums", links.super7sAlbums],
-        ["Super 7s tournament app", links.super7sTournamentApp],
-        ["Contact media team", "/contact"],
-      ])}
     </section>
   `;
 }
 
-function contactPage() {
-  return infoDetail("contact");
-}
-
-function partnersPage() {
-  return infoDetail("partners");
-}
-
-function companyPage() {
+function registerPage() {
+  const registrationOptions = competitions.filter((item) => item.status.toLowerCase().includes("live") || item.level === "Community" || item.level === "Club").slice(0, 10);
   return html`
     ${pageHero(
-      "About LIT7s and the tenant",
-      "This mockup presents LIT7s as a continuing rugby sevens event company: upcoming events convert, past events prove, FAQ reduces support load, and media keeps the series visible.",
-      button("Upcoming events", "/events", "primary") + button("Contact LIT7s", "/contact", "secondary"),
+      "Register a team or player group",
+      "A front-end intake for team managers across rugby 7s and 15s. Pick a tournament, division, roster size, manager contact, travel notes, and source handoff.",
+      button("Browse tournaments", "/tournaments", "primary") + button("Submit tournament", "/submit", "secondary"),
     )}
     <section class="section light">
-      <div class="grid two">
-        <article class="detail-main">
-          <div class="tag-row">
-            <span class="tag green">Event company</span>
-            <span class="tag orange">Tenant mockup</span>
+      <div class="form-grid">
+        <form class="form-card" data-demo-form data-form-toast="Registration draft captured for owner review">
+          <div class="form-fields">
+            <div class="success-box" data-success-box>Draft registration captured for owner review. No payment or provider write was created.</div>
+            <div class="form-field">
+              <label for="event">Tournament</label>
+              <select id="event" name="event" required>
+                ${registrationOptions.map((item) => `<option>${safe(item.name)}</option>`).join("")}
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="team">Team name</label>
+              <input id="team" name="team" required placeholder="Your club, school, nation, or invitational team" />
+            </div>
+            <div class="form-field">
+              <label for="code">Rugby code</label>
+              <select id="code" name="code" required>
+                <option>7s</option>
+                <option>15s</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="division">Division</label>
+              <select id="division" name="division" required>
+                <option>Men's Open</option>
+                <option>Women's Open</option>
+                <option>Elite</option>
+                <option>Social</option>
+                <option>Youth</option>
+                <option>Inclusive</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="manager">Manager email</label>
+              <input id="manager" name="manager" type="email" required placeholder="manager@example.com" />
+            </div>
+            <div class="form-field">
+              <label for="roster">Roster size</label>
+              <input id="roster" name="roster" type="number" min="7" max="35" value="12" required />
+            </div>
+            <div class="form-field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" placeholder="Travel, accommodation, eligibility, roster, or ticketing notes"></textarea>
+            </div>
+            <button class="button primary" type="submit">Submit draft ${icons.arrow}</button>
           </div>
-          <h2>What the site needs to communicate</h2>
-          <p>
-            LIT7s needs to make upcoming registration obvious, make spectator tickets easy to find,
-            show that past events were real and active, and answer practical questions for teams,
-            spectators, parents, partners, and media.
-          </p>
-          <div class="matrix">
-            ${companyPillars.map(([title, copy]) => `<div class="matrix-item"><strong>${safe(title)}</strong><span>${safe(copy)}</span></div>`).join("")}
-          </div>
-          <h3>Tenant capabilities represented</h3>
-          <div class="resource-grid">
-            ${opsItems
-              .slice(0, 4)
-              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
-              .join("")}
-          </div>
-        </article>
+        </form>
         <aside class="detail-aside">
-          <h3>Company routes</h3>
+          <h3>Manager checklist</h3>
+          <ul class="timeline">
+            <li>Confirm code, division, age grade, and eligibility.</li>
+            <li>Add manager contact, roster count, travel notes, and source link.</li>
+            <li>Open official payment, ticketing, or registration provider when available.</li>
+            <li>Publish team profile after organizer review.</li>
+          </ul>
+          <div class="button-row stacked">
+            ${button("LIT tickets", links.litTickets, "dark")}
+            ${button("USA Club Rugby", links.usaClub, "light")}
+            ${button("Submit missing tournament", "/submit", "light")}
+          </div>
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
+function submitPage() {
+  return html`
+    ${pageHero(
+      "Submit or update a rugby tournament",
+      "Organizer and community intake for adding every missing rugby tournament: 7s, 15s, national, club, youth, women, social, regional, and global.",
+      button("Search first", "/tournaments", "primary") + button("Operations model", "/ops", "secondary"),
+    )}
+    <section class="section light">
+      <div class="form-grid">
+        <form class="form-card" data-demo-form data-form-toast="Tournament submission drafted for moderation">
+          <div class="form-fields">
+            <div class="success-box" data-success-box>Tournament draft saved locally for mock review. No live database write was created.</div>
+            <div class="form-field">
+              <label for="tournament-name">Tournament name</label>
+              <input id="tournament-name" required placeholder="Tournament, series, league, or cup" />
+            </div>
+            <div class="form-field">
+              <label for="source-url">Official source URL</label>
+              <input id="source-url" type="url" placeholder="https://..." />
+            </div>
+            <div class="form-field">
+              <label for="submit-code">Rugby code</label>
+              <select id="submit-code">
+                <option>7s</option>
+                <option>15s</option>
+                <option>Both / mixed</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="level">Level</label>
+              <select id="level">
+                <option>International</option>
+                <option>Club</option>
+                <option>Community</option>
+                <option>Youth</option>
+                <option>School</option>
+                <option>University</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="location">Location</label>
+              <input id="location" placeholder="City, country, or host rotation" />
+            </div>
+            <div class="form-field">
+              <label for="submit-notes">What should be listed?</label>
+              <textarea id="submit-notes" placeholder="Dates, divisions, tickets, registration, teams, media, past winners, contacts"></textarea>
+            </div>
+            <button class="button primary" type="submit">Submit for review ${icons.arrow}</button>
+          </div>
+        </form>
+        <aside class="detail-aside">
+          <h3>Review states</h3>
+          <ul class="timeline">
+            <li>Community suggestion</li>
+            <li>Organizer claimed</li>
+            <li>Official source verified</li>
+            <li>Tickets and registration connected</li>
+            <li>Past proof and media attached</li>
+          </ul>
           ${quickLinkList([
-            ["Official LIT7s", links.litHome],
-            ["Upcoming events", "/events"],
-            ["Past events", "/past-events"],
-            ["Media", "/media"],
-            ["Partners", "/partners"],
-            ["Jobs", links.jobs],
+            ["Global index", "/tournaments"],
+            ["Community hub", "/community"],
+            ["FAQ", "/faq"],
             ["Contact", "/contact"],
-          ])}
-          <h3>External ecosystem</h3>
-          ${quickLinkList([
-            ["Super 7s Series", links.super7s],
-            ["Series teams", links.super7sTeams2026],
-            ["Series fixtures", links.super7sFixtures2026],
-            ["Series standings", links.super7sStandings2026],
           ])}
         </aside>
       </div>
@@ -1699,7 +1981,7 @@ function companyPage() {
 }
 
 function teamCard(team) {
-  const tournament = tournaments.find((item) => item.name === team.tournament);
+  const tournament = competitions.find((item) => item.name === team.tournament);
   return html`
     <article class="card light-card">
       <div class="card-body">
@@ -1710,13 +1992,13 @@ function teamCard(team) {
         <h3>${safe(team.name)}</h3>
         <p>${safe(team.summary)}</p>
         ${metaList([
-          [icons.team, `${team.roster} roster slots`],
+          [icons.team, team.roster],
           [icons.shield, team.record],
           [icons.calendar, team.tournament],
         ])}
         <div class="button-row">
           ${button("Team profile", `/teams/${team.slug}`, "dark small")}
-          ${tournament ? button("Event", `/tournaments/${tournament.slug}`, "light small") : ""}
+          ${tournament ? button("Tournament", `/tournaments/${tournament.slug}`, "light small") : ""}
         </div>
       </div>
     </article>
@@ -1726,9 +2008,9 @@ function teamCard(team) {
 function teamsPage() {
   return html`
     ${pageHero(
-      "Teams directory",
-      "Team cards connect tournament entry, division fit, roster status, player profiles, and manager actions across the tenant.",
-      button("Register team", "/register", "primary"),
+      "Team profiles",
+      "National teams, professional clubs, community clubs, operator teams, schools, and invitational sides connected to the tournaments they play.",
+      button("Register a team", "/register", "primary") + button("Community hub", "/community", "secondary"),
     )}
     <section class="section light">
       <div class="grid two">${teams.map(teamCard).join("")}</div>
@@ -1740,9 +2022,9 @@ function teamDetail(slug) {
   const team = teams.find((item) => item.slug === slug);
   if (!team) return notFoundPage();
   const roster = people.filter((person) => person.team === team.name || person.team.includes(team.name.split(" ")[0]));
-  const tournament = tournaments.find((item) => item.name === team.tournament);
+  const tournament = competitions.find((item) => item.name === team.tournament);
   return html`
-    ${pageHero(team.name, team.summary, button("Start registration", "/register", "primary"))}
+    ${pageHero(team.name, team.summary, button("Register or claim team", "/register", "primary"))}
     <section class="section light">
       <div class="detail-layout">
         <article class="detail-main">
@@ -1751,26 +2033,19 @@ function teamDetail(slug) {
           <div class="matrix">
             <div class="matrix-item"><strong>Base</strong><span>${safe(team.base)}</span></div>
             <div class="matrix-item"><strong>Level</strong><span>${safe(team.level)}</span></div>
-            <div class="matrix-item"><strong>Roster</strong><span>${safe(team.roster)} players</span></div>
-            <div class="matrix-item"><strong>Event</strong><span>${safe(team.tournament)}</span></div>
+            <div class="matrix-item"><strong>Roster model</strong><span>${safe(team.roster)}</span></div>
+            <div class="matrix-item"><strong>Tournament</strong><span>${safe(team.tournament)}</span></div>
           </div>
           <h3>Roster spotlight</h3>
-          <div class="grid two">${(roster.length ? roster : people.slice(3, 5)).map(personCard).join("")}</div>
+          <div class="grid two">${(roster.length ? roster : people.slice(0, 2)).map(personCard).join("")}</div>
         </article>
         <aside class="detail-aside">
           <h3>Actions</h3>
           <div class="button-row stacked">
             ${button("Register team", "/register", "primary")}
             ${tournament ? button("Tournament", `/tournaments/${tournament.slug}`, "light") : ""}
-            ${button("Tickets", "/tickets", "light")}
+            ${button("Media", "/media", "light")}
           </div>
-          <h3>Manager checklist</h3>
-          <ul class="timeline">
-            <li>Confirm division and eligibility.</li>
-            <li>Upload player list and manager contact.</li>
-            <li>Connect ticket block and accommodation link.</li>
-            <li>Publish public team profile after review.</li>
-          </ul>
         </aside>
       </div>
     </section>
@@ -1805,9 +2080,9 @@ function personCard(person) {
 function playersPage() {
   return html`
     ${pageHero(
-      "Player and coach profiles",
-      "Profiles combine verified LIT7s coach listings with marked mock player examples for the future tenant's athlete discovery experience.",
-      button("Search tournaments", "/tournaments", "primary"),
+      "Player, coach, and organizer profiles",
+      "MiGente-style public profiles for athletes, coaches, organizers, and community leaders connected to tournaments, teams, photos, and registration.",
+      button("Team profiles", "/teams", "primary") + button("Media", "/media", "secondary"),
     )}
     <section class="section light">
       <div class="grid two">${people.map(personCard).join("")}</div>
@@ -1820,7 +2095,7 @@ function playerDetail(slug) {
   if (!person) return notFoundPage();
   const team = teams.find((item) => item.name === person.team);
   return html`
-    ${pageHero(person.name, person.bio, button(team ? "Team profile" : "Related teams", team ? `/teams/${team.slug}` : "/teams", "primary"))}
+    ${pageHero(person.name, person.bio, button(team ? "Team profile" : "Teams", team ? `/teams/${team.slug}` : "/teams", "primary"))}
     <section class="section light">
       <div class="detail-layout">
         <article class="detail-main">
@@ -1834,9 +2109,7 @@ function playerDetail(slug) {
           </div>
           <h3>Profile notes</h3>
           <p>${safe(person.bio)}</p>
-          <div class="matrix">
-            ${person.stats.map((stat) => `<div class="matrix-item"><strong>${safe(stat)}</strong><span>Profile attribute</span></div>`).join("")}
-          </div>
+          <div class="matrix">${person.stats.map((stat) => `<div class="matrix-item"><strong>${safe(stat)}</strong><span>Profile attribute</span></div>`).join("")}</div>
         </article>
         <aside class="detail-aside">
           <h3>Actions</h3>
@@ -1845,152 +2118,161 @@ function playerDetail(slug) {
             ${button("Players directory", "/players", "light")}
             ${button("Media hub", "/media", "light")}
           </div>
-          <h3>Tenant modules</h3>
-          <ul class="timeline">
-            <li>Bio and media approval.</li>
-            <li>Event participation history.</li>
-            <li>Coach notes and highlights.</li>
-            <li>Recruiting and share controls.</li>
-          </ul>
         </aside>
       </div>
     </section>
   `;
 }
 
-function ticketsPage() {
-  const options = tournaments.filter((item) => item.ctas.length);
-  const selected = options.find((item) => item.name === state.ticketSelection) ?? options[0];
+function communityPage() {
   return html`
     ${pageHero(
-      "Tickets, parking, and event entry",
-      "Ticketing and registration CTAs point to verified public LIT7s links while the tenant checkout panel shows the future app flow for spectators, VIP guests, parking, and team managers.",
-      button("Open team registration", "/register", "primary") + button("Read ticket FAQ", "/faq", "secondary"),
+      "Rugby community hub",
+      "The MiGente-like layer: member profiles, team pages, event memory, local groups, media, organizer posts, tournament submissions, and questions that stay attached to the sport.",
+      button("Submit tournament", "/submit", "primary") + button("Join as a team", "/register", "secondary"),
     )}
     <section class="section light">
-      <div class="ticket-panel">
-        <div class="list">
-          ${options
-            .map(
-              (item) => html`
-                <article class="result-row">
-                  <div class="score-tile"><span>${safe(item.scope)}</span><strong>${item.score}</strong></div>
-                  <div>
-                    <h3>${safe(item.name)}</h3>
-                    <p>${safe(item.summary)}</p>
-                    ${metaList([
-                      [icons.ticket, item.status],
-                      [icons.pin, item.city],
-                    ])}
-                  </div>
-                  <div class="row-actions">
-                    <button class="button dark small" type="button" data-select-ticket="${safe(item.name)}">Select</button>
-                    ${button(item.ctas[0][0], item.ctas[0][1], "light small")}
-                  </div>
-                </article>
-              `,
-            )
-            .join("")}
-        </div>
-        <aside class="checkout">
-          <h2>Checkout preview</h2>
-          <p>${safe(selected.name)}</p>
-          <div class="checkout-line"><span>Event product</span><strong>${safe(selected.format)}</strong></div>
-          <div class="checkout-line"><span>Team capacity</span><strong>${safe(selected.teamCount)}+</strong></div>
-          <div class="checkout-line"><span>Status</span><strong>${safe(selected.status)}</strong></div>
-          <div class="button-row">
-            ${selected.ctas.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "secondary")).join("")}
-          </div>
-          <h3>Useful ticket links</h3>
-          ${quickLinkList([
-            ["VIP tickets", "/info/vip-tickets"],
-            ["Schedule", "/schedule"],
-            ["Venue and parking", "/info/tournament-information"],
-            ["FAQ", "/faq"],
-          ])}
-        </aside>
+      <div class="section-head">
+        <h2>Community surfaces</h2>
+        <p>Not just a calendar. The directory should help people recognize teams, players, organizers, places, and proof from past events.</p>
       </div>
+      <div class="resource-grid wide">
+        ${[
+          ["Groups", "Local rugby communities, alumni networks, schools, inclusive clubs, fan groups, and touring sides."],
+          ["Profiles", "Players, coaches, organizers, photographers, sponsors, and volunteers with event history."],
+          ["Event memory", "Past winners, photos, clips, testimonials, tables, fixtures, and registration links for the next event."],
+          ["Questions", "FAQ and discussion prompts tied to tickets, registration, divisions, rules, travel, and source verification."],
+        ]
+          .map(([title, copy]) => `<article class="mini-card"><h3>${safe(title)}</h3><p>${safe(copy)}</p></article>`)
+          .join("")}
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>Teams and profiles</h2>
+        <p>Public profile cards make the tournament index feel active and searchable.</p>
+      </div>
+      <div class="grid two">${teams.slice(0, 4).map((team) => teamCard(team)).join("")}</div>
     </section>
   `;
 }
 
-function registerPage() {
-  const registrationOptions = [
-    "LIT 7s London",
-    "LIT Super 7s Series",
-    "LIT Florida International 7s",
-    "The Olympic Experience LIT Rugby Sevens Camp USA",
-  ];
+function pastEventsPage() {
   return html`
     ${pageHero(
-      "Register for upcoming LIT7s events",
-      "A working front-end intake for team managers: choose the event, division, manager contact, roster count, accommodation needs, and review state before opening the official public handoff.",
-      button("Browse upcoming events", "/events", "primary") + button("Registration FAQ", "/faq", "secondary"),
+      "Past events and social proof",
+      "Past winners, media, source coverage, organizer pages, team memories, and community submissions prove this is a continuing rugby network.",
+      button("Upcoming events", "/events", "primary") + button("Media", "/media", "secondary"),
     )}
     <section class="section light">
-      <div class="form-grid">
-        <form class="form-card" data-registration-form>
-          <div class="form-fields">
-            <div class="success-box" data-success-box>Draft registration captured for owner review. No payment or provider write was created.</div>
-            <div class="form-field">
-              <label for="event">Event</label>
-              <select id="event" name="event" required>
-                ${registrationOptions.map((item) => `<option>${safe(item)}</option>`).join("")}
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="team">Team name</label>
-              <input id="team" name="team" required placeholder="Your team" />
-            </div>
-            <div class="form-field">
-              <label for="division">Division</label>
-              <select id="division" name="division" required>
-                <option>Men's Open</option>
-                <option>Women's Open</option>
-                <option>Social</option>
-                <option>Elite</option>
-                <option>U23</option>
-                <option>U18</option>
-                <option>U16</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="manager">Manager email</label>
-              <input id="manager" name="manager" type="email" required placeholder="manager@example.com" />
-            </div>
-            <div class="form-field">
-              <label for="roster">Roster size</label>
-              <input id="roster" name="roster" type="number" min="7" max="15" value="12" required />
-            </div>
-            <div class="form-field">
-              <label for="notes">Notes</label>
-              <textarea id="notes" name="notes" placeholder="Travel, accommodation, eligibility, or roster notes"></textarea>
-            </div>
-            <button class="button primary" type="submit">Submit draft ${icons.arrow}</button>
-          </div>
-        </form>
+      <div class="grid three">${pastEvents.map((item) => pastEventCard(item, true)).join("")}</div>
+    </section>
+  `;
+}
+
+function faqPage() {
+  return html`
+    ${pageHero(
+      "Global rugby directory FAQ",
+      "Answers for players, teams, spectators, organizers, media, sponsors, parents, and community members using a global rugby tournament index.",
+      button("Submit tournament", "/submit", "primary") + button("Search index", "/tournaments", "secondary"),
+    )}
+    <section class="section light">
+      <div class="faq-layout">
+        <div class="faq-list">${faqItems.map((item, index) => faqCard(item, index < 2)).join("")}</div>
         <aside class="detail-aside">
-          <h3>Registration rules surfaced</h3>
-          <ul class="timeline">
-            <li>LIT7s team registration reference: team of 15 players and one manager.</li>
-            <li>Florida reference: online team registration and EventConnect hotel workflow.</li>
-            <li>Series rules reference: up to 14 players in Super Sevens rules profile.</li>
-            <li>Future tenant: owner review before payment, roster, and compliance writes.</li>
-          </ul>
-          <div class="button-row">
-            ${button("Florida registration", links.floridaRegistration, "dark")}
-            ${button("Series team entry", links.super7sTickets, "light")}
-          </div>
-          <h3>Before registering</h3>
+          <h3>Most useful routes</h3>
           ${quickLinkList([
-            ["Upcoming events", "/events"],
-            ["Team registration info", "/info/team-registration-info"],
-            ["Sevens competitions", "/info/sevens-competitions"],
-            ["Sevens rules", "/info/sevens-rules"],
-            ["What to pack", "/info/what-to-pack"],
-            ["Contact LIT7s", "/contact"],
+            ["Global index", "/tournaments"],
+            ["Rugby 7s", "/sevens"],
+            ["Rugby 15s", "/fifteens"],
+            ["Submit", "/submit"],
+            ["Community", "/community"],
           ])}
         </aside>
+      </div>
+    </section>
+  `;
+}
+
+function mediaPage() {
+  return html`
+    ${pageHero(
+      "Media and proof",
+      "Photos, highlights, source links, team pages, past winners, testimonials, and organizer stories make a tournament directory feel alive.",
+      button("Past proof", "/past-events", "primary") + button("Submit media source", "/submit", "secondary"),
+    )}
+    <section class="section light">
+      <div class="resource-grid wide">
+        ${mediaCollections.map(
+          (item) => html`
+            <article class="mini-card">
+              <h3>${safe(item.title)}</h3>
+              <p>${safe(item.summary)}</p>
+              <div class="button-row">${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}</div>
+            </article>
+          `,
+        ).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function companyPage() {
+  return html`
+    ${pageHero(
+      "About MiGente Rugby",
+      "A future tenant concept for a global rugby community directory: every tournament, every level, every rugby code, with teams, people, media, questions, ticketing, and registration connected.",
+      button("Global index", "/tournaments", "primary") + button("Operations", "/ops", "secondary"),
+    )}
+    <section class="section light">
+      <div class="grid two">
+        <article class="detail-main">
+          <div class="tag-row">
+            <span class="tag green">Global rugby</span>
+            <span class="tag orange">Community network</span>
+          </div>
+          <h2>What the product communicates</h2>
+          <p>
+            The site is not just a LIT landing page anymore. It is a rugby discovery network with official-source links,
+            operator pages, event conversion, team and player profiles, media proof, and a submission workflow for the
+            tournaments the seed data does not cover yet.
+          </p>
+          <div class="matrix">${opsItems.slice(0, 4).map(([title, copy]) => `<div class="matrix-item"><strong>${safe(title)}</strong><span>${safe(copy)}</span></div>`).join("")}</div>
+        </article>
+        <aside class="detail-aside">
+          <h3>Core routes</h3>
+          ${quickLinkList(quickLinks.slice(0, 10))}
+          <h3>Official source examples</h3>
+          ${quickLinkList([
+            ["World Rugby", links.worldRugby],
+            ["SVNS", links.svns],
+            ["Nations Championship", links.nationsChampionship],
+            ["USA Club Rugby", links.usaClub],
+          ])}
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
+function contactPage() {
+  return html`
+    ${pageHero(
+      "Contact and claim a listing",
+      "Mock contact surface for tournament owners, teams, media, sponsors, and federation admins who want to claim or correct a rugby profile.",
+      button("Submit tournament", "/submit", "primary") + button("Operations", "/ops", "secondary"),
+    )}
+    <section class="section light">
+      <div class="resource-grid wide">
+        ${[
+          ["Tournament owner", "Claim a listing, add official source URLs, connect ticketing, and upload event media."],
+          ["Team manager", "Register interest, correct a team page, add roster context, or ask about divisions."],
+          ["Media or sponsor", "Connect photo galleries, highlight clips, partner packages, and post-event proof."],
+          ["Federation admin", "Bulk update fixtures, calendars, official tournament pages, and source trust states."],
+        ]
+          .map(([title, copy]) => `<article class="mini-card"><h3>${safe(title)}</h3><p>${safe(copy)}</p><div class="button-row">${button("Start request", "/submit", "dark small")}</div></article>`)
+          .join("")}
       </div>
     </section>
   `;
@@ -1999,9 +2281,9 @@ function registerPage() {
 function opsPage() {
   return html`
     ${pageHero(
-      "Tenant operations",
-      "Mobilis and MiGente patterns are translated into a future LIT Rugby tenant: searchable public routes, source labels, review states, event intake, and provider handoff slots.",
-      button("Start registration", "/register", "primary"),
+      "Directory operations model",
+      "How Mobilis-style tenant operations and MiGente-style community discovery become a future global rugby index with source-labeled listings and owner review.",
+      button("Submit tournament", "/submit", "primary"),
     )}
     <section class="section light">
       <div class="grid two">
@@ -2020,12 +2302,12 @@ function opsPage() {
         <article class="form-card">
           <h2>Launch-readiness board</h2>
           <div class="matrix">
-            <div class="matrix-item"><strong>Public preview</strong><span>Ready</span></div>
-            <div class="matrix-item"><strong>Auth gate</strong><span>Future Clerk owner route</span></div>
-            <div class="matrix-item"><strong>Data store</strong><span>Future Supabase event registry</span></div>
-            <div class="matrix-item"><strong>Payments</strong><span>External links only</span></div>
-            <div class="matrix-item"><strong>Messaging</strong><span>Future WhatsApp/email handoff</span></div>
-            <div class="matrix-item"><strong>Publishing</strong><span>Source-labeled review flow</span></div>
+            <div class="matrix-item"><strong>Public preview</strong><span>Static SPA deployed under /lit</span></div>
+            <div class="matrix-item"><strong>Search</strong><span>Client-side seed index across 7s and 15s</span></div>
+            <div class="matrix-item"><strong>Data store</strong><span>Future database and moderation queue</span></div>
+            <div class="matrix-item"><strong>Payments</strong><span>External links only in mockup</span></div>
+            <div class="matrix-item"><strong>Community</strong><span>Teams, players, media, event memory</span></div>
+            <div class="matrix-item"><strong>Coverage</strong><span>Official feeds plus organizer submissions</span></div>
           </div>
         </article>
       </div>
@@ -2033,9 +2315,13 @@ function opsPage() {
   `;
 }
 
+function schedulePage() {
+  return eventsPage();
+}
+
 function notFoundPage() {
   return html`
-    ${pageHero("Page not found", "That LIT Rugby route is not in the mockup yet.", button("Return home", "/", "primary"))}
+    ${pageHero("Page not found", "That route is not in the global rugby directory mockup yet.", button("Return home", "/", "primary"))}
   `;
 }
 
@@ -2047,24 +2333,27 @@ function render() {
   if (path === "/" || parts.length === 0) markup = homePage();
   else if (parts[0] === "tournaments" && parts[1]) markup = tournamentDetail(parts[1]);
   else if (parts[0] === "tournaments") markup = tournamentsPage();
+  else if (parts[0] === "sevens") markup = sevensPage();
+  else if (parts[0] === "fifteens") markup = fifteensPage();
+  else if (parts[0] === "nations") markup = nationsPage();
+  else if (parts[0] === "clubs") markup = clubsPage();
   else if (parts[0] === "events" && parts[1]) markup = eventDetail(parts[1]);
-  else if (parts[0] === "events") markup = eventsPage();
-  else if (parts[0] === "upcoming") markup = eventsPage();
-  else if (parts[0] === "past-events") markup = pastEventsPage();
-  else if (parts[0] === "faq") markup = faqPage();
-  else if (parts[0] === "info" && parts[1]) markup = infoDetail(parts[1]);
-  else if (parts[0] === "info") markup = infoIndexPage();
-  else if (parts[0] === "schedule") markup = schedulePage();
-  else if (parts[0] === "media") markup = mediaPage();
-  else if (parts[0] === "company") markup = companyPage();
-  else if (parts[0] === "contact") markup = contactPage();
-  else if (parts[0] === "partners") markup = partnersPage();
+  else if (parts[0] === "events" || parts[0] === "upcoming") markup = eventsPage();
+  else if (parts[0] === "tickets") markup = ticketsPage();
+  else if (parts[0] === "register") markup = registerPage();
+  else if (parts[0] === "submit") markup = submitPage();
+  else if (parts[0] === "community") markup = communityPage();
   else if (parts[0] === "teams" && parts[1]) markup = teamDetail(parts[1]);
   else if (parts[0] === "teams") markup = teamsPage();
   else if (parts[0] === "players" && parts[1]) markup = playerDetail(parts[1]);
   else if (parts[0] === "players") markup = playersPage();
-  else if (parts[0] === "tickets") markup = ticketsPage();
-  else if (parts[0] === "register") markup = registerPage();
+  else if (parts[0] === "past-events") markup = pastEventsPage();
+  else if (parts[0] === "faq") markup = faqPage();
+  else if (parts[0] === "media") markup = mediaPage();
+  else if (parts[0] === "company") markup = companyPage();
+  else if (parts[0] === "contact") markup = contactPage();
+  else if (parts[0] === "partners") markup = contactPage();
+  else if (parts[0] === "schedule") markup = schedulePage();
   else if (parts[0] === "ops") markup = opsPage();
   else markup = notFoundPage();
 
@@ -2085,32 +2374,49 @@ function bindPage() {
 
   app.querySelector("[data-home-search-submit]")?.addEventListener("click", () => {
     state.query = app.querySelector("[data-home-search]")?.value ?? "";
+    state.scope = "All";
+    state.code = "All";
+    state.level = "All";
     navigate("/tournaments");
   });
 
   app.querySelector("[data-home-search]")?.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       state.query = event.currentTarget.value;
+      state.scope = "All";
+      state.code = "All";
+      state.level = "All";
       navigate("/tournaments");
     }
   });
 
-  app.querySelectorAll("[data-home-scope]").forEach((buttonEl) => {
+  app.querySelectorAll("[data-home-preset]").forEach((buttonEl) => {
     buttonEl.addEventListener("click", () => {
-      state.scope = buttonEl.dataset.homeScope;
-      navigate("/tournaments");
+      const preset = buttonEl.dataset.homePreset;
+      state.query = "";
+      state.scope = "All";
+      state.code = "All";
+      state.level = "All";
+      if (preset === "7s") state.code = "7s";
+      if (preset === "15s") state.code = "15s";
+      if (preset === "nations") state.level = "International";
+      if (preset === "clubs") state.level = "Club";
+      if (preset === "community") state.level = "Community";
+      navigate(preset === "7s" ? "/sevens" : preset === "15s" ? "/fifteens" : preset === "nations" ? "/nations" : preset === "clubs" ? "/clubs" : preset === "community" ? "/community" : "/tournaments");
     });
   });
 
   const query = app.querySelector("[data-filter-query]");
   const scope = app.querySelector("[data-filter-scope]");
-  const format = app.querySelector("[data-filter-format]");
+  const code = app.querySelector("[data-filter-code]");
+  const level = app.querySelector("[data-filter-level]");
   const division = app.querySelector("[data-filter-division]");
-  [query, scope, format, division].filter(Boolean).forEach((control) => {
+  [query, scope, code, level, division].filter(Boolean).forEach((control) => {
     control.addEventListener("input", () => {
       state.query = query?.value ?? "";
       state.scope = scope?.value ?? "All";
-      state.format = format?.value ?? "All";
+      state.code = code?.value ?? "All";
+      state.level = level?.value ?? "All";
       state.division = division?.value ?? "All";
       render();
     });
@@ -2124,12 +2430,13 @@ function bindPage() {
     });
   });
 
-  app.querySelector("[data-registration-form]")?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const success = app.querySelector("[data-success-box]");
-    success?.classList.add("show");
-    showToast("Registration draft captured for review");
-    event.currentTarget.scrollIntoView({ block: "start", behavior: "smooth" });
+  app.querySelectorAll("[data-demo-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      form.querySelector("[data-success-box]")?.classList.add("show");
+      showToast(form.dataset.formToast ?? "Draft captured for review");
+      form.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
   });
 }
 

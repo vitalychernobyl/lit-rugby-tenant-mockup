@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&family=Titillium+Web:wght@600;700;900&display=swap");
 
 :root {
-  --bg: #050806;
-  --bg-2: #0d1410;
-  --surface: #ffffff;
-  --surface-2: #f3f6f1;
-  --ink: #f8fff9;
+  --bg: #070a08;
+  --bg-2: #101510;
+  --surface: #fffdf7;
+  --surface-2: #f4f1e8;
+  --ink: #fbfff9;
   --ink-dark: #08110b;
-  --muted: #aab9ad;
-  --muted-dark: #536158;
+  --muted: #aeb7ae;
+  --muted-dark: #586258;
   --line: rgba(255, 255, 255, 0.13);
   --line-dark: rgba(8, 17, 11, 0.13);
   --red: #c71f22;
   --red-dark: #8b1215;
-  --cyan: #06aed5;
-  --green: #5eb978;
-  --green-dark: #2d7045;
-  --green-soft: rgba(94, 185, 120, 0.15);
-  --green-rgb: 94, 185, 120;
-  --orange: #ee8d03;
-  --gold: #ffd34f;
+  --cyan: #2f9aaa;
+  --green: #7aa66f;
+  --green-dark: #456f3f;
+  --green-soft: rgba(122, 166, 111, 0.15);
+  --green-rgb: 122, 166, 111;
+  --orange: #c97942;
+  --gold: #caa64f;
   --shadow: 0 26px 86px rgba(0, 0, 0, 0.36);
   --radius: 8px;
   --max: 1180px;
@@ -40,7 +40,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, #080b09 0%, var(--bg) 28%, #0c0f0c 100%);
   color: var(--ink);
   font-family: var(--font);
   letter-spacing: 0;
@@ -98,9 +99,9 @@ img {
   width: 48px;
   height: 48px;
   place-items: center;
-  border: 2px solid var(--green);
+  border: 2px solid rgba(var(--green-rgb), 0.8);
   border-radius: 6px;
-  background: linear-gradient(135deg, #fff 0 48%, var(--green) 48% 100%);
+  background: linear-gradient(135deg, #fffdf7 0 48%, var(--green) 48% 100%);
   color: #050706;
   font-weight: 950;
   letter-spacing: 0;
@@ -195,7 +196,7 @@ img {
   z-index: -2;
   content: "";
   background:
-    linear-gradient(90deg, rgba(5, 8, 6, 0.98), rgba(5, 8, 6, 0.86) 44%, rgba(5, 8, 6, 0.58)),
+    linear-gradient(90deg, rgba(7, 10, 8, 0.98), rgba(7, 10, 8, 0.88) 44%, rgba(7, 10, 8, 0.64)),
     linear-gradient(180deg, transparent 58%, var(--bg) 100%),
     url("assets/lit-rugby-hero.png") center right / cover no-repeat;
 }
@@ -205,7 +206,7 @@ img {
   inset: 0;
   z-index: -1;
   content: "";
-  background: linear-gradient(180deg, rgba(94, 185, 120, 0.06), transparent 62%);
+  background: linear-gradient(180deg, rgba(var(--green-rgb), 0.05), transparent 62%);
   opacity: 0.8;
 }
 
@@ -220,6 +221,20 @@ img {
 
 .hero-copy {
   max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  border: 1px solid rgba(var(--green-rgb), 0.32);
+  border-radius: 5px;
+  background: rgba(255, 253, 247, 0.08);
+  color: #d8dfd5;
+  padding: 7px 10px;
+  font-family: var(--ui-font);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 h1,
@@ -277,11 +292,11 @@ h1 {
 .button.primary {
   background: var(--green);
   color: #020603;
-  box-shadow: 0 12px 30px rgba(var(--green-rgb), 0.2);
+  box-shadow: 0 12px 30px rgba(var(--green-rgb), 0.16);
 }
 
 .button.primary:hover {
-  background: #75c78e;
+  background: #8bb681;
 }
 
 .button.secondary {
@@ -480,7 +495,7 @@ input:focus {
   min-height: 72px;
   place-items: center;
   border-radius: 6px;
-  background: linear-gradient(135deg, var(--green), #07100a 82%);
+  background: linear-gradient(135deg, var(--green), #111711 82%);
   color: #fff;
   text-align: center;
 }
@@ -689,7 +704,7 @@ input:focus {
 .light .card,
 .card.light-card {
   border-color: var(--line-dark);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
 }
 
@@ -776,7 +791,21 @@ input:focus {
 .media-frame {
   position: relative;
   min-height: 150px;
-  background: linear-gradient(135deg, rgba(var(--green-rgb), 0.22), rgba(238, 141, 3, 0.1));
+  background:
+    linear-gradient(135deg, rgba(var(--green-rgb), 0.2), rgba(201, 121, 66, 0.13)),
+    linear-gradient(180deg, #1a211a, #080b09);
+}
+
+.media-frame.sevens-frame {
+  background:
+    linear-gradient(135deg, rgba(var(--green-rgb), 0.24), rgba(201, 121, 66, 0.12)),
+    linear-gradient(180deg, #172117, #070a08);
+}
+
+.media-frame.fifteens-frame {
+  background:
+    linear-gradient(135deg, rgba(47, 154, 170, 0.18), rgba(var(--green-rgb), 0.14)),
+    linear-gradient(180deg, #172022, #070a08);
 }
 
 .media-frame::after {
@@ -792,8 +821,8 @@ input:focus {
 .page-hero {
   padding: 74px max(22px, calc((100vw - var(--max)) / 2)) 42px;
   background:
-    linear-gradient(135deg, rgba(var(--green-rgb), 0.1), transparent 42%),
-    #07100a;
+    linear-gradient(135deg, rgba(var(--green-rgb), 0.08), transparent 42%),
+    #0b100c;
   border-bottom: 1px solid var(--line);
 }
 
@@ -818,7 +847,7 @@ input:focus {
   display: grid;
   max-width: var(--max);
   margin: 0 auto 22px;
-  grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(150px, 190px));
+  grid-template-columns: minmax(220px, 1fr) repeat(4, minmax(128px, 176px));
   gap: 12px;
 }
 
@@ -831,7 +860,7 @@ input:focus {
   min-height: 46px;
   border: 1px solid var(--line-dark);
   border-radius: 6px;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
   padding: 0 12px;
   outline: none;
@@ -867,7 +896,7 @@ input:focus {
   align-items: stretch;
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
   padding: 14px;
 }
@@ -879,10 +908,13 @@ input:focus {
   background: #061008;
   color: var(--green);
   text-align: center;
+  padding: 10px;
+  overflow-wrap: anywhere;
 }
 
 .score-tile strong {
-  font-size: 32px;
+  font-size: 30px;
+  line-height: 1;
 }
 
 .score-tile span {
@@ -890,6 +922,10 @@ input:focus {
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.code-tile {
+  color: #f8fff2;
 }
 
 .result-row h3 {
@@ -952,7 +988,7 @@ input:focus {
 .detail-aside {
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
 }
 
@@ -1089,7 +1125,7 @@ input:focus {
 .form-card {
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
   padding: 24px;
 }
@@ -1115,7 +1151,7 @@ input:focus {
 .mini-card {
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-dark);
   padding: 16px;
 }
