@@ -1,4 +1,4 @@
-import { archiveEvents } from "./data/archive-events.js";
+import { archiveEvents } from "./data/archive-events.js?v=20260708-rm2";
 
 const today = new Date("2026-07-08T12:00:00-04:00");
 const app = document.querySelector("#app");
@@ -51,6 +51,58 @@ const externalLinks = {
 
 const imageFor = (slug, fallbackIndex = 0) =>
   archiveEvents.find((event) => event.slug === slug)?.image || archiveEvents[fallbackIndex % archiveEvents.length]?.image || "";
+
+const socialSets = {
+  lit: [
+    { label: "Instagram", url: "https://www.instagram.com/lit7s/" },
+    { label: "Facebook", url: "https://www.facebook.com/LIT7s/" },
+    { label: "X / Twitter", url: "https://twitter.com/lit7s?lang=en-GB" },
+    { label: "YouTube", url: "https://www.youtube.com/channel/UCBcTEJS7_GPoL27Srp3ftBw" },
+  ],
+  rugbyTown: [
+    { label: "Instagram", url: "https://www.instagram.com/rugbytownofficial/" },
+    { label: "Facebook", url: "https://www.facebook.com/RugbyTownUSA" },
+    { label: "X / Twitter", url: "https://twitter.com/RugbyTown_USA" },
+  ],
+  tropical: [
+    { label: "Instagram", url: "https://www.instagram.com/tropical7s" },
+    { label: "Facebook", url: "https://www.facebook.com/tropical7s" },
+    { label: "X / Twitter", url: "https://twitter.com/tropical7s?lang=en" },
+    { label: "YouTube", url: "https://www.youtube.com/channel/UCuW0qnsBClhvuM_HcK3ZIbg" },
+  ],
+  dubai: [
+    { label: "Instagram", url: "https://www.instagram.com/dubai7s" },
+    { label: "Facebook", url: "https://www.facebook.com/dubai7s/" },
+    { label: "X / Twitter", url: "https://twitter.com/dubai7s" },
+  ],
+  rugbyEurope: [
+    { label: "Instagram", url: "https://www.instagram.com/rugby_europe" },
+    { label: "Facebook", url: "https://www.facebook.com/rugbyeurope/" },
+    { label: "X / Twitter", url: "https://twitter.com/rugby_europe" },
+  ],
+  internationalTouch: [
+    { label: "Instagram", url: "https://instagram.com/internationaltouch" },
+    { label: "Facebook", url: "https://www.facebook.com/internationaltouch.org" },
+    { label: "X / Twitter", url: "https://twitter.com/intltouchorg" },
+    { label: "YouTube", url: "https://www.youtube.com/internationaltouch" },
+  ],
+  rugbyWorldCup: [
+    { label: "Instagram", url: "https://www.instagram.com/rugbyworldcup/" },
+    { label: "Facebook", url: "https://www.facebook.com/rugbyworldcup/" },
+    { label: "X / Twitter", url: "https://twitter.com/rugbyworldcup" },
+    { label: "YouTube", url: "https://www.youtube.com/channel/UCE28rwYoaV7jvU6GVzdu_GQ" },
+  ],
+  majorca: [
+    { label: "Instagram", url: "https://www.instagram.com/majorcabeachrugby/" },
+    { label: "Facebook", url: "https://www.facebook.com/BeachRugbyMajorca" },
+    { label: "X / Twitter", url: "https://twitter.com/MajorcaBeachRug" },
+  ],
+  algarve: [
+    { label: "Instagram", url: "https://www.instagram.com/algarve7s/" },
+    { label: "Facebook", url: "https://www.facebook.com/Algarve7s" },
+    { label: "YouTube", url: "https://www.youtube.com/channel/UCpRAmkc4RE7PtYS9UJ80w-A" },
+  ],
+};
 
 const currentEvents = [
   {
@@ -796,7 +848,7 @@ const recentEvents = [
     divisions: ["Beach rugby", "Men", "Women", "Youth"],
     amenities: ["Festival", "Beach rugby", "Multiple divisions"],
     image: imageFor("ameland-beach-rugby", 32),
-    summary: "Ameland's beach rugby festival is a major Dutch beach tournament with broad team categories and social proof from repeat editions.",
+    summary: "Ameland's beach rugby festival is a major Dutch beach tournament with broad team categories and repeat-edition details.",
     officialUrl: "https://beachrugby.nl/",
     registerUrl: "https://beachrugby.nl/",
     ticketUrl: "https://beachrugby.nl/",
@@ -827,6 +879,118 @@ const recentEvents = [
   },
 ];
 
+const profileEventEnrichments = {
+  "rugby-europe": {
+    image: "https://www.rugbyeurope.eu/media/50adwbgu/bm4i1399.jpg?width=1200&height=630&format=webp&quality=80&mode=crop&v=1dc69e8e8e01140",
+    socialLinks: socialSets.rugbyEurope,
+    externalLinks: [{ label: "Rugby Europe", url: "https://www.rugbyeurope.eu/" }],
+  },
+  "touch-rugby": {
+    socialLinks: socialSets.internationalTouch,
+    externalLinks: [{ label: "International Touch", url: "https://www.internationaltouch.org/" }],
+  },
+  "world-rugby": {
+    socialLinks: socialSets.rugbyWorldCup,
+    externalLinks: [{ label: "World Rugby", url: "https://www.world.rugby/" }],
+  },
+  "beach-rugby": {
+    socialLinks: socialSets.majorca,
+  },
+};
+
+const eventEnrichments = {
+  "lit-7s-london-2026": {
+    image: "https://www.lit7s.com/wp-content/uploads/2024/04/image0-2.jpeg",
+    socialLinks: socialSets.lit,
+    externalLinks: [{ label: "LIT7s", url: externalLinks.lit }],
+  },
+  "world-rugby-junior-championship-2026": {
+    image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2026/01/15/f7d52801-b8a7-41b1-a7e4-b682b7fdd3b3/JWC2026_Logo_RGB_Hor_SC_DarkRed.jpg?width=1200&height=630",
+  },
+  "nations-championship-2026": {
+    image: "https://resources.world.rugby/photo-resources/2020/12/14/0bc19e91-bf74-4abb-b24d-46aa981048aa/WR_BM_LIN_FC_R_POS.png?width=1200&height=630",
+  },
+  "world-rugby-nations-cup-november-2026": {
+    image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2026/03/05/824b67c5-ae31-48e6-b569-602bff466181/nations-cup-2026-logo.png?width=1200&height=630",
+  },
+  "pacific-nations-cup-2026": {
+    image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2024/02/21/ce485388-7ff2-4325-aefa-aedb0150c580/PNC_PPT_Template.png?width=1200&height=630",
+  },
+  "wxv-global-series-challenger-2026": {
+    image: "https://www.world.rugby/resources/prod/v9.19.3/i/meta/wr.png",
+  },
+  "rugbytown-7s-2026": {
+    image: "https://rugbytownusa.com/wp-content/uploads/2025/04/RUGBYTOWN_USA_2022_RGB_Web-768x768.webp",
+    socialLinks: socialSets.rugbyTown,
+    externalLinks: [{ label: "RugbyTown USA", url: externalLinks.rugbyTown }],
+  },
+  "european-touch-championships-2026": {
+    socialLinks: socialSets.internationalTouch,
+  },
+  "european-youth-touch-championships-2026": {
+    image: "https://res.cloudinary.com/internationaltouch/image/fetch/s--QaEAjZQ1--/f_jpg,h_300/https://fit-prod-media-syd1.syd1.cdn.digitaloceanspaces.com/public/event_logo/FIT_EYTC26_logo_cmyk_aw.jpg",
+  },
+  "asia-pacific-seniors-touch-cup-2026": {
+    image: "https://res.cloudinary.com/internationaltouch/image/fetch/s--aTCB2kTZ--/f_jpg,h_300/https://fit-prod-media-syd1.syd1.cdn.digitaloceanspaces.com/public/event_logo/FIT_APSTC_26_Logo_CMYK.jpg",
+  },
+  "british-irish-cup-tag-rugby-2026": {
+    image: "https://static.wixstatic.com/media/2e0c8a_7f8be6f1025c4dd7b509355f5cb23966~mv2.png/v1/fill/w_1000,h_551,al_c,q_90,usm_0.66_1.00_0.01/2e0c8a_7f8be6f1025c4dd7b509355f5cb23966~mv2.png",
+  },
+  "emirates-dubai-7s-2026": {
+    socialLinks: socialSets.dubai,
+    contactEmails: ["guestservices@b9events.com", "ticketing@b9events.com"],
+    externalLinks: [{ label: "Emirates Dubai 7s", url: externalLinks.dubai }],
+  },
+  "tropical-7s-2027": {
+    image: "https://static.wixstatic.com/media/ad99cf_95fa857bc9324789a9e0e889c5eccaef~mv2.png/v1/fit/w_2500,h_1330,al_c/ad99cf_95fa857bc9324789a9e0e889c5eccaef~mv2.png",
+    socialLinks: socialSets.tropical,
+    contactEmails: ["info@tropical7s.com"],
+    externalLinks: [{ label: "Tropical 7s", url: externalLinks.tropical }],
+  },
+  "mens-rugby-world-cup-2027": {
+    image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2024/12/11/e3f535e2-78b6-48de-a000-f17413a5f883/WebbEllisCup_RWC27_Australia.png?width=1200&height=630",
+    socialLinks: socialSets.rugbyWorldCup,
+    externalLinks: [{ label: "RWC 2027 tickets", url: externalLinks.rwc2027Tickets }],
+  },
+  "mens-rugby-world-cup-2027-draw": {
+    image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2024/12/11/e3f535e2-78b6-48de-a000-f17413a5f883/WebbEllisCup_RWC27_Australia.png?width=1200&height=630",
+    socialLinks: socialSets.rugbyWorldCup,
+  },
+  "majorca-beach-rugby-2027": {
+    socialLinks: socialSets.majorca,
+    externalLinks: [{ label: "Majorca Beach Rugby", url: externalLinks.majorca }],
+  },
+  "algarve-7s-2027": {
+    image: "https://static.wixstatic.com/media/c4dd98_afd295fa598143bc94802db84b8458ef~mv2.jpg/v1/fill/w_2500,h_1767,al_c/c4dd98_afd295fa598143bc94802db84b8458ef~mv2.jpg",
+    socialLinks: socialSets.algarve,
+    contactEmails: ["info@sports-ventures.com", "algarve7s@sports-ventures.com"],
+    externalLinks: [{ label: "Algarve 7s", url: externalLinks.algarve }],
+  },
+};
+
+function uniqueLinks(...groups) {
+  const links = groups.flat().filter((link) => link?.url);
+  return [...new Map(links.map((link) => [link.url.toLowerCase(), link])).values()];
+}
+
+function uniqueStrings(...groups) {
+  return [...new Set(groups.flat().filter(Boolean))];
+}
+
+function enrichEvent(event) {
+  const shared = profileEventEnrichments[event.profileSlug] || {};
+  const direct = eventEnrichments[event.slug] || {};
+  return {
+    ...event,
+    image: (direct.image ?? event.image) || shared.image || "",
+    description: direct.description || event.description || event.summary,
+    socialLinks: uniqueLinks(shared.socialLinks || [], event.socialLinks || [], direct.socialLinks || []),
+    externalLinks: uniqueLinks(shared.externalLinks || [], event.externalLinks || [], direct.externalLinks || []),
+    contactEmails: uniqueStrings(shared.contactEmails || [], event.contactEmails || [], direct.contactEmails || []),
+    contactPhones: uniqueStrings(shared.contactPhones || [], event.contactPhones || [], direct.contactPhones || []),
+  };
+}
+
 const normalizedArchiveEvents = archiveEvents.map((event) => ({
   ...event,
   country: event.country || event.city || "",
@@ -834,7 +998,9 @@ const normalizedArchiveEvents = archiveEvents.map((event) => ({
   isPast: true,
 }));
 
-const allEvents = [...currentEvents, ...recentEvents, ...normalizedArchiveEvents];
+const allEvents = [...currentEvents, ...recentEvents].map(enrichEvent).concat(normalizedArchiveEvents.map(enrichEvent));
+
+const findEvent = (slug) => allEvents.find((item) => item.slug === slug);
 
 const profiles = [
   {
@@ -857,7 +1023,7 @@ const profiles = [
     initials: "L7",
     focus: ["7s", "Elite", "Open", "Festival"],
     summary:
-      "LIT7s is built around competitive rugby, a spectator festival, team entry, VIP, parking, live entertainment, and strong tournament media.",
+      "LIT7s brings together competitive rugby, a spectator festival, team entry, VIP, parking, live entertainment, and tournament media.",
     eventSlugs: ["lit-7s-london-2026"],
     url: externalLinks.lit,
   },
@@ -941,7 +1107,7 @@ const profiles = [
     initials: "BR",
     focus: ["Beach", "Travel", "Clubs", "Festival"],
     summary:
-      "Beach rugby listings highlight destination tournaments with team packages, social proof, repeat editions, and visual media.",
+      "Beach rugby listings highlight destination tournaments with team packages, repeat editions, travel links, and visual media.",
     eventSlugs: ["beach-rugby-championship-2026", "majorca-beach-rugby-2027", "lignano-beach-rugby-2026"],
     url: "/beach",
   },
@@ -1158,6 +1324,11 @@ function searchText(event) {
     event.kind,
     event.level,
     event.summary,
+    event.description,
+    ...(event.contactEmails || []),
+    ...(event.contactPhones || []),
+    ...(event.socialLinks || []).flatMap((link) => [link.label, link.url]),
+    ...(event.externalLinks || []).flatMap((link) => [link.label, link.url]),
     ...(event.divisions || []),
     ...(event.amenities || []),
   ]
@@ -1179,8 +1350,52 @@ function button(label, url, variant = "secondary", icon = icons.arrow) {
   return `<a class="button ${variant}" href="${safe(href(url))}"${linkAttrs(url)}>${safe(label)} ${icon}</a>`;
 }
 
+function actionButton(label, url, variant = "secondary") {
+  if (!url) return "";
+  return button(label, url, variant, isExternal(url) ? icons.external : icons.arrow);
+}
+
 function meta(icon, text) {
   return `<li class="meta">${icon}<span>${safe(text)}</span></li>`;
+}
+
+function linkList(title, links = []) {
+  const cleaned = uniqueLinks(links).filter((link) => link?.url && link?.label);
+  if (!cleaned.length) return "";
+  return `
+    <div class="resource-list">
+      <h3>${safe(title)}</h3>
+      ${cleaned.map((link) => `<a href="${safe(href(link.url))}"${linkAttrs(link.url)}>${safe(link.label)} ${isExternal(link.url) ? icons.external : icons.arrow}</a>`).join("")}
+    </div>
+  `;
+}
+
+function eventResourcePanel(event) {
+  const primaryLinks = uniqueLinks(
+    isExternal(event.officialUrl) ? [{ label: "Official website", url: event.officialUrl }] : [],
+    isExternal(event.ticketUrl) ? [{ label: "Tickets", url: event.ticketUrl }] : [],
+    isExternal(event.registerUrl) ? [{ label: "Registration", url: event.registerUrl }] : [],
+    event.externalLinks || []
+  );
+  const contactLinks = [
+    ...(event.contactEmails || []).map((email) => ({ label: email, url: `mailto:${email}` })),
+    ...(event.contactPhones || []).map((phone) => ({ label: phone, url: `tel:${phone.replace(/[^\d+]/g, "")}` })),
+  ];
+  const html = [
+    linkList("Event links", primaryLinks),
+    linkList("Social media", event.socialLinks || []),
+    linkList("Contact", contactLinks),
+  ].join("");
+  return html ? `<div class="detail-resources">${html}</div>` : "";
+}
+
+function eventActionButtons(event) {
+  const actions = [
+    isExternal(event.officialUrl) ? actionButton("Event website", event.officialUrl, "secondary") : "",
+    isExternal(event.ticketUrl) ? actionButton("Tickets", event.ticketUrl || event.officialUrl, "primary") : "",
+    isExternal(event.registerUrl) ? actionButton("Team registration", event.registerUrl || event.officialUrl, "secondary") : "",
+  ].join("");
+  return actions || button("Browse events", "/events", "primary");
 }
 
 function eventCard(event) {
@@ -1210,8 +1425,8 @@ function eventCard(event) {
         </ul>
         <div class="event-actions">
           ${button("Details", route, "secondary")}
-          ${event.ticketUrl ? button("Tickets", event.ticketUrl, "primary", icons.external) : ""}
-          ${event.registerUrl ? button("Register", event.registerUrl, "secondary", icons.external) : ""}
+          ${p !== "Past" && event.ticketUrl ? actionButton("Tickets", event.ticketUrl, "primary") : ""}
+          ${p !== "Past" && event.registerUrl ? actionButton("Register", event.registerUrl, "secondary") : ""}
         </div>
       </div>
     </article>
@@ -1240,7 +1455,7 @@ function rowCard(event) {
 }
 
 function profileCard(profile) {
-  const events = profile.eventSlugs.map((slug) => allEvents.find((event) => event.slug === slug)).filter(Boolean);
+  const events = profile.eventSlugs.map((slug) => findEvent(slug)).filter(Boolean);
   return `
     <article class="profile-card">
       <div class="profile-top">
@@ -1422,9 +1637,9 @@ function homePage() {
         <div class="section-head">
           <div>
             <p class="eyebrow">Past events</p>
-            <h2>Proof the calendar keeps moving</h2>
+            <h2>Past tournament archive</h2>
           </div>
-          <p>Past events give visitors confidence: real tournament pages, real destinations, media-rich listings, and a visible pattern of repeat rugby weekends.</p>
+          <p>Browse previous editions, venues, divisions, destination details, media, organizer notes, and available contact links from the rugby calendar.</p>
         </div>
         <div class="grid three">${past.map(eventCard).join("")}</div>
       </section>
@@ -1504,7 +1719,7 @@ function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Sea
             <p class="eyebrow">Archive</p>
             <h2>Past tournament pages</h2>
           </div>
-          <p>Past events stay visible for photos, team references, repeat editions, destination proof, and organizer credibility.</p>
+          <p>Past events include photos, team references, repeat editions, destination notes, organizer links, and available contact details.</p>
         </div>
         <div class="row-list">${past.slice(0, 32).map(rowCard).join("")}</div>
       </section>
@@ -1513,7 +1728,7 @@ function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Sea
 }
 
 function eventDetailPage(slug) {
-  const event = allEvents.find((item) => item.slug === slug);
+  const event = findEvent(slug);
   if (!event) return notFoundPage();
   const related = allEvents
     .filter((item) => item.slug !== event.slug && (item.code === event.code || item.region === event.region))
@@ -1521,13 +1736,14 @@ function eventDetailPage(slug) {
   const profile = profiles.find((item) => item.slug === event.profileSlug);
   return `
     <main class="page">
-      ${pageHero(event.title, event.summary, button("Event website", event.officialUrl, "secondary", icons.external) + button("Tickets", event.ticketUrl || event.officialUrl, "primary", icons.external) + button("Team registration", event.registerUrl || event.officialUrl, "secondary", icons.external), event.image)}
+      ${pageHero(event.title, event.summary, eventActionButtons(event), event.image)}
       <section class="section">
         <div class="detail-wrap">
           <article class="detail-main">
             <p class="eyebrow">${safe(event.code)} tournament</p>
             <h2>${safe(event.title)}</h2>
             <p>${safe(event.summary)}</p>
+            ${event.description && event.description !== event.summary ? `<div class="rich-description"><h3>About this event</h3><p>${safe(event.description)}</p></div>` : ""}
             <div class="chip-list">
               <span class="tag">${safe(phase(event))}</span>
               <span class="tag">${safe(event.level)}</span>
@@ -1538,6 +1754,7 @@ function eventDetailPage(slug) {
             <div class="chip-list">${(event.divisions || []).map((item) => `<span class="pill">${safe(item)}</span>`).join("")}</div>
             <h3>Event details</h3>
             <div class="chip-list">${(event.amenities || []).map((item) => `<span class="pill">${safe(item)}</span>`).join("")}</div>
+            ${eventResourcePanel(event)}
           </article>
           <aside class="detail-side">
             <h3>Next steps</h3>
@@ -1546,9 +1763,7 @@ function eventDetailPage(slug) {
               ${meta(icons.pin, event.location)}
               ${meta(icons.users, `${event.code} - ${event.level}`)}
             </ul>
-            ${button("Open event website", event.officialUrl, "secondary", icons.external)}
-            ${button("Tickets", event.ticketUrl || event.officialUrl, "primary", icons.external)}
-            ${button("Registration", event.registerUrl || event.officialUrl, "secondary", icons.external)}
+            ${eventActionButtons(event)}
             ${profile ? button(profile.title, `/profiles/${profile.slug}`, "secondary") : ""}
           </aside>
         </div>
@@ -1639,9 +1854,9 @@ function profilesPage() {
         <div class="section-head">
           <div>
             <p class="eyebrow">Spotlights</p>
-            <h2>People visitors recognize</h2>
+            <h2>Player and manager spotlights</h2>
           </div>
-          <p>Player and manager profiles give tournament pages a stronger community layer and give visitors more reasons to explore.</p>
+          <p>Player and manager profiles connect tournament pages to teams, national programs, registration needs, and event media.</p>
         </div>
         <div class="grid four">${people.map(personCard).join("")}</div>
       </section>
@@ -1652,7 +1867,7 @@ function profilesPage() {
 function profileDetailPage(slug) {
   const profile = profiles.find((item) => item.slug === slug);
   if (!profile) return notFoundPage();
-  const events = profile.eventSlugs.map((eventSlug) => allEvents.find((event) => event.slug === eventSlug)).filter(Boolean);
+  const events = profile.eventSlugs.map((eventSlug) => findEvent(eventSlug)).filter(Boolean);
   return `
     <main class="page">
       ${pageHero(profile.title, profile.summary, button("Events", "/events", "secondary") + button("Open website", profile.url, "primary", isExternal(profile.url) ? icons.external : icons.arrow), events[0]?.image || imageFor("lit-7s", 1))}
@@ -1684,7 +1899,7 @@ function teamsPage() {
 function teamDetailPage(slug) {
   const team = teams.find((item) => item.slug === slug);
   if (!team) return notFoundPage();
-  const events = team.eventSlugs.map((eventSlug) => allEvents.find((event) => event.slug === eventSlug)).filter(Boolean);
+  const events = team.eventSlugs.map((eventSlug) => findEvent(eventSlug)).filter(Boolean);
   return `
     <main class="page">
       ${pageHero(team.title, team.summary, button("Related events", "/events", "primary"), events[0]?.image || imageFor("tropical-7s", 2))}
@@ -1704,7 +1919,7 @@ function mediaPage() {
   ];
   return `
     <main class="page">
-      ${pageHero("Tournament media", "Photos, clips, destination cards, team pages, organizer profiles, and past-event memory help visitors trust the tournament before they register.", button("Past events", "/past-events", "primary") + button("Submit media", "/submit", "secondary"), imageFor("grenada-rugby-world-7s-2", 10))}
+      ${pageHero("Tournament media", "Photos, clips, destination cards, team pages, organizer profiles, and past-event memory sit alongside registration and ticket links.", button("Past events", "/past-events", "primary") + button("Submit media", "/submit", "secondary"), imageFor("grenada-rugby-world-7s-2", 10))}
       <section class="section">
         <div class="grid two">
           ${media.map(([title, copy, image, url]) => `
@@ -1723,7 +1938,7 @@ function pastEventsPage() {
   const past = sortedEvents(allEvents.filter((event) => phase(event) === "Past")).reverse();
   return `
     <main class="page">
-      ${pageHero("Past rugby events", "Past tournament pages prove continuity: teams travelled, organizers delivered, media was captured, and future editions have context.", button("Upcoming events", "/events?status=upcoming", "primary") + button("Media", "/media", "secondary"), imageFor("ameland-beach-rugby", 11))}
+      ${pageHero("Past rugby events", "Browse previous editions by format, destination, team type, photos, organizer links, and available contact details.", button("Upcoming events", "/events?status=upcoming", "primary") + button("Media", "/media", "secondary"), imageFor("ameland-beach-rugby", 11))}
       <section class="section light">
         <div class="row-list">${past.slice(0, 70).map(rowCard).join("")}</div>
       </section>
@@ -1736,7 +1951,7 @@ function faqPage() {
     ["How do I enter a team?", "Open the event page, choose Team registration, and follow the tournament's entry route for divisions, squad size, pricing, and deadlines."],
     ["Can spectators buy tickets here?", "Event pages surface ticket, parking, VIP, and official event links whenever they are available."],
     ["Does Rugbymonkey cover 15s as well as 7s?", "Yes. The calendar includes 15s, 7s, beach rugby, touch, tag, youth, club, university, national-team, and destination tournament profiles."],
-    ["Why are past events visible?", "Past events show repeat history, destination quality, team participation, and media proof for tournaments that return year after year."],
+    ["What can I find on past event pages?", "Past event pages include dates, venues, divisions, photos, organizer notes, available contact details, and related tournament links."],
     ["Can organizers add a tournament?", "Yes. Use Submit tournament to send dates, venue, divisions, website, ticket links, registration links, and media details."],
     ["What should team managers check first?", "Confirm the date, venue, format, divisions, team-entry route, travel logistics, roster needs, and ticket options for supporters."],
   ];

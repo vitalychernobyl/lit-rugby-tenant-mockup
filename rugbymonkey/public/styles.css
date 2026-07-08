@@ -731,6 +731,16 @@ textarea:focus {
   line-height: 1.65;
 }
 
+.rich-description {
+  margin: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 18px;
+}
+
+.rich-description p {
+  max-width: 760px;
+}
+
 .detail-side {
   align-self: start;
 }
@@ -738,6 +748,55 @@ textarea:focus {
 .detail-side .button {
   width: 100%;
   margin-top: 10px;
+}
+
+.detail-resources {
+  display: grid;
+  margin-top: 24px;
+  gap: 14px;
+}
+
+.resource-list {
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.resource-list h3 {
+  margin: 0 0 3px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.resource-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 9px 10px;
+  background: rgba(141, 162, 109, 0.1);
+  color: #eef2e8;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.resource-list a svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.resource-list a:hover {
+  background: rgba(141, 162, 109, 0.18);
 }
 
 .chip-list {
