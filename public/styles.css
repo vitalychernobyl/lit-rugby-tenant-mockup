@@ -301,6 +301,24 @@ h1 {
   color: var(--green);
 }
 
+.light .button.secondary,
+.card.light-card .button.secondary,
+.detail-main .button.secondary,
+.mini-card .button.secondary {
+  border-color: var(--line-dark);
+  background: #061008;
+  color: #fff;
+}
+
+.light .button.secondary:hover,
+.card.light-card .button.secondary:hover,
+.detail-main .button.secondary:hover,
+.mini-card .button.secondary:hover {
+  border-color: rgba(0, 255, 92, 0.48);
+  background: #0b2112;
+  color: var(--green);
+}
+
 .button.dark {
   background: var(--ink-dark);
   color: #fff;
@@ -322,6 +340,14 @@ h1 {
   min-height: 36px;
   padding: 9px 11px;
   font-size: 12px;
+}
+
+.section-actions {
+  display: flex;
+  max-width: var(--max);
+  margin: 22px auto 0;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .search-deck {
@@ -479,6 +505,16 @@ input:focus {
   text-transform: uppercase;
 }
 
+.date-tile.compact {
+  width: 88px;
+  min-height: 66px;
+  margin-bottom: 14px;
+}
+
+.date-tile.compact strong {
+  font-size: 23px;
+}
+
 .event-mini h3 {
   margin: 0 0 7px;
   font-size: 16px;
@@ -540,6 +576,38 @@ input:focus {
 .green-band .quick-link:hover {
   background: #fff;
   color: #041007;
+}
+
+.light .quick-link,
+.detail-aside .quick-link {
+  border-color: rgba(0, 124, 53, 0.26);
+  background: rgba(0, 255, 92, 0.1);
+  color: var(--ink-dark);
+}
+
+.light .quick-link:hover,
+.detail-aside .quick-link:hover {
+  border-color: var(--green-dark);
+  background: rgba(0, 255, 92, 0.2);
+  color: var(--green-dark);
+}
+
+.checkout .quick-link {
+  border-color: rgba(0, 255, 92, 0.28);
+  background: rgba(0, 255, 92, 0.08);
+  color: #fff;
+}
+
+.checkout .quick-link:hover {
+  border-color: var(--green);
+  background: rgba(0, 255, 92, 0.18);
+  color: var(--green);
+}
+
+.checkout .button.secondary {
+  border-color: var(--line);
+  background: rgba(0, 255, 92, 0.08);
+  color: #fff;
 }
 
 .stat-ribbon {
@@ -971,6 +1039,39 @@ input:focus {
   content: "";
 }
 
+.check-list {
+  display: grid;
+  gap: 9px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.light .check-list li,
+.card.light-card .check-list li {
+  color: var(--muted-dark);
+}
+
+.check-list li::before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: inset 0 0 0 4px #061008;
+  content: "";
+}
+
 .matrix {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1081,6 +1182,95 @@ input:focus {
   margin-bottom: 7px;
   font-family: var(--ui-font);
   font-size: 16px;
+}
+
+.faq-layout {
+  display: grid;
+  max-width: var(--max);
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 22px;
+  align-items: start;
+}
+
+.faq-list {
+  display: grid;
+  max-width: var(--max);
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.faq-list.preview {
+  max-width: var(--max);
+}
+
+.faq-item {
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink-dark);
+  padding: 0;
+  overflow: hidden;
+}
+
+.section:not(.light) .faq-item {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+}
+
+.faq-item summary {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  font-family: var(--ui-font);
+  font-size: 18px;
+  font-weight: 900;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  display: grid;
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: #031008;
+  content: "+";
+  font-family: var(--ui-font);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item p {
+  margin: 0;
+  border-top: 1px solid var(--line-dark);
+  color: var(--muted-dark);
+  padding: 0 18px 16px;
+  line-height: 1.65;
+}
+
+.section:not(.light) .faq-item p {
+  border-top-color: var(--line);
+  color: var(--muted);
+}
+
+.faq-item .button-row {
+  padding: 0 18px 18px;
 }
 
 .text-link {
@@ -1235,7 +1425,8 @@ input:focus {
   .hero-grid,
   .detail-layout,
   .ticket-panel,
-  .form-grid {
+  .form-grid,
+  .faq-layout {
     grid-template-columns: 1fr;
   }
 

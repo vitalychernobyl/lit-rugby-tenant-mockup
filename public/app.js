@@ -17,9 +17,20 @@ const links = {
   floridaRegistration: "https://app.eventconnect.io/events/36742/registration-type/create?nav=hidden",
   floridaHotels: "https://app.eventconnect.io/events/36742/hotels?nav=hidden",
   imgCheckout: "https://www.lit7s.com/img-camp-checkout/",
+  litCamp: "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/",
+  imgExperience: "https://www.lit7s.com/the-img-experience-lit-rugby-sevens-camp-usa/",
   floridaTerms: "https://www.lit7s.com/lit-florida-international-7s-terms-conditions/",
   london7s: "https://www.lit7s.com/lit-7s-london7s/",
   super7s: "https://www.super7sseries.com",
+  super7sRules: "https://www.super7sseries.com/rules",
+  super7sEliteRules: "https://www.super7sseries.com/elite-series-rules",
+  super7sOpenSocialRules: "https://www.super7sseries.com/open-and-social-rules",
+  super7sTournamentApp: "https://www.super7sseries.com/tournament-app",
+  super7sTeams2026: "https://www.super7sseries.com/copy-of-2025-1",
+  super7sFixtures2026: "https://www.super7sseries.com/copy-of-2024-1",
+  super7sStandings2026: "https://www.super7sseries.com/copy-of-2024-2",
+  super7sAlbums: "https://www.facebook.com/LIT7s/photos_albums",
+  super7sContact: "https://www.super7sseries.com/contact",
   tournamentInformation: "https://www.lit7s.com/tournament-information/",
   schedule: "https://www.lit7s.com/schedule/",
   whatToPack: "https://www.lit7s.com/what-to-pack/",
@@ -278,6 +289,226 @@ const events = [
   },
 ];
 
+const upcomingEventSlugs = ["lit7s-london-2026", "super-series-2026"];
+
+const pastEvents = [
+  {
+    slug: "lit7s-2024-winners",
+    title: "2024 LIT7s winners",
+    date: "July 2024",
+    location: "Wasps Rugby Club, West London",
+    label: "Winner proof",
+    summary:
+      "A proof page for published LIT7s winner history, showing how the tenant can convert previous results into credibility for the next event.",
+    proof: [
+      "Shogun Rugby - Men's Open Cup winners",
+      "Wild Dogs Alpha Pack - Women's Open winners",
+      "CNCF 7s - Men's Open Plate winners",
+      "Surrey Exiles - Men's Social Cup winners",
+    ],
+    actions: [
+      ["Awards mockup", "/info/prizes-and-awards"],
+      ["Media hub", "/media"],
+      ["Official LIT7s", links.litHome],
+    ],
+  },
+  {
+    slug: "lit-florida-2025-archive",
+    title: "LIT Florida International 7s archive",
+    date: "November 29, 2025",
+    location: "Premier Sports Campus, Bradenton",
+    label: "USA expansion",
+    summary:
+      "A past-event archive model for the US tournament: adult and youth divisions, team registration, hotels, livestream, photographers, and entertainment.",
+    proof: [
+      "Adult and youth division structure",
+      "EventConnect registration and hotel workflow",
+      "Premier Sports Campus event profile",
+      "USA market pathway for future LIT7s events",
+    ],
+    actions: [
+      ["Archive details", "/events/florida-2025"],
+      ["Registration reference", links.floridaRegistration],
+      ["Hotel reference", links.floridaHotels],
+    ],
+  },
+  {
+    slug: "olympic-camp-2026-archive",
+    title: "LIT Rugby Sevens Camp USA archive",
+    date: "February 27 to March 1, 2026",
+    location: "Chula Vista, California",
+    label: "Training proof",
+    summary:
+      "A camp archive model showing how LIT7s can present athlete development, Olympian coaches, testing, feedback, and future camp registration.",
+    proof: [
+      "Olympian coach profiles connected to player pages",
+      "Athlete intake and training modules",
+      "Feedback and development story for parents and players",
+      "Future camp registration and checkout handoff",
+    ],
+    actions: [
+      ["Camp details", "/events/olympic-experience-2026"],
+      ["Coach profiles", "/players"],
+      ["Official camp", links.litCamp],
+    ],
+  },
+  {
+    slug: "super-7s-2026-series-proof",
+    title: "2026 Super 7s Series proof",
+    date: "May to July 2026",
+    location: "United Kingdom",
+    label: "Series momentum",
+    summary:
+      "A season-proof model for repeat events, fixtures, standings, teams, media albums, and tournament app links that keep the public site alive between event days.",
+    proof: [
+      "Five-event series model",
+      "Elite, open, and social competitions",
+      "Fixtures, teams, standings, and albums",
+      "Season finale connection to LIT 7s at Wasps",
+    ],
+    actions: [
+      ["Series details", "/events/super-series-2026"],
+      ["Standings", links.super7sStandings2026],
+      ["Series albums", links.super7sAlbums],
+    ],
+  },
+];
+
+const proofStats = [
+  ["70+", "Team benchmark on flagship LIT7s event pages"],
+  ["14th", "Annual LIT7s event in 2026"],
+  ["5", "Super 7s Series tournament model"],
+  ["UK + USA", "Tournament, series, and camp surfaces"],
+];
+
+const faqItems = [
+  {
+    q: "How do I register a team?",
+    a:
+      "Use the registration page to pick an event, division, manager contact, roster size, and notes. Official public registration links stay visible for the current LIT7s checkout or EventConnect handoff.",
+    links: [
+      ["Register team", "/register"],
+      ["Team registration info", "/info/team-registration-info"],
+      ["Series team entry", links.super7sTickets],
+    ],
+  },
+  {
+    q: "How do spectators buy tickets or parking?",
+    a:
+      "The ticketing page groups spectator, parking, VIP, and team-entry actions by event. LIT 7s London currently points to the public Ticketpass flow surfaced from LIT7s.com.",
+    links: [
+      ["Ticketing preview", "/tickets"],
+      ["VIP tickets", "/info/vip-tickets"],
+      ["Public Ticketpass", links.super7sTickets],
+    ],
+  },
+  {
+    q: "Which LIT7s events are upcoming?",
+    a:
+      "As of July 8, 2026, the mockup treats LIT 7s London on July 18, 2026 and the 2026 Super 7s Series path as the main upcoming conversion routes.",
+    links: [
+      ["Upcoming events", "/events"],
+      ["London event", "/events/lit7s-london-2026"],
+      ["Series event", "/events/super-series-2026"],
+    ],
+  },
+  {
+    q: "Which divisions are available?",
+    a:
+      "The event models include men's and women's elite, open, social, youth, and camp pathways. Each tournament page can show the exact division mix before a team registers.",
+    links: [
+      ["Competitions", "/info/sevens-competitions"],
+      ["Tournament search", "/tournaments"],
+      ["Rules", "/info/sevens-rules"],
+    ],
+  },
+  {
+    q: "Where is LIT 7s London held?",
+    a:
+      "The public LIT7s page places the 2026 LIT 7s event at Wasps Rugby Club in West London, with the venue address and travel notes handled through the tournament information route.",
+    links: [
+      ["Tournament information", "/info/tournament-information"],
+      ["Google Maps", links.googleMapsWasps],
+      ["London 7s official page", links.london7s],
+    ],
+  },
+  {
+    q: "What should teams bring?",
+    a:
+      "Players, managers, youth teams, and spectators each get a checklist route so pre-event emails can link to one clean source before match day.",
+    links: [
+      ["What to pack", "/info/what-to-pack"],
+      ["Schedule", "/schedule"],
+      ["Contact", "/contact"],
+    ],
+  },
+  {
+    q: "Where can I see past events, winners, and media?",
+    a:
+      "The past-events and media routes turn previous winners, archives, galleries, highlight clips, and social channels into proof that the event series is active and credible.",
+    links: [
+      ["Past events", "/past-events"],
+      ["Media", "/media"],
+      ["Awards", "/info/prizes-and-awards"],
+    ],
+  },
+  {
+    q: "Is this mockup processing real payments?",
+    a:
+      "No. This static preview captures only local draft state. Any real purchase, team entry, VIP, hotel, or registration action opens the public external provider or official LIT7s page.",
+    links: [
+      ["Operations notes", "/ops"],
+      ["Tickets", "/tickets"],
+      ["Contact LIT7s", "/contact"],
+    ],
+  },
+  {
+    q: "How do sponsors, partners, or media contact LIT7s?",
+    a:
+      "The company, partners, and contact pages route sponsorship, media, jobs, and operational questions into clear inquiry paths with official LIT7s links.",
+    links: [
+      ["Company", "/company"],
+      ["Partners", "/partners"],
+      ["Contact", "/contact"],
+    ],
+  },
+];
+
+const mediaCollections = [
+  {
+    title: "Event galleries",
+    summary: "Photo albums grouped by tournament, division, pitch, finals, awards, and team profiles.",
+    actions: [
+      ["Official media", links.media],
+      ["Series albums", links.super7sAlbums],
+    ],
+  },
+  {
+    title: "Video and livestream",
+    summary: "Highlight reels, livestream clips, coach videos, and social-first moments connected to events and players.",
+    actions: [
+      ["YouTube", links.youtube],
+      ["Super 7s app", links.super7sTournamentApp],
+    ],
+  },
+  {
+    title: "Social proof",
+    summary: "Instagram, Facebook, and YouTube links surfaced as public proof without pulling private account data into the mock.",
+    actions: [
+      ["Instagram", links.instagram],
+      ["Facebook", links.facebook],
+    ],
+  },
+  {
+    title: "Press and partners",
+    summary: "Media requests, sponsor deliverables, award moments, and post-event packages routed into company pages.",
+    actions: [
+      ["Contact", "/contact"],
+      ["Partners", "/partners"],
+    ],
+  },
+];
+
 const infoPages = [
   {
     slug: "tournament-information",
@@ -491,6 +722,11 @@ const infoPages = [
 ];
 
 const quickLinks = [
+  ["Upcoming Events", "/events"],
+  ["Register", "/register"],
+  ["Tickets and Parking", "/tickets"],
+  ["Past Events", "/past-events"],
+  ["FAQ", "/faq"],
   ["Tournament Information", "/info/tournament-information"],
   ["Schedule", "/schedule"],
   ["What to Pack", "/info/what-to-pack"],
@@ -500,6 +736,7 @@ const quickLinks = [
   ["Prizes and Awards", "/info/prizes-and-awards"],
   ["Sevens Rules", "/info/sevens-rules"],
   ["Media", "/media"],
+  ["Company", "/company"],
   ["Contact", "/contact"],
   ["Partners", "/partners"],
 ];
@@ -640,7 +877,7 @@ const state = {
   scope: "All",
   format: "All",
   division: "All",
-  ticketSelection: "LIT Florida International 7s",
+  ticketSelection: "LIT 7s London",
 };
 
 const app = document.querySelector("#app");
@@ -772,6 +1009,68 @@ function eventMini(event) {
   `;
 }
 
+function eventCard(event, light = false) {
+  const actions = event.actions ?? [["Official link", event.link]];
+  return html`
+    <article class="card ${light ? "light-card" : ""}">
+      <div class="card-body">
+        <div class="date-tile compact"><span>${safe(event.month)}</span><strong>${safe(event.day)}</strong></div>
+        <div class="tag-row"><span class="tag green">${safe(event.label)}</span></div>
+        <h3>${safe(event.title)}</h3>
+        <p>${safe(event.summary)}</p>
+        ${metaList([
+          [icons.calendar, event.date],
+          [icons.pin, event.location],
+        ])}
+        <div class="button-row">
+          ${button("Event details", `/events/${event.slug}`, light ? "dark small" : "secondary small")}
+          ${actions
+            .slice(0, 2)
+            .map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small"))
+            .join("")}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function pastEventCard(item, light = false) {
+  return html`
+    <article class="card ${light ? "light-card" : ""}">
+      <div class="card-body">
+        <div class="tag-row">
+          <span class="tag green">${safe(item.label)}</span>
+          <span class="tag orange">${safe(item.date)}</span>
+        </div>
+        <h3>${safe(item.title)}</h3>
+        <p>${safe(item.summary)}</p>
+        ${metaList([
+          [icons.calendar, item.date],
+          [icons.pin, item.location],
+        ])}
+        <ul class="check-list">
+          ${item.proof.slice(0, 4).map((proof) => `<li>${safe(proof)}</li>`).join("")}
+        </ul>
+        <div class="button-row">
+          ${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary small" : light ? "light small" : "secondary small")).join("")}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function faqCard(item, open = false) {
+  return html`
+    <details class="faq-item" ${open ? "open" : ""}>
+      <summary>${safe(item.q)}</summary>
+      <p>${safe(item.a)}</p>
+      <div class="button-row">
+        ${item.links.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}
+      </div>
+    </details>
+  `;
+}
+
 function tournamentCard(tournament, light = false) {
   const ctas = tournament.ctas
     .slice(0, 2)
@@ -842,25 +1141,26 @@ function pageHero(title, copy, action = "") {
 }
 
 function homePage() {
-  const featured = tournaments.slice(0, 3).map((tournament) => tournamentCard(tournament)).join("");
+  const upcomingEvents = upcomingEventSlugs.map((slug) => events.find((event) => event.slug === slug)).filter(Boolean);
+  const featuredSearch = tournaments.slice(0, 3).map((tournament) => tournamentCard(tournament)).join("");
   return html`
     <div class="page">
       <section class="hero">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Find rugby sevens tournaments</h1>
+            <h1>Upcoming LIT7s events and registration</h1>
             <p>
-              Search local, national, and global rugby sevens events, compare divisions, inspect teams,
-              follow player profiles, and move directly into tickets, parking, VIP, or registration.
+              Find the next LIT7s tournament or series entry, buy spectator tickets and parking,
+              register a team, review past event proof, and get answers before event day.
             </p>
             <div class="hero-actions">
-              ${button("Search tournaments", "/tournaments", "primary")}
-              ${button("Register team", "/register", "secondary")}
-              ${button("Official LIT7s", links.litHome, "ghost")}
+              ${button("View upcoming events", "/events", "primary")}
+              ${button("Register a team", "/register", "secondary")}
+              ${button("Read FAQ", "/faq", "ghost")}
             </div>
             <div class="search-deck" role="search">
               <div class="search-bar">
-                <input class="search-input" data-home-search placeholder="Search Florida, London, SVNS, U18, women's open..." value="${safe(
+                <input class="search-input" data-home-search placeholder="Search London tickets, Super 7s, parking, youth, women's open..." value="${safe(
                   state.query,
                 )}" />
                 <button class="button primary" data-home-search-submit type="button">${icons.search} Search</button>
@@ -874,50 +1174,79 @@ function homePage() {
           </div>
           <aside class="hero-panel">
             <div class="panel-head">
-              <h2>LIT7s.com featured</h2>
-              <span>Event slate</span>
+              <h2>Next actions</h2>
+              <span>Register or attend</span>
             </div>
-            <div class="event-stack">${events.map(eventMini).join("")}</div>
+            <div class="event-stack">${upcomingEvents.map(eventMini).join("")}</div>
             <div class="panel-foot">
-              <h3>Official resource routes</h3>
-              ${quickLinkList(quickLinks.slice(0, 6))}
+              <h3>Fast links</h3>
+              ${quickLinkList([
+                ["Team registration", "/register"],
+                ["Tickets and parking", "/tickets"],
+                ["VIP tickets", "/info/vip-tickets"],
+                ["What to pack", "/info/what-to-pack"],
+                ["Contact LIT7s", "/contact"],
+              ])}
             </div>
           </aside>
         </div>
       </section>
 
       <div class="stat-ribbon">
-        <div class="stat"><strong>70+</strong><span>LIT7s team benchmark</span></div>
-        <div class="stat"><strong>14</strong><span>Annual LIT7s in 2026</span></div>
-        <div class="stat"><strong>3</strong><span>Search scopes</span></div>
-        <div class="stat"><strong>${tournaments.length + teams.length + people.length}</strong><span>Mock entities</span></div>
+        ${proofStats.map(([value, label]) => `<div class="stat"><strong>${safe(value)}</strong><span>${safe(label)}</span></div>`).join("")}
       </div>
 
       <section class="section">
         <div class="section-head">
-          <h2>Featured tournament discovery</h2>
-          <p>Verified LIT7s content is mixed with labeled future-tenant examples so the search surface shows the whole product shape.</p>
+          <h2>Upcoming events to register for</h2>
+          <p>Each event card pushes the user toward the right next step: team entry, spectator tickets, VIP, parking, schedule, or official details.</p>
         </div>
-        <div class="grid three">${featured}</div>
+        <div class="grid two">${upcomingEvents.map((event) => eventCard(event)).join("")}</div>
       </section>
 
       <section class="section light">
         <div class="section-head">
-          <h2>Teams and player profiles stay connected to events</h2>
-          <p>Every profile can route back to divisions, tickets, registration state, roster status, and source evidence.</p>
+          <h2>Past events show this is a continuing series</h2>
+          <p>Archives, winners, camps, and Super 7s season content create social proof and keep LIT7s useful after the final whistle.</p>
         </div>
-        <div class="grid two">
-          ${teamCard(teams[0])}
-          ${personCard(people[0])}
+        <div class="grid two">${pastEvents.slice(0, 2).map((item) => pastEventCard(item, true)).join("")}</div>
+        <div class="section-actions">${button("See past events", "/past-events", "dark")}${button("Open media hub", "/media", "light")}</div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Questions answered before event day</h2>
+          <p>Teams, spectators, parents, sponsors, and media get route-level answers instead of hunting through scattered links.</p>
         </div>
+        <div class="faq-list preview">
+          ${faqItems.slice(0, 4).map((item, index) => faqCard(item, index === 0)).join("")}
+        </div>
+        <div class="section-actions">${button("Open full FAQ", "/faq", "primary")}${button("Contact LIT7s", "/contact", "secondary")}</div>
+      </section>
+
+      <section class="section light">
+        <div class="section-head">
+          <h2>Search still covers the wider rugby market</h2>
+          <p>Local, national, and global discovery remains available for the future tenant while the main conversion path stays focused on LIT7s events.</p>
+        </div>
+        <div class="grid three">${featuredSearch}</div>
       </section>
 
       <section class="section green-band">
         <div class="section-head">
-          <h2>More LIT7s pages are mocked and linked</h2>
-          <p>Official menu items become tenant-ready pages for schedule, VIP, rules, media, contact, partners, and manager workflows.</p>
+          <h2>Company, media, and event information are linked</h2>
+          <p>Official menu items become tenant-ready pages for schedule, rules, media, FAQ, partners, company info, and manager workflows.</p>
         </div>
-        ${quickLinkList()}
+        ${quickLinkList([
+          ["Company overview", "/company"],
+          ["Media hub", "/media"],
+          ["FAQ", "/faq"],
+          ["Past events", "/past-events"],
+          ["Tournament information", "/info/tournament-information"],
+          ["Series standings", links.super7sStandings2026],
+          ["Teams directory", "/teams"],
+          ["Player profiles", "/players"],
+        ])}
       </section>
     </div>
   `;
@@ -1007,37 +1336,43 @@ function tournamentDetail(slug) {
 }
 
 function eventsPage() {
+  const upcoming = upcomingEventSlugs.map((slug) => events.find((event) => event.slug === slug)).filter(Boolean);
+  const archive = events.filter((event) => !upcomingEventSlugs.includes(event.slug));
   return html`
     ${pageHero(
-      "LIT7s.com event features",
-      "Featured event detail pages reflect the current LIT7s public content: Florida International 7s, LIT Super 7s Series, London 7s, and USA sevens camp programming.",
-      button("Buy tickets", "/tickets", "primary"),
+      "Upcoming events and registration",
+      "The main user path is simple: pick the next LIT7s event, choose team registration or spectator tickets, then use FAQ, schedule, media, and contact pages when questions come up.",
+      button("Register a team", "/register", "primary") + button("Tickets and parking", "/tickets", "secondary"),
     )}
     <section class="section">
-      <div class="grid three">
-        ${events
-          .map(
-            (event) => html`
-              <article class="card">
-                <div class="card-body">
-                  <div class="date-tile"><span>${safe(event.month)}</span><strong>${safe(event.day)}</strong></div>
-                  <div class="tag-row"><span class="tag green">${safe(event.label)}</span></div>
-                  <h3>${safe(event.title)}</h3>
-                  <p>${safe(event.summary)}</p>
-                  ${metaList([
-                    [icons.calendar, event.date],
-                    [icons.pin, event.location],
-                  ])}
-                  <div class="button-row">
-                    ${button("Event detail", `/events/${event.slug}`, "primary small")}
-                    ${button("Official link", event.link, "secondary small")}
-                  </div>
-                </div>
-              </article>
-            `,
-          )
-          .join("")}
+      <div class="section-head">
+        <h2>Open conversion paths</h2>
+        <p>LIT 7s London and the 2026 Super 7s Series are treated as the priority event routes for registration, tickets, and event-day information.</p>
       </div>
+      <div class="grid three">
+        ${upcoming.map((event) => eventCard(event)).join("")}
+      </div>
+    </section>
+    <section class="section light">
+      <div class="section-head">
+        <h2>Archive and support routes</h2>
+        <p>Past or reference event profiles stay discoverable for proof, media, coach profiles, hotels, and future follow-up campaigns.</p>
+      </div>
+      <div class="grid two">${archive.map((event) => eventCard(event, true)).join("")}</div>
+    </section>
+    <section class="section green-band">
+      <div class="section-head">
+        <h2>Common pre-event tasks</h2>
+        <p>Every operational question should route to a clear page before someone has to email the organizer.</p>
+      </div>
+      ${quickLinkList([
+        ["Schedule", "/schedule"],
+        ["What to pack", "/info/what-to-pack"],
+        ["Sevens rules", "/info/sevens-rules"],
+        ["FAQ", "/faq"],
+        ["Media", "/media"],
+        ["Contact", "/contact"],
+      ])}
     </section>
   `;
 }
@@ -1064,6 +1399,17 @@ function eventDetail(slug) {
             <div class="matrix-item"><strong>Tenant modules</strong><span>${safe(event.modules.join(", "))}</span></div>
             <div class="matrix-item"><strong>Source posture</strong><span>Official link plus tenant preview</span></div>
           </div>
+          <h3>What users need before event day</h3>
+          <div class="resource-grid">
+            ${[
+              ["Registration", "Team managers need event, division, roster size, manager contact, and payment handoff clarity."],
+              ["Spectator plan", "Fans need ticket, parking, venue, public transport, schedule, food, bar, and VIP information."],
+              ["Proof", "Past winners, media, team profiles, and social channels help prove this is a continuing event series."],
+              ["Support", "FAQ, contact, and partner pages answer sponsor, media, parent, and travel questions quickly."],
+            ]
+              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
+              .join("")}
+          </div>
           <h3>Event modules mocked</h3>
           <div class="resource-grid">
             ${event.modules
@@ -1084,10 +1430,13 @@ function eventDetail(slug) {
           <div class="button-row stacked">${actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}</div>
           <h3>Related LIT7s pages</h3>
           ${quickLinkList([
+            ["Register", "/register"],
             ["Tournament information", "/info/tournament-information"],
             ["Schedule", "/schedule"],
             ["Tickets", "/tickets"],
             ["Media", "/media"],
+            ["FAQ", "/faq"],
+            ["Past events", "/past-events"],
           ])}
         </aside>
       </div>
@@ -1168,8 +1517,126 @@ function schedulePage() {
   return infoDetail("schedule");
 }
 
+function pastEventsPage() {
+  return html`
+    ${pageHero(
+      "Past events and social proof",
+      "Previous winners, archives, camps, series content, and media routes make the site feel like an active event company rather than a one-off registration form.",
+      button("View upcoming events", "/events", "primary") + button("Open media hub", "/media", "secondary"),
+    )}
+    <section class="section light">
+      <div class="grid two">${pastEvents.map((item) => pastEventCard(item, true)).join("")}</div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>Proof that supports registration</h2>
+        <p>These are the proof blocks a future tenant can keep adding after each event: winners, galleries, attendance notes, sponsors, standings, and testimonials.</p>
+      </div>
+      <div class="resource-grid wide">
+        ${[
+          ["Winners and awards", "Publish finals, cup, plate, social, and player-of-the-tournament winners with shareable links.", "/info/prizes-and-awards"],
+          ["Media galleries", "Keep photos, livestreams, highlight reels, and social posts connected to the event archive.", "/media"],
+          ["Team credibility", "Let future teams inspect who has played before, which divisions fit, and how rosters are presented.", "/teams"],
+          ["Series momentum", "Connect Super 7s teams, fixtures, standings, and albums so the season does not disappear between event days.", links.super7sStandings2026],
+          ["Partner proof", "Show sponsor activations, hospitality, awards, and venue moments for future partner sales.", "/partners"],
+          ["Organizer credibility", "Make company, contact, and FAQ pages visible for parents, managers, sponsors, and media.", "/company"],
+        ]
+          .map(
+            ([title, copy, href]) => html`
+              <article class="mini-card">
+                <h3>${safe(title)}</h3>
+                <p>${safe(copy)}</p>
+                <div class="button-row">${button("Open", href, "dark small")}</div>
+              </article>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
+function faqPage() {
+  return html`
+    ${pageHero(
+      "LIT7s FAQ",
+      "Answers for team managers, spectators, parents, sponsors, partners, and media before they register, buy tickets, travel, or contact the organizer.",
+      button("Register team", "/register", "primary") + button("Tickets and parking", "/tickets", "secondary"),
+    )}
+    <section class="section light">
+      <div class="faq-layout">
+        <div class="faq-list">${faqItems.map((item, index) => faqCard(item, index < 2)).join("")}</div>
+        <aside class="detail-aside">
+          <h3>Most useful links</h3>
+          ${quickLinkList([
+            ["Upcoming events", "/events"],
+            ["Register", "/register"],
+            ["Tickets", "/tickets"],
+            ["What to pack", "/info/what-to-pack"],
+            ["Schedule", "/schedule"],
+            ["Contact", "/contact"],
+          ])}
+          <h3>Official sources</h3>
+          ${quickLinkList([
+            ["LIT7s.com", links.litHome],
+            ["London 7s page", links.london7s],
+            ["Super 7s Series", links.super7s],
+            ["Ticketpass", links.super7sTickets],
+          ])}
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
 function mediaPage() {
-  return infoDetail("media");
+  return html`
+    ${pageHero(
+      "Media and event proof",
+      "A dedicated media hub for galleries, highlight clips, livestream references, social channels, partner deliverables, and post-event proof that supports the next registration push.",
+      button("Official media", links.media, "primary") + button("Past events", "/past-events", "secondary"),
+    )}
+    <section class="section light">
+      <div class="resource-grid wide">
+        ${mediaCollections
+          .map(
+            (item) => html`
+              <article class="mini-card">
+                <h3>${safe(item.title)}</h3>
+                <p>${safe(item.summary)}</p>
+                <div class="button-row">
+                  ${item.actions.map(([label, href], index) => button(label, href, index === 0 ? "dark small" : "light small")).join("")}
+                </div>
+              </article>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>Event media should drive the next event</h2>
+        <p>Each post-event asset can point back to tickets, registration, teams, players, partners, and proof pages.</p>
+      </div>
+      <div class="grid two">
+        ${pastEvents.slice(0, 2).map((item) => pastEventCard(item)).join("")}
+      </div>
+    </section>
+    <section class="section green-band">
+      <div class="section-head">
+        <h2>Social and official channels</h2>
+        <p>Public channels are reachable from the tenant without pretending to ingest private data.</p>
+      </div>
+      ${quickLinkList([
+        ["Instagram", links.instagram],
+        ["Facebook", links.facebook],
+        ["YouTube", links.youtube],
+        ["Series albums", links.super7sAlbums],
+        ["Super 7s tournament app", links.super7sTournamentApp],
+        ["Contact media team", "/contact"],
+      ])}
+    </section>
+  `;
 }
 
 function contactPage() {
@@ -1178,6 +1645,61 @@ function contactPage() {
 
 function partnersPage() {
   return infoDetail("partners");
+}
+
+function companyPage() {
+  return html`
+    ${pageHero(
+      "About LIT7s and the tenant",
+      "This mockup presents LIT7s as a continuing rugby sevens event company: upcoming events convert, past events prove, FAQ reduces support load, and media keeps the series visible.",
+      button("Upcoming events", "/events", "primary") + button("Contact LIT7s", "/contact", "secondary"),
+    )}
+    <section class="section light">
+      <div class="grid two">
+        <article class="detail-main">
+          <div class="tag-row">
+            <span class="tag green">Event company</span>
+            <span class="tag orange">Tenant mockup</span>
+          </div>
+          <h2>What the site needs to communicate</h2>
+          <p>
+            LIT7s needs to make upcoming registration obvious, make spectator tickets easy to find,
+            show that past events were real and active, and answer practical questions for teams,
+            spectators, parents, partners, and media.
+          </p>
+          <div class="matrix">
+            ${proofStats.map(([value, label]) => `<div class="matrix-item"><strong>${safe(value)}</strong><span>${safe(label)}</span></div>`).join("")}
+          </div>
+          <h3>Tenant capabilities represented</h3>
+          <div class="resource-grid">
+            ${opsItems
+              .slice(0, 4)
+              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
+              .join("")}
+          </div>
+        </article>
+        <aside class="detail-aside">
+          <h3>Company routes</h3>
+          ${quickLinkList([
+            ["Official LIT7s", links.litHome],
+            ["Upcoming events", "/events"],
+            ["Past events", "/past-events"],
+            ["Media", "/media"],
+            ["Partners", "/partners"],
+            ["Jobs", links.jobs],
+            ["Contact", "/contact"],
+          ])}
+          <h3>External ecosystem</h3>
+          ${quickLinkList([
+            ["Super 7s Series", links.super7s],
+            ["Series teams", links.super7sTeams2026],
+            ["Series fixtures", links.super7sFixtures2026],
+            ["Series standings", links.super7sStandings2026],
+          ])}
+        </aside>
+      </div>
+    </section>
+  `;
 }
 
 function teamCard(team) {
@@ -1345,9 +1867,9 @@ function ticketsPage() {
   const selected = options.find((item) => item.name === state.ticketSelection) ?? options[0];
   return html`
     ${pageHero(
-      "Tickets and event entry",
-      "Ticketing and registration CTAs point to the verified public LIT7s links while the tenant checkout panel shows the future app flow.",
-      button("Open team registration", "/register", "primary"),
+      "Tickets, parking, and event entry",
+      "Ticketing and registration CTAs point to verified public LIT7s links while the tenant checkout panel shows the future app flow for spectators, VIP guests, parking, and team managers.",
+      button("Open team registration", "/register", "primary") + button("Read ticket FAQ", "/faq", "secondary"),
     )}
     <section class="section light">
       <div class="ticket-panel">
@@ -1383,6 +1905,13 @@ function ticketsPage() {
           <div class="button-row">
             ${selected.ctas.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "secondary")).join("")}
           </div>
+          <h3>Useful ticket links</h3>
+          ${quickLinkList([
+            ["VIP tickets", "/info/vip-tickets"],
+            ["Schedule", "/schedule"],
+            ["Venue and parking", "/info/tournament-information"],
+            ["FAQ", "/faq"],
+          ])}
         </aside>
       </div>
     </section>
@@ -1390,11 +1919,17 @@ function ticketsPage() {
 }
 
 function registerPage() {
+  const registrationOptions = [
+    "LIT 7s London",
+    "LIT Super 7s Series",
+    "LIT Florida International 7s",
+    "The Olympic Experience LIT Rugby Sevens Camp USA",
+  ];
   return html`
     ${pageHero(
-      "Team registration",
-      "A working front-end intake for team managers: event selection, division, contact, roster count, accommodation needs, and review state.",
-      button("Browse events", "/events", "secondary"),
+      "Register for upcoming LIT7s events",
+      "A working front-end intake for team managers: choose the event, division, manager contact, roster count, accommodation needs, and review state before opening the official public handoff.",
+      button("Browse upcoming events", "/events", "primary") + button("Registration FAQ", "/faq", "secondary"),
     )}
     <section class="section light">
       <div class="form-grid">
@@ -1404,10 +1939,7 @@ function registerPage() {
             <div class="form-field">
               <label for="event">Event</label>
               <select id="event" name="event" required>
-                ${tournaments
-                  .slice(0, 4)
-                  .map((item) => `<option>${safe(item.name)}</option>`)
-                  .join("")}
+                ${registrationOptions.map((item) => `<option>${safe(item)}</option>`).join("")}
               </select>
             </div>
             <div class="form-field">
@@ -1453,6 +1985,15 @@ function registerPage() {
             ${button("Florida registration", links.floridaRegistration, "dark")}
             ${button("Series team entry", links.super7sTickets, "light")}
           </div>
+          <h3>Before registering</h3>
+          ${quickLinkList([
+            ["Upcoming events", "/events"],
+            ["Team registration info", "/info/team-registration-info"],
+            ["Sevens competitions", "/info/sevens-competitions"],
+            ["Sevens rules", "/info/sevens-rules"],
+            ["What to pack", "/info/what-to-pack"],
+            ["Contact LIT7s", "/contact"],
+          ])}
         </aside>
       </div>
     </section>
@@ -1512,10 +2053,14 @@ function render() {
   else if (parts[0] === "tournaments") markup = tournamentsPage();
   else if (parts[0] === "events" && parts[1]) markup = eventDetail(parts[1]);
   else if (parts[0] === "events") markup = eventsPage();
+  else if (parts[0] === "upcoming") markup = eventsPage();
+  else if (parts[0] === "past-events") markup = pastEventsPage();
+  else if (parts[0] === "faq") markup = faqPage();
   else if (parts[0] === "info" && parts[1]) markup = infoDetail(parts[1]);
   else if (parts[0] === "info") markup = infoIndexPage();
   else if (parts[0] === "schedule") markup = schedulePage();
   else if (parts[0] === "media") markup = mediaPage();
+  else if (parts[0] === "company") markup = companyPage();
   else if (parts[0] === "contact") markup = contactPage();
   else if (parts[0] === "partners") markup = partnersPage();
   else if (parts[0] === "teams" && parts[1]) markup = teamDetail(parts[1]);
