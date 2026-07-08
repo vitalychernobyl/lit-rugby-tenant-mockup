@@ -5,23 +5,42 @@ export default {
     const shouldServeShell = !isAsset;
 
     if (shouldServeShell || url.pathname === "/index.html") {
-      url.pathname = "/";
-    }
-
-    if (shouldServeShell) {
-      url.searchParams.set("_shell", "rugbymonkey-20260708");
+      return shellResponse();
     }
 
     const response = await env.ASSETS.fetch(new Request(url.toString(), request));
 
-    if (!shouldServeShell) return response;
-
-    const headers = new Headers(response.headers);
-    headers.set("Cache-Control", "no-store, must-revalidate");
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers,
-    });
+    return response;
   },
 };
+
+function shellResponse() {
+  return new Response(
+    `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rugbymonkey - Rugby Tournaments Calendar</title>
+    <meta
+      name="description"
+      content="Find rugby tournaments, team entry, spectator tickets, media, and rugby event profiles across 7s, 15s, beach rugby, touch, tag, and youth competitions."
+    />
+    <meta name="theme-color" content="#0b120d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/styles-rm5.css" />
+  </head>
+  <body>
+    <div id="app" class="site-shell" aria-live="polite"></div>
+    <script type="module" src="/app-rm5.js"></script>
+  </body>
+</html>`,
+    {
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store, must-revalidate",
+      },
+    },
+  );
+}
