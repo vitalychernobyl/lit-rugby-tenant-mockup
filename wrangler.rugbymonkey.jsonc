@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "rugbymonkey-tenant",
+  "main": "rugbymonkey/src/worker.js",
+  "compatibility_date": "2026-07-08",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./rugbymonkey/public",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "routes": [
+    {
+      "pattern": "rugbymonkey.com/*",
+      "zone_name": "rugbymonkey.com"
+    },
+    {
+      "pattern": "www.rugbymonkey.com/*",
+      "zone_name": "rugbymonkey.com"
+    }
+  ]
+}
