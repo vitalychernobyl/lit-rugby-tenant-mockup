@@ -374,11 +374,11 @@ const pastEvents = [
   },
 ];
 
-const proofStats = [
-  ["70+", "Team benchmark on flagship LIT7s event pages"],
-  ["14th", "Annual LIT7s event in 2026"],
-  ["5", "Super 7s Series tournament model"],
-  ["UK + USA", "Tournament, series, and camp surfaces"],
+const companyPillars = [
+  ["Upcoming event conversion", "Make registration, spectator tickets, parking, VIP, and event details visible before users have to ask."],
+  ["Past event proof", "Turn winners, archives, galleries, and camp content into evidence that the LIT7s calendar keeps moving."],
+  ["Clear event support", "Answer team, parent, sponsor, media, travel, and rules questions through visible linked pages."],
+  ["Media and partner momentum", "Keep social channels, albums, highlights, partners, and company contact paths close to every event."],
 ];
 
 const faqItems = [
@@ -1192,10 +1192,6 @@ function homePage() {
         </div>
       </section>
 
-      <div class="stat-ribbon">
-        ${proofStats.map(([value, label]) => `<div class="stat"><strong>${safe(value)}</strong><span>${safe(label)}</span></div>`).join("")}
-      </div>
-
       <section class="section">
         <div class="section-head">
           <h2>Upcoming events to register for</h2>
@@ -1668,7 +1664,7 @@ function companyPage() {
             spectators, parents, partners, and media.
           </p>
           <div class="matrix">
-            ${proofStats.map(([value, label]) => `<div class="matrix-item"><strong>${safe(value)}</strong><span>${safe(label)}</span></div>`).join("")}
+            ${companyPillars.map(([title, copy]) => `<div class="matrix-item"><strong>${safe(title)}</strong><span>${safe(copy)}</span></div>`).join("")}
           </div>
           <h3>Tenant capabilities represented</h3>
           <div class="resource-grid">
