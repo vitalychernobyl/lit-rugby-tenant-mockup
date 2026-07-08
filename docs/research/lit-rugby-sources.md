@@ -1,14 +1,30 @@
 # LIT Rugby Research Notes
 
-Research date: 2026-07-07.
+Research dates: 2026-07-07 and 2026-07-08.
 
 ## Official LIT7s sources used
 
 - `https://www.lit7s.com/`
   - Page title: LIT 7s 2026 Events.
-  - Description references LIT Super 7s Series, 13th annual LIT7s, and 70+ amateur and elite teams from around the world.
+  - Description references LIT Super 7s Series, LIT7s, and 70+ amateur and elite teams from around the world.
+  - Current home content references LIT Super 7s Series as five tournaments from May to July and LIT 7s on July 18, 2026.
+  - Current home content describes the 14th annual LIT7s at WASPS Rugby Club in West London.
   - Public navigation includes LIT7s Tournament, London 7s, LIT Super 7s Series, LIT Rugby Sevens Camp, LIT Florida International 7s, and Contact LIT7s.
   - Public CTA links include Ticketpass team entry/tickets and EventConnect Florida team registration.
+  - Visual system sampled from inline Elementor styles: black/white base, `#00FF5C` green CTA highlight, `#EE8D03` orange event accent, `#C71F22` red section accent, Anton/Titillium/Raleway typography signals.
+- LIT7s public menu links represented as internal mock routes:
+  - Tournament Information: `https://www.lit7s.com/tournament-information/`
+  - Schedule: `https://www.lit7s.com/schedule/`
+  - What to Pack: `https://www.lit7s.com/what-to-pack/`
+  - VIP Tickets: `https://www.lit7s.com/vip-tickets/`
+  - Team Registration Info: `https://www.lit7s.com/team-registration/`
+  - Sevens Competitions: `https://www.lit7s.com/sevens-competitions/`
+  - Prizes and Awards: `https://www.lit7s.com/prizes-and-awards/`
+  - Sevens Rules: `https://www.lit7s.com/sevens-rules/`
+  - Media: `https://www.lit7s.com/lit7s-media/`
+  - Contact: `https://www.lit7s.com/contact-us/`
+  - Partners: `https://www.lit7s.com/partners-2/`
+  - Become a Partner: `https://www.lit7s.com/sponsor-or-partner-with-lit7s/`
 - `https://www.lit7s.com/team-registration/`
   - LIT7s registration reference includes GBP 320 entry for a team of 15 players and one manager.
   - Team managers collect tournament pack, tickets, wristbands, match details, and schedule updates.

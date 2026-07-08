@@ -20,6 +20,23 @@ const links = {
   floridaTerms: "https://www.lit7s.com/lit-florida-international-7s-terms-conditions/",
   london7s: "https://www.lit7s.com/lit-7s-london7s/",
   super7s: "https://www.super7sseries.com",
+  tournamentInformation: "https://www.lit7s.com/tournament-information/",
+  schedule: "https://www.lit7s.com/schedule/",
+  whatToPack: "https://www.lit7s.com/what-to-pack/",
+  vipTickets: "https://www.lit7s.com/vip-tickets/",
+  teamRegistrationInfo: "https://www.lit7s.com/team-registration/",
+  competitions: "https://www.lit7s.com/sevens-competitions/",
+  prizesAwards: "https://www.lit7s.com/prizes-and-awards/",
+  sevensRules: "https://www.lit7s.com/sevens-rules/",
+  media: "https://www.lit7s.com/lit7s-media/",
+  contact: "https://www.lit7s.com/contact-us/",
+  partners: "https://www.lit7s.com/partners-2/",
+  becomePartner: "https://www.lit7s.com/sponsor-or-partner-with-lit7s/",
+  jobs: "https://www.lit7s.com/jobs/",
+  instagram: "https://www.instagram.com/LIT7s/",
+  facebook: "https://www.facebook.com/lit7s",
+  youtube: "https://www.youtube.com/channel/UCBcTEJS7_GPoL27Srp3ftBw",
+  googleMapsWasps: "https://maps.app.goo.gl/rhXD7UExSMua12pB6",
 };
 
 const tournaments = [
@@ -67,22 +84,23 @@ const tournaments = [
   },
   {
     slug: "london-7s",
-    name: "London 7s",
+    name: "LIT 7s London",
     scope: "Local",
     region: "United Kingdom",
     city: "London",
-    venue: "London area rugby venue",
-    date: "2025-07-19",
-    status: "Reference event",
+    venue: "WASPS Rugby Club, West London",
+    date: "2026-07-18",
+    status: "Spectator tickets and parking",
     format: "Tournament",
-    divisions: ["Men's Open", "Men's Social", "Women's Open", "Women's Social"],
+    divisions: ["Elite", "Men's Open", "Men's Social", "Women's Open", "Women's Social"],
     teamCount: 70,
-    source: "Verified from LIT7s.com",
+    source: "Verified from current LIT7s.com home",
     score: 91,
     summary:
-      "The flagship London sevens event profile, built around elite and amateur teams, prizes, food, bars, live music, media, and night-party energy.",
+      "The 14th annual LIT7s event in West London, positioned around elite and amateur teams, an all-day bar, live music, DJ, food, cheerleaders, and tournament-party energy.",
     ctas: [
-      ["Buy tickets", links.super7sTickets],
+      ["Buy tickets and parking", links.super7sTickets],
+      ["VIP tickets", links.vipTickets],
       ["London 7s page", links.london7s],
     ],
   },
@@ -183,6 +201,25 @@ const tournaments = [
 
 const events = [
   {
+    slug: "lit7s-london-2026",
+    title: "LIT 7s London 2026",
+    day: "18",
+    month: "Jul",
+    location: "WASPS Rugby Club, West London",
+    date: "July 18, 2026",
+    label: "14th annual LIT7s",
+    summary:
+      "The flagship UK tournament profile for 70+ elite and amateur teams, spectator tickets, parking, VIP packages, live music, DJ, food, bars, and media.",
+    link: links.london7s,
+    tournamentSlug: "london-7s",
+    actions: [
+      ["Buy tickets and parking", links.super7sTickets],
+      ["VIP tickets", links.vipTickets],
+      ["Official page", links.london7s],
+    ],
+    modules: ["Ticketing", "VIP", "Parking", "Media", "Schedule"],
+  },
+  {
     slug: "florida-2025",
     title: "LIT Florida International 7s",
     day: "29",
@@ -193,6 +230,13 @@ const events = [
     summary:
       "USA tournament entry with EventConnect registration, accommodation flow, youth and adult divisions, and stadium-campus operations.",
     link: links.floridaRegistration,
+    tournamentSlug: "lit-florida-international-7s",
+    actions: [
+      ["Team registration", links.floridaRegistration],
+      ["Book hotels", links.floridaHotels],
+      ["Terms", links.floridaTerms],
+    ],
+    modules: ["Registration", "Hotels", "Youth divisions", "Livestream"],
   },
   {
     slug: "super-series-2026",
@@ -205,6 +249,13 @@ const events = [
     summary:
       "Team entry, spectator tickets, parking, standings, rules, and multi-event points modeled for repeat competition operations.",
     link: links.super7sTickets,
+    tournamentSlug: "lit-super-7s-series",
+    actions: [
+      ["Enter your team", links.super7sTickets],
+      ["Spectator tickets", links.super7sTickets],
+      ["Series site", links.super7s],
+    ],
+    modules: ["Series standings", "Team points", "Rules", "Tickets"],
   },
   {
     slug: "olympic-experience-2026",
@@ -217,7 +268,240 @@ const events = [
     summary:
       "Three-day sevens camp profile for advanced athletes, Olympian coaches, fitness testing, and personal feedback.",
     link: "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/",
+    tournamentSlug: "lit-olympic-experience-camp",
+    actions: [
+      ["Reserve spot", links.imgCheckout],
+      ["Camp page", "https://www.lit7s.com/the-olympic-experience-lit-rugby-sevens-camp-usa-2026/"],
+      ["IMG experience", "https://www.lit7s.com/the-img-experience-lit-rugby-sevens-camp-usa/"],
+    ],
+    modules: ["Athlete intake", "Coach profiles", "Fitness testing", "Feedback"],
   },
+];
+
+const infoPages = [
+  {
+    slug: "tournament-information",
+    title: "Tournament Information",
+    nav: "Info",
+    source: links.tournamentInformation,
+    summary:
+      "A tenant-ready overview page for venue details, arrival guidance, day-of operations, spectator expectations, and source-backed event notes.",
+    sections: [
+      ["Venue", "WASPS Rugby Club in West London, with a mapped venue link and future embedded travel guidance."],
+      ["Public transport", "Surface train, Underground, bus, and disruption notices before match day."],
+      ["Timings", "Doors, pool matches, finals, award windows, live music, DJ, and after-party moments."],
+      ["Parking", "Advance parking inventory tied to ticketing, carpool guidance, and sold-out messaging."],
+    ],
+    actions: [
+      ["Official information", links.tournamentInformation],
+      ["Google Maps", links.googleMapsWasps],
+      ["Schedule", "/schedule"],
+    ],
+  },
+  {
+    slug: "schedule",
+    title: "Schedule",
+    nav: "Schedule",
+    source: links.schedule,
+    summary:
+      "A mocked schedule surface for pools, knockout rounds, finals, prize moments, media calls, and party programming.",
+    sections: [
+      ["Pools", "Team managers can scan fixtures by pitch, division, and bracket stage."],
+      ["Knockouts", "Quarterfinals, semifinals, finals, and plate games can be promoted as live result routes."],
+      ["Awards", "Prize and player-of-the-tournament moments are surfaced beside media and social prompts."],
+      ["Entertainment", "Live music, DJ, food, bar, and cheerleader programming can sit in the same day view."],
+    ],
+    actions: [
+      ["Official schedule", links.schedule],
+      ["Tickets", links.super7sTickets],
+      ["Tournament details", "/events/lit7s-london-2026"],
+    ],
+  },
+  {
+    slug: "what-to-pack",
+    title: "What to Pack",
+    nav: "Pack",
+    source: links.whatToPack,
+    summary:
+      "A practical checklist for players, managers, families, and spectators, suitable for future pre-event messaging.",
+    sections: [
+      ["Players", "Boots, mouthguard, tape, recovery gear, spare kit, water bottle, and weather layers."],
+      ["Managers", "Roster list, eligibility documents, wristband collection plan, and emergency contact notes."],
+      ["Spectators", "Tickets, parking pass, sun/rain gear, charging battery, and food/bar payment method."],
+      ["Youth teams", "Consent, guardian contacts, medical notes, and safeguarding confirmations."],
+    ],
+    actions: [
+      ["Official packing page", links.whatToPack],
+      ["Register team", "/register"],
+      ["Contact LIT7s", "/contact"],
+    ],
+  },
+  {
+    slug: "vip-tickets",
+    title: "VIP Tickets",
+    nav: "VIP",
+    source: links.vipTickets,
+    summary:
+      "A premium ticketing mockup for hospitality packages, reserved areas, team sponsor guests, and owner review states.",
+    sections: [
+      ["Hospitality", "VIP packages can show inventory, benefits, sponsor allocation, and fulfillment status."],
+      ["Guest list", "Owner-managed tables, guest names, and ticket-pass handoff state."],
+      ["Perks", "Priority access, viewing area, drinks, food, media moments, and post-event hospitality."],
+      ["Controls", "Mock-only checkout preview with external public LIT7s ticket links."],
+    ],
+    actions: [
+      ["Official VIP tickets", links.vipTickets],
+      ["Buy tickets", links.super7sTickets],
+      ["Ticketing preview", "/tickets"],
+    ],
+  },
+  {
+    slug: "team-registration-info",
+    title: "Team Registration Info",
+    nav: "Team registration",
+    source: links.teamRegistrationInfo,
+    summary:
+      "A source-labeled registration guide for team managers, roster limits, division choice, payment handoff, and review states.",
+    sections: [
+      ["Team pack", "Team pack pickup, tickets, wristbands, match details, schedule updates, and manager responsibilities."],
+      ["Roster", "Public LIT7s team references include manager and player capacity rules; the mockup keeps roster writes local."],
+      ["Divisions", "Men's, women's, elite, open, social, U23, U18, and U16 surfaces can be filtered before registration."],
+      ["Review", "Tenant owner review happens before any future provider write, payment, or roster lock."],
+    ],
+    actions: [
+      ["Official registration info", links.teamRegistrationInfo],
+      ["Register team", "/register"],
+      ["Florida registration", links.floridaRegistration],
+    ],
+  },
+  {
+    slug: "sevens-competitions",
+    title: "Sevens Competitions",
+    nav: "Competitions",
+    source: links.competitions,
+    summary:
+      "A division and competition explainer for teams comparing elite, open, social, youth, and camp pathways.",
+    sections: [
+      ["Elite", "High-level competition cards can expose eligibility, prizes, featured teams, and media coverage."],
+      ["Open", "Club and invitational sides can compare event fit, roster readiness, and travel needs."],
+      ["Social", "Participation-first divisions can emphasize team experience, scheduling, and post-event content."],
+      ["Youth", "Youth divisions can show safeguarding, waivers, age bands, and guardian requirements."],
+    ],
+    actions: [
+      ["Official competitions", links.competitions],
+      ["Search tournaments", "/tournaments"],
+      ["Sevens rules", "/info/sevens-rules"],
+    ],
+  },
+  {
+    slug: "prizes-and-awards",
+    title: "Prizes and Awards",
+    nav: "Awards",
+    source: links.prizesAwards,
+    summary:
+      "A mocked awards board for tournament winners, social winners, player awards, prize money, trophies, and sponsor moments.",
+    sections: [
+      ["Open winners", "Cash, medals, trophies, and featured media slots can be shown beside final results."],
+      ["Social winners", "Trophies, social prizes, and team-photo moments can be promoted after finals."],
+      ["Players", "Player-of-the-tournament awards can connect directly into profile pages."],
+      ["Sponsors", "Sponsor-backed awards can carry logo slots and partner links in a future tenant build."],
+    ],
+    actions: [
+      ["Official awards", links.prizesAwards],
+      ["Player profiles", "/players"],
+      ["Become a partner", links.becomePartner],
+    ],
+  },
+  {
+    slug: "sevens-rules",
+    title: "Sevens Rules",
+    nav: "Rules",
+    source: links.sevensRules,
+    summary:
+      "A rules reference mockup for match length, substitutions, roster limits, tiebreakers, and series-points interpretation.",
+    sections: [
+      ["Roster rules", "Surface player limits, team manager notes, and division-specific constraints."],
+      ["Match format", "Seven-minute halves, pool play, knockout flow, and rest windows can become structured fields."],
+      ["Substitutions", "Rolling substitutions and match-day management notes become manager reminders."],
+      ["Tiebreakers", "Series and tournament tiebreakers can be displayed as ordered rules with source labels."],
+    ],
+    actions: [
+      ["Official rules", links.sevensRules],
+      ["Series profile", "/tournaments/lit-super-7s-series"],
+      ["Register team", "/register"],
+    ],
+  },
+  {
+    slug: "media",
+    title: "Media",
+    nav: "Media",
+    source: links.media,
+    summary:
+      "A media hub mockup for photo galleries, highlight clips, social embeds, presenter schedules, and team/player content.",
+    sections: [
+      ["Photo galleries", "Event galleries can be grouped by tournament, pitch, division, and team."],
+      ["Video", "Highlight reels and livestream clips can connect to event and player profiles."],
+      ["Social", "Instagram, Facebook, and YouTube can be surfaced without bundling private account data."],
+      ["Approvals", "Owner review can manage featured media before publishing to public pages."],
+    ],
+    actions: [
+      ["Official media", links.media],
+      ["Instagram", links.instagram],
+      ["YouTube", links.youtube],
+    ],
+  },
+  {
+    slug: "contact",
+    title: "Contact LIT7s",
+    nav: "Contact",
+    source: links.contact,
+    summary:
+      "A contact and inquiry mockup for team managers, sponsors, partners, media, jobs, and event operations.",
+    sections: [
+      ["Team inquiries", "Route team questions to registration, division, roster, and accommodation prompts."],
+      ["Partners", "Route sponsorship interest to partner packages and event inventory."],
+      ["Media", "Route photographer, livestream, and press requests into an owner-review queue."],
+      ["Jobs", "Surface opportunities and staffing links as future owner-managed listings."],
+    ],
+    actions: [
+      ["Official contact", links.contact],
+      ["Partners", "/partners"],
+      ["Opportunities", links.jobs],
+    ],
+  },
+  {
+    slug: "partners",
+    title: "Partners and Sponsorship",
+    nav: "Partners",
+    source: links.partners,
+    summary:
+      "A partner-facing mockup for sponsor packages, venue activations, media placements, team support, and future CRM handoffs.",
+    sections: [
+      ["Partner directory", "Official and future partners can be grouped by category, event, entitlement, and renewal state."],
+      ["Sponsorship packages", "Packages can expose visibility, pitch-side inventory, VIP allocation, and media deliverables."],
+      ["Activation plan", "On-site banners, social posts, awards, hospitality, and team experiences can be tracked by status."],
+      ["Owner workflow", "Partner inquiries stay draft-only until approved by the tenant owner and connected to a real CRM."],
+    ],
+    actions: [
+      ["Official partners", links.partners],
+      ["Become a partner", links.becomePartner],
+      ["Contact LIT7s", "/contact"],
+    ],
+  },
+];
+
+const quickLinks = [
+  ["Tournament Information", "/info/tournament-information"],
+  ["Schedule", "/schedule"],
+  ["What to Pack", "/info/what-to-pack"],
+  ["VIP Tickets", "/info/vip-tickets"],
+  ["Team Registration Info", "/info/team-registration-info"],
+  ["Sevens Competitions", "/info/sevens-competitions"],
+  ["Prizes and Awards", "/info/prizes-and-awards"],
+  ["Sevens Rules", "/info/sevens-rules"],
+  ["Media", "/media"],
+  ["Contact", "/contact"],
+  ["Partners", "/partners"],
 ];
 
 const teams = [
@@ -418,6 +702,28 @@ function button(label, href, variant = "primary") {
   return `<a class="button ${variant}" href="${safe(target)}" ${attrs}>${safe(label)} ${icons.arrow}</a>`;
 }
 
+function navLink(label, href, className = "text-link") {
+  const external = href.startsWith("http") || href.startsWith("mailto:");
+  const attrs = external ? 'target="_blank" rel="noreferrer"' : "data-route";
+  const target = external ? href : toRoute(href);
+  return `<a class="${safe(className)}" href="${safe(target)}" ${attrs}>${safe(label)}</a>`;
+}
+
+function quickLinkList(items = quickLinks) {
+  return html`
+    <div class="quick-links">
+      ${items
+        .map(([label, href]) => {
+          const external = href.startsWith("http") || href.startsWith("mailto:");
+          const attrs = external ? 'target="_blank" rel="noreferrer"' : "data-route";
+          const target = external ? href : toRoute(href);
+          return `<a class="quick-link" href="${safe(target)}" ${attrs}><span>${safe(label)}</span>${icons.arrow}</a>`;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
 function tagList(items, color = "") {
   return `<div class="tag-row">${items.map((item) => `<span class="tag ${color}">${safe(item)}</span>`).join("")}</div>`;
 }
@@ -455,14 +761,14 @@ function filteredTournaments() {
 
 function eventMini(event) {
   return html`
-    <article class="event-mini">
+    <a class="event-mini" href="${toRoute(`/events/${event.slug}`)}" data-route>
       <div class="date-tile"><span>${safe(event.month)}</span><strong>${safe(event.day)}</strong></div>
       <div>
         <h3>${safe(event.title)}</h3>
         <p>${safe(event.location)}</p>
         <p>${safe(event.label)}</p>
       </div>
-    </article>
+    </a>
   `;
 }
 
@@ -476,7 +782,7 @@ function tournamentCard(tournament, light = false) {
       <div class="media-frame"></div>
       <div class="card-body">
         <div class="tag-row">
-          <span class="tag red">${safe(tournament.scope)}</span>
+          <span class="tag orange">${safe(tournament.scope)}</span>
           <span class="tag green">${safe(tournament.format)}</span>
           <span class="tag">${safe(tournament.source)}</span>
         </div>
@@ -503,7 +809,7 @@ function resultRow(tournament) {
       <div class="score-tile"><span>Match</span><strong>${tournament.score}</strong></div>
       <div>
         <div class="tag-row">
-          <span class="tag red">${safe(tournament.scope)}</span>
+          <span class="tag orange">${safe(tournament.scope)}</span>
           <span class="tag green">${safe(tournament.format)}</span>
           <span class="tag">${safe(tournament.status)}</span>
         </div>
@@ -545,11 +851,12 @@ function homePage() {
             <h1>Find rugby sevens tournaments</h1>
             <p>
               Search local, national, and global rugby sevens events, compare divisions, inspect teams,
-              follow player profiles, and move directly into tickets or registration.
+              follow player profiles, and move directly into tickets, parking, VIP, or registration.
             </p>
             <div class="hero-actions">
               ${button("Search tournaments", "/tournaments", "primary")}
               ${button("Register team", "/register", "secondary")}
+              ${button("Official LIT7s", links.litHome, "ghost")}
             </div>
             <div class="search-deck" role="search">
               <div class="search-bar">
@@ -571,15 +878,19 @@ function homePage() {
               <span>Event slate</span>
             </div>
             <div class="event-stack">${events.map(eventMini).join("")}</div>
+            <div class="panel-foot">
+              <h3>Official resource routes</h3>
+              ${quickLinkList(quickLinks.slice(0, 6))}
+            </div>
           </aside>
         </div>
       </section>
 
       <div class="stat-ribbon">
         <div class="stat"><strong>70+</strong><span>LIT7s team benchmark</span></div>
-        <div class="stat"><strong>13</strong><span>Years of LIT7s events</span></div>
+        <div class="stat"><strong>14</strong><span>Annual LIT7s in 2026</span></div>
         <div class="stat"><strong>3</strong><span>Search scopes</span></div>
-        <div class="stat"><strong>24</strong><span>Sample profiles</span></div>
+        <div class="stat"><strong>${tournaments.length + teams.length + people.length}</strong><span>Mock entities</span></div>
       </div>
 
       <section class="section">
@@ -599,6 +910,14 @@ function homePage() {
           ${teamCard(teams[0])}
           ${personCard(people[0])}
         </div>
+      </section>
+
+      <section class="section green-band">
+        <div class="section-head">
+          <h2>More LIT7s pages are mocked and linked</h2>
+          <p>Official menu items become tenant-ready pages for schedule, VIP, rules, media, contact, partners, and manager workflows.</p>
+        </div>
+        ${quickLinkList()}
       </section>
     </div>
   `;
@@ -651,7 +970,7 @@ function tournamentDetail(slug) {
       <div class="detail-layout">
         <article class="detail-main">
           <div class="tag-row">
-            <span class="tag red">${safe(tournament.scope)}</span>
+            <span class="tag orange">${safe(tournament.scope)}</span>
             <span class="tag green">${safe(tournament.format)}</span>
             <span class="tag">${safe(tournament.source)}</span>
           </div>
@@ -702,14 +1021,17 @@ function eventsPage() {
               <article class="card">
                 <div class="card-body">
                   <div class="date-tile"><span>${safe(event.month)}</span><strong>${safe(event.day)}</strong></div>
-                  <div class="tag-row"><span class="tag red">${safe(event.label)}</span></div>
+                  <div class="tag-row"><span class="tag green">${safe(event.label)}</span></div>
                   <h3>${safe(event.title)}</h3>
                   <p>${safe(event.summary)}</p>
                   ${metaList([
                     [icons.calendar, event.date],
                     [icons.pin, event.location],
                   ])}
-                  <div class="button-row">${button("Event detail", event.link, "primary small")}</div>
+                  <div class="button-row">
+                    ${button("Event detail", `/events/${event.slug}`, "primary small")}
+                    ${button("Official link", event.link, "secondary small")}
+                  </div>
                 </div>
               </article>
             `,
@@ -720,12 +1042,151 @@ function eventsPage() {
   `;
 }
 
+function eventDetail(slug) {
+  const event = events.find((item) => item.slug === slug);
+  if (!event) return notFoundPage();
+  const tournament = tournaments.find((item) => item.slug === event.tournamentSlug);
+  const actions = event.actions ?? [["Official link", event.link]];
+  return html`
+    ${pageHero(event.title, event.summary, button(actions[0][0], actions[0][1], "primary"))}
+    <section class="section light">
+      <div class="detail-layout">
+        <article class="detail-main">
+          <div class="tag-row">
+            <span class="tag green">${safe(event.label)}</span>
+            <span class="tag orange">${safe(event.date)}</span>
+          </div>
+          <h2>${safe(event.title)}</h2>
+          <p>${safe(event.summary)}</p>
+          <div class="matrix">
+            <div class="matrix-item"><strong>Date</strong><span>${safe(event.date)}</span></div>
+            <div class="matrix-item"><strong>Location</strong><span>${safe(event.location)}</span></div>
+            <div class="matrix-item"><strong>Tenant modules</strong><span>${safe(event.modules.join(", "))}</span></div>
+            <div class="matrix-item"><strong>Source posture</strong><span>Official link plus tenant preview</span></div>
+          </div>
+          <h3>Event modules mocked</h3>
+          <div class="resource-grid">
+            ${event.modules
+              .map((module) => `<article class="mini-card"><strong>${safe(module)}</strong><span>Owner-review surface ready for this event.</span></article>`)
+              .join("")}
+          </div>
+          ${
+            tournament
+              ? html`
+                  <h3>Connected tournament</h3>
+                  <div class="grid two">${tournamentCard(tournament, true)}</div>
+                `
+              : ""
+          }
+        </article>
+        <aside class="detail-aside">
+          <h3>Clickable actions</h3>
+          <div class="button-row stacked">${actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}</div>
+          <h3>Related LIT7s pages</h3>
+          ${quickLinkList([
+            ["Tournament information", "/info/tournament-information"],
+            ["Schedule", "/schedule"],
+            ["Tickets", "/tickets"],
+            ["Media", "/media"],
+          ])}
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
+function infoIndexPage() {
+  return html`
+    ${pageHero(
+      "LIT7s information hub",
+      "Official LIT7s menu items are mocked as tenant-ready pages with clear source links, owner-review states, and internal workflows.",
+      button("Open registration", "/register", "primary"),
+    )}
+    <section class="section light">
+      <div class="resource-grid wide">
+        ${infoPages
+          .map(
+            (page) => html`
+              <article class="mini-card">
+                <div class="tag-row"><span class="tag green">${safe(page.nav)}</span></div>
+                <h3>${safe(page.title)}</h3>
+                <p>${safe(page.summary)}</p>
+                <div class="button-row">
+                  ${button("Mock page", `/info/${page.slug}`, "dark small")}
+                  ${button("Official source", page.source, "light small")}
+                </div>
+              </article>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
+function infoDetail(slug) {
+  const page = infoPages.find((item) => item.slug === slug);
+  if (!page) return notFoundPage();
+  return html`
+    ${pageHero(page.title, page.summary, button(page.actions[0][0], page.actions[0][1], "primary"))}
+    <section class="section light">
+      <div class="detail-layout">
+        <article class="detail-main">
+          <div class="tag-row">
+            <span class="tag green">Mocked tenant page</span>
+            <span class="tag">${safe(page.nav)}</span>
+          </div>
+          <h2>${safe(page.title)}</h2>
+          <p>${safe(page.summary)}</p>
+          <div class="resource-grid">
+            ${page.sections
+              .map(([title, copy]) => `<article class="mini-card"><strong>${safe(title)}</strong><span>${safe(copy)}</span></article>`)
+              .join("")}
+          </div>
+          <h3>Source and workflow notes</h3>
+          <div class="matrix">
+            <div class="matrix-item"><strong>Official source</strong><span>${navLink("Open source", page.source)}</span></div>
+            <div class="matrix-item"><strong>Tenant status</strong><span>Mocked, linked, no live provider writes</span></div>
+            <div class="matrix-item"><strong>Owner review</strong><span>Ready for content approval and route hardening</span></div>
+            <div class="matrix-item"><strong>Next integration</strong><span>CMS data, ticket inventory, media, or CRM based on page type</span></div>
+          </div>
+        </article>
+        <aside class="detail-aside">
+          <h3>Actions</h3>
+          <div class="button-row stacked">
+            ${page.actions.map(([label, href], index) => button(label, href, index === 0 ? "primary" : "light")).join("")}
+          </div>
+          <h3>More pages</h3>
+          ${quickLinkList(quickLinks.filter(([label]) => label !== page.title).slice(0, 7))}
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
+function schedulePage() {
+  return infoDetail("schedule");
+}
+
+function mediaPage() {
+  return infoDetail("media");
+}
+
+function contactPage() {
+  return infoDetail("contact");
+}
+
+function partnersPage() {
+  return infoDetail("partners");
+}
+
 function teamCard(team) {
+  const tournament = tournaments.find((item) => item.name === team.tournament);
   return html`
     <article class="card light-card">
       <div class="card-body">
         <div class="tag-row">
-          <span class="tag red">${safe(team.level)}</span>
+          <span class="tag orange">${safe(team.level)}</span>
           <span class="tag green">${safe(team.base)}</span>
         </div>
         <h3>${safe(team.name)}</h3>
@@ -735,7 +1196,10 @@ function teamCard(team) {
           [icons.shield, team.record],
           [icons.calendar, team.tournament],
         ])}
-        <div class="button-row">${button("Team profile", `/teams/${team.slug}`, "dark small")}</div>
+        <div class="button-row">
+          ${button("Team profile", `/teams/${team.slug}`, "dark small")}
+          ${tournament ? button("Event", `/tournaments/${tournament.slug}`, "light small") : ""}
+        </div>
       </div>
     </article>
   `;
@@ -758,6 +1222,7 @@ function teamDetail(slug) {
   const team = teams.find((item) => item.slug === slug);
   if (!team) return notFoundPage();
   const roster = people.filter((person) => person.team === team.name || person.team.includes(team.name.split(" ")[0]));
+  const tournament = tournaments.find((item) => item.name === team.tournament);
   return html`
     ${pageHero(team.name, team.summary, button("Start registration", "/register", "primary"))}
     <section class="section light">
@@ -775,6 +1240,12 @@ function teamDetail(slug) {
           <div class="grid two">${(roster.length ? roster : people.slice(3, 5)).map(personCard).join("")}</div>
         </article>
         <aside class="detail-aside">
+          <h3>Actions</h3>
+          <div class="button-row stacked">
+            ${button("Register team", "/register", "primary")}
+            ${tournament ? button("Tournament", `/tournaments/${tournament.slug}`, "light") : ""}
+            ${button("Tickets", "/tickets", "light")}
+          </div>
           <h3>Manager checklist</h3>
           <ul class="timeline">
             <li>Confirm division and eligibility.</li>
@@ -789,6 +1260,7 @@ function teamDetail(slug) {
 }
 
 function personCard(person) {
+  const team = teams.find((item) => item.name === person.team);
   return html`
     <article class="card light-card">
       <div class="card-body">
@@ -796,12 +1268,15 @@ function personCard(person) {
           <div class="avatar">${safe(person.initials)}</div>
           <div>
             <div class="tag-row">
-              <span class="tag red">${safe(person.role)}</span>
+              <span class="tag orange">${safe(person.role)}</span>
               <span class="tag">${safe(person.type)}</span>
             </div>
             <h3>${safe(person.name)}</h3>
             <p>${safe(person.position)} - ${safe(person.team)}</p>
-            <div class="button-row">${button("View profile", `/players/${person.slug}`, "dark small")}</div>
+            <div class="button-row">
+              ${button("View profile", `/players/${person.slug}`, "dark small")}
+              ${team ? button("Team", `/teams/${team.slug}`, "light small") : ""}
+            </div>
           </div>
         </div>
       </div>
@@ -825,8 +1300,9 @@ function playersPage() {
 function playerDetail(slug) {
   const person = people.find((item) => item.slug === slug);
   if (!person) return notFoundPage();
+  const team = teams.find((item) => item.name === person.team);
   return html`
-    ${pageHero(person.name, person.bio, button("Related teams", "/teams", "primary"))}
+    ${pageHero(person.name, person.bio, button(team ? "Team profile" : "Related teams", team ? `/teams/${team.slug}` : "/teams", "primary"))}
     <section class="section light">
       <div class="detail-layout">
         <article class="detail-main">
@@ -845,6 +1321,12 @@ function playerDetail(slug) {
           </div>
         </article>
         <aside class="detail-aside">
+          <h3>Actions</h3>
+          <div class="button-row stacked">
+            ${team ? button("Open team", `/teams/${team.slug}`, "primary") : ""}
+            ${button("Players directory", "/players", "light")}
+            ${button("Media hub", "/media", "light")}
+          </div>
           <h3>Tenant modules</h3>
           <ul class="timeline">
             <li>Bio and media approval.</li>
@@ -1028,7 +1510,14 @@ function render() {
   if (path === "/" || parts.length === 0) markup = homePage();
   else if (parts[0] === "tournaments" && parts[1]) markup = tournamentDetail(parts[1]);
   else if (parts[0] === "tournaments") markup = tournamentsPage();
+  else if (parts[0] === "events" && parts[1]) markup = eventDetail(parts[1]);
   else if (parts[0] === "events") markup = eventsPage();
+  else if (parts[0] === "info" && parts[1]) markup = infoDetail(parts[1]);
+  else if (parts[0] === "info") markup = infoIndexPage();
+  else if (parts[0] === "schedule") markup = schedulePage();
+  else if (parts[0] === "media") markup = mediaPage();
+  else if (parts[0] === "contact") markup = contactPage();
+  else if (parts[0] === "partners") markup = partnersPage();
   else if (parts[0] === "teams" && parts[1]) markup = teamDetail(parts[1]);
   else if (parts[0] === "teams") markup = teamsPage();
   else if (parts[0] === "players" && parts[1]) markup = playerDetail(parts[1]);
