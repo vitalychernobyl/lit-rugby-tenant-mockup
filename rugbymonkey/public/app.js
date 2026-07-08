@@ -968,6 +968,173 @@ const eventEnrichments = {
   },
 };
 
+const eventImageAssets = {
+  "abingdon-7s": "/assets/events/abingdon-7s.webp",
+  "alaska-midnight-sun-7s": "/assets/events/alaska-midnight-sun-7s.png",
+  "algarve-7s": "/assets/events/algarve-7s.png",
+  "algarve-7s-2027": "/assets/events/algarve-7s-2027.jpg",
+  "ameland-beach-rugby": "/assets/events/ameland-beach-rugby.png",
+  "ameland-beach-rugby-2026": "/assets/events/ameland-beach-rugby-2026.png",
+  "amsterdam-7s": "/assets/events/amsterdam-7s.jpg",
+  "asia-pacific-seniors-touch-cup-2026": "/assets/events/asia-pacific-seniors-touch-cup-2026.jpg",
+  "autumn-tag-rugby-tournament": "/assets/events/autumn-tag-rugby-tournament.webp",
+  "balaton-beach-rugby": "/assets/events/balaton-beach-rugby.png",
+  "bali-10s": "/assets/events/bali-10s.webp",
+  "beach-rugby-championship-2026": "/assets/events/beach-rugby-championship-2026.jpg",
+  "beach-rugby-tournament-by-wight-wave-beach-sports-festival-2022": "/assets/events/beach-rugby-tournament-by-wight-wave-beach-sports-festival-2022.png",
+  "beerfoot-beach-7s": "/assets/events/beerfoot-beach-7s.webp",
+  "beverley-womens-7s": "/assets/events/beverley-womens-7s.png",
+  "billingham-rugby-festival": "/assets/events/billingham-rugby-festival.png",
+  "bomber-county-10s": "/assets/events/bomber-county-10s.webp",
+  "bournemouth-7s-2": "/assets/events/bournemouth-7s-2.png",
+  "british-irish-cup-tag-rugby-2026": "/assets/events/british-irish-cup-tag-rugby-2026.png",
+  "brussels-rugby-7s": "/assets/events/brussels-rugby-7s.png",
+  "budapest-7s": "/assets/events/budapest-7s.jpg",
+  "can-am-7s": "/assets/events/can-am-7s.webp",
+  "chassiscab-daf-7s": "/assets/events/chassiscab-daf-7s.jpg",
+  "cheltenham-7s": "/assets/events/cheltenham-7s.png",
+  "chester-7s": "/assets/events/chester-7s.jpg",
+  "chiswick-7s": "/assets/events/chiswick-7s.png",
+  "cleveland-beach-rugby": "/assets/events/cleveland-beach-rugby.png",
+  "costa-blanca-beach-rugby": "/assets/events/costa-blanca-beach-rugby.png",
+  "cyril-7s": "/assets/events/cyril-7s.webp",
+  "decky-memorial-touch-rugby-tournament": "/assets/events/decky-memorial-touch-rugby-tournament.webp",
+  "doordash-national-youth-championships-2026": "/assets/events/doordash-national-youth-championships-2026.jpg",
+  "edinburgh-city-7s": "/assets/events/edinburgh-city-7s.png",
+  "eggchaser-7s": "/assets/events/eggchaser-7s.jpg",
+  "egham-7s": "/assets/events/egham-7s.png",
+  "emirates-dubai-7s": "/assets/events/emirates-dubai-7s.png",
+  "emirates-dubai-7s-2026": "/assets/events/emirates-dubai-7s-2026.png",
+  "energia-7s-2022": "/assets/events/energia-7s-2022.jpg",
+  "european-grand-old-rugby-festival-verona-italy": "/assets/events/european-grand-old-rugby-festival-verona-italy.jpg",
+  "european-touch-championships-2026": "/assets/events/european-touch-championships-2026.jpg",
+  "european-university-games-7s-2026": "/assets/events/european-university-games-7s-2026.webp",
+  "european-youth-touch-championships-2026": "/assets/events/european-youth-touch-championships-2026.jpg",
+  "exmouth-beach-rugby-fest": "/assets/events/exmouth-beach-rugby-fest.jpg",
+  "fajana": "/assets/events/fajana.webp",
+  "fat-blokes-7s": "/assets/events/fat-blokes-7s.png",
+  "figueira-beach-rugby": "/assets/events/figueira-beach-rugby.png",
+  "figueira-beach-rugby-2026": "/assets/events/figueira-beach-rugby-2026.png",
+  "flag-city-10s": "/assets/events/flag-city-10s.webp",
+  "forest-sevens": "/assets/events/forest-sevens.webp",
+  "frome-7s": "/assets/events/frome-7s.png",
+  "gibraltar-7s": "/assets/events/gibraltar-7s.png",
+  "grenada-rugby-world-7s": "/assets/events/grenada-rugby-world-7s.webp",
+  "grenada-rugby-world-7s-2": "/assets/events/grenada-rugby-world-7s-2.png",
+  "heart-of-wales-7s": "/assets/events/heart-of-wales-7s.png",
+  "house-of-hope-7s": "/assets/events/house-of-hope-7s.png",
+  "hsbc-cape-town-7s": "/assets/events/hsbc-cape-town-7s.webp",
+  "hsbc-hong-kong-sevens": "/assets/events/hsbc-hong-kong-sevens.webp",
+  "hsbc-los-angeles-7s-2": "/assets/events/hsbc-los-angeles-7s-2.webp",
+  "hsbc-new-zealand-7s": "/assets/events/hsbc-new-zealand-7s.webp",
+  "hsbc-sydney-7s": "/assets/events/hsbc-sydney-7s.webp",
+  "isuzu-touch-rugby-tournament": "/assets/events/isuzu-touch-rugby-tournament.png",
+  "jc-technique-sevens": "/assets/events/jc-technique-sevens.png",
+  "jf7s-wimbledon": "/assets/events/jf7s-wimbledon.png",
+  "jungle-sevens": "/assets/events/jungle-sevens.png",
+  "kootenai-7s": "/assets/events/kootenai-7s.webp",
+  "ldn-7s": "/assets/events/ldn-7s.jpg",
+  "lignano-beach-rugby": "/assets/events/lignano-beach-rugby.png",
+  "lignano-beach-rugby-2026": "/assets/events/lignano-beach-rugby-2026.png",
+  "lit-7s": "/assets/events/lit-7s.png",
+  "lit-7s-london-2026": "/assets/events/lit-7s-london-2026.jpg",
+  "london9s-2022-international-amateur-rugby9s-festival": "/assets/events/london9s-2022-international-amateur-rugby9s-festival.jpg",
+  "lumberjack-10s": "/assets/events/lumberjack-10s.webp",
+  "lusty-glaze-beach": "/assets/events/lusty-glaze-beach.png",
+  "macclesfield-7s": "/assets/events/macclesfield-7s.png",
+  "majorca-beach-rugby-2": "/assets/events/majorca-beach-rugby-2.png",
+  "majorca-beach-rugby-2027": "/assets/events/majorca-beach-rugby-2027.png",
+  "manor-7s": "/assets/events/manor-7s.jpg",
+  "manor-7s-2": "/assets/events/manor-7s-2.png",
+  "marseille-south-beach-rugby": "/assets/events/marseille-south-beach-rugby.png",
+  "matthew-new-memorial-7s": "/assets/events/matthew-new-memorial-7s.jpg",
+  "memorial-10s-rugby": "/assets/events/memorial-10s-rugby.jpg",
+  "mens-rugby-world-cup-2027": "/assets/events/mens-rugby-world-cup-2027.webp",
+  "mens-rugby-world-cup-2027-draw": "/assets/events/mens-rugby-world-cup-2027-draw.webp",
+  "midlands-midnight-7s": "/assets/events/midlands-midnight-7s.jpg",
+  "mkruggerfest": "/assets/events/mkruggerfest.png",
+  "moonshine-7s": "/assets/events/moonshine-7s.png",
+  "national-junior-touch-cup-2026": "/assets/events/national-junior-touch-cup-2026.webp",
+  "national-pub-7s": "/assets/events/national-pub-7s.png",
+  "nations-championship-2026": "/assets/events/nations-championship-2026.webp",
+  "north-sea-beach-rugby": "/assets/events/north-sea-beach-rugby.png",
+  "north-sea-beach-rugby-2026": "/assets/events/north-sea-beach-rugby-2026.png",
+  "norwich-7s": "/assets/events/norwich-7s.png",
+  "november-london-7s-tournament": "/assets/events/november-london-7s-tournament.webp",
+  "old-pen-7s": "/assets/events/old-pen-7s.png",
+  "oldershaw-cider-7s": "/assets/events/oldershaw-cider-7s.webp",
+  "orkney-rfc-social-10s-tournament": "/assets/events/orkney-rfc-social-10s-tournament.webp",
+  "pacific-nations-cup-2026": "/assets/events/pacific-nations-cup-2026.webp",
+  "pigfest-10s": "/assets/events/pigfest-10s.png",
+  "premier-rugby-sevens-the-bay-area": "/assets/events/premier-rugby-sevens-the-bay-area.webp",
+  "premier-rugby-sevens-the-championship": "/assets/events/premier-rugby-sevens-the-championship.webp",
+  "premier-rugby-sevens-the-district": "/assets/events/premier-rugby-sevens-the-district.webp",
+  "prishtina-7s": "/assets/events/prishtina-7s.webp",
+  "rock-n-roll-7s": "/assets/events/rock-n-roll-7s.png",
+  "rugby-europe-u18-boys-7s-championship-2026": "/assets/events/rugby-europe-u18-boys-7s-championship-2026.webp",
+  "rugby-europe-u18-boys-7s-trophy-1-2026": "/assets/events/rugby-europe-u18-boys-7s-trophy-1-2026.webp",
+  "rugby-europe-u18-boys-7s-trophy-2-2026": "/assets/events/rugby-europe-u18-boys-7s-trophy-2-2026.webp",
+  "rugby-europe-u18-girls-7s-championship-2026": "/assets/events/rugby-europe-u18-girls-7s-championship-2026.webp",
+  "rugby-europe-u18-girls-7s-trophy-2026": "/assets/events/rugby-europe-u18-girls-7s-trophy-2026.webp",
+  "rugby-ramble": "/assets/events/rugby-ramble.jpg",
+  "rugby-world-cup-sevens-2022": "/assets/events/rugby-world-cup-sevens-2022.webp",
+  "rugbytown-7s": "/assets/events/rugbytown-7s.webp",
+  "rugbytown-7s-2026": "/assets/events/rugbytown-7s-2026.webp",
+  "sardi-7s": "/assets/events/sardi-7s.webp",
+  "school-sport-australia-touch-football-2026": "/assets/events/school-sport-australia-touch-football-2026.jpg",
+  "seaside-7s": "/assets/events/seaside-7s.png",
+  "seven-hills-rugby-7s": "/assets/events/seven-hills-rugby-7s.png",
+  "siege-7s": "/assets/events/siege-7s.png",
+  "sitges-sevens": "/assets/events/sitges-sevens.png",
+  "sixways-7s": "/assets/events/sixways-7s.jpg",
+  "sopot-beach-rugby": "/assets/events/sopot-beach-rugby.png",
+  "south-coast-5s-beach-touch-rugby": "/assets/events/south-coast-5s-beach-touch-rugby.jpg",
+  "south-devon-7s": "/assets/events/south-devon-7s.jpg",
+  "south-island-7s": "/assets/events/south-island-7s.png",
+  "south-island-7s-2": "/assets/events/south-island-7s-2.jpg",
+  "southampton-ladies-rugby-7": "/assets/events/southampton-ladies-rugby-7.webp",
+  "split-mens-7s-championship-series-2026": "/assets/events/split-mens-7s-championship-series-2026.webp",
+  "split-womens-7s-championship-series-2026": "/assets/events/split-womens-7s-championship-series-2026.webp",
+  "sports-tours-7s-broadstreet": "/assets/events/sports-tours-7s-broadstreet.png",
+  "spytech-7s": "/assets/events/spytech-7s.jpg",
+  "steel-city-7s": "/assets/events/steel-city-7s.webp",
+  "streatham-croydon-carnival-7s": "/assets/events/streatham-croydon-carnival-7s.jpg",
+  "summer-social-rugby-2022": "/assets/events/summer-social-rugby-2022.jpg",
+  "sundogs-festival": "/assets/events/sundogs-festival.jpg",
+  "super-sevens-series-bury-rugby-club": "/assets/events/super-sevens-series-bury-rugby-club.png",
+  "super-sevens-series-cobham": "/assets/events/super-sevens-series-cobham.png",
+  "super-sevens-series-stafford-leg": "/assets/events/super-sevens-series-stafford-leg.webp",
+  "tagfest-coventry-warwickshire-2022": "/assets/events/tagfest-coventry-warwickshire-2022.png",
+  "tagfest-leeds-2026": "/assets/events/tagfest-leeds-2026.jpg",
+  "tagfest-london": "/assets/events/tagfest-london.webp",
+  "tagfest-oxford": "/assets/events/tagfest-oxford.webp",
+  "tagfest-yorkshire": "/assets/events/tagfest-yorkshire.webp",
+  "tennessee-7s": "/assets/events/tennessee-7s.webp",
+  "tigna-7s": "/assets/events/tigna-7s.webp",
+  "tropical-7s": "/assets/events/tropical-7s.jpg",
+  "tropical-7s-2027": "/assets/events/tropical-7s-2027.png",
+  "tuilagi-sport-rugby-festival": "/assets/events/tuilagi-sport-rugby-festival.png",
+  "ultimate-sevens-2026": "/assets/events/ultimate-sevens-2026.png",
+  "ultimate-tour-la-manga-club": "/assets/events/ultimate-tour-la-manga-club.png",
+  "victoria-falls-international-sevens": "/assets/events/victoria-falls-international-sevens.png",
+  "warsaw-rugby-festival": "/assets/events/warsaw-rugby-festival.webp",
+  "weston-s-mare-beach-rugby-festival": "/assets/events/weston-s-mare-beach-rugby-festival.png",
+  "weymouth-beach-rugby-fest": "/assets/events/weymouth-beach-rugby-fest.png",
+  "whiskey-10s-rugby-tournament": "/assets/events/whiskey-10s-rugby-tournament.jpg",
+  "wight-wave-beach-rugby-tournament": "/assets/events/wight-wave-beach-rugby-tournament.png",
+  "world-rugby-junior-championship-2026": "/assets/events/world-rugby-junior-championship-2026.webp",
+  "world-rugby-nations-cup-november-2026": "/assets/events/world-rugby-nations-cup-november-2026.webp",
+  "worthing-rugby-7s": "/assets/events/worthing-rugby-7s.png",
+  "wxv-global-series-challenger-2026": "/assets/events/wxv-global-series-challenger-2026.png",
+  "xmasters-beach-rugby-2": "/assets/events/xmasters-beach-rugby-2.png",
+  "youth-olympic-games-rugby-7s-2026": "/assets/events/youth-olympic-games-rugby-7s-2026.jpg",
+  "zia-7s": "/assets/events/zia-7s.webp"
+};
+
+function localImageFor(slug, fallbackIndex = 0) {
+  return eventImageAssets[slug] || imageFor(slug, fallbackIndex);
+}
+
 function uniqueLinks(...groups) {
   const links = groups.flat().filter((link) => link?.url);
   return [...new Map(links.map((link) => [link.url.toLowerCase(), link])).values()];
@@ -982,7 +1149,7 @@ function enrichEvent(event) {
   const direct = eventEnrichments[event.slug] || {};
   return {
     ...event,
-    image: (direct.image ?? event.image) || shared.image || "",
+    image: eventImageAssets[event.slug] || (direct.image ?? event.image) || shared.image || "",
     description: direct.description || event.description || event.summary,
     socialLinks: uniqueLinks(shared.socialLinks || [], event.socialLinks || [], direct.socialLinks || []),
     externalLinks: uniqueLinks(shared.externalLinks || [], event.externalLinks || [], direct.externalLinks || []),
@@ -1545,7 +1712,7 @@ function footer() {
   `;
 }
 
-function pageHero(title, copy, actions = "", image = imageFor("rugbytown-7s", 0)) {
+function pageHero(title, copy, actions = "", image = localImageFor("rugbytown-7s", 0)) {
   return `
     <section class="detail-hero" ${cssImage(image, "--detail-image")}>
       <div class="stack">
@@ -1561,7 +1728,7 @@ function pageHero(title, copy, actions = "", image = imageFor("rugbytown-7s", 0)
 function homePage() {
   const upcoming = sortedEvents(allEvents.filter((event) => phase(event) !== "Past")).slice(0, 9);
   const past = sortedEvents(allEvents.filter((event) => phase(event) === "Past")).reverse().slice(0, 6);
-  const heroImage = imageFor("rugbytown-7s", 3);
+  const heroImage = localImageFor("rugbytown-7s", 3);
   return `
     <main class="page">
       <section class="hero" ${cssImage(heroImage)}>
@@ -1707,7 +1874,7 @@ function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Sea
   const past = events.filter((event) => phase(event) === "Past").reverse();
   return `
     <main class="page">
-      ${pageHero(title, copy, button("Submit tournament", "/submit", "secondary") + button("Register team", "/register", "primary"), imageFor("emirates-dubai-7s", 4))}
+      ${pageHero(title, copy, button("Submit tournament", "/submit", "secondary") + button("Register team", "/register", "primary"), localImageFor("emirates-dubai-7s", 4))}
       <section class="section">
         ${filterBar(state, defaultCode)}
         <div class="results-bar">${safe(events.length)} matching events</div>
@@ -1786,7 +1953,7 @@ function registerPage() {
   const upcoming = sortedEvents(allEvents.filter((event) => phase(event) !== "Past")).slice(0, 14);
   return `
     <main class="page">
-      ${pageHero("Register for rugby tournaments", "Choose the right tournament, review divisions and travel needs, then open the team-entry or ticket route for the event.", button("Browse events", "/events", "secondary") + button("Submit tournament", "/submit", "primary"), imageFor("tropical-7s", 5))}
+      ${pageHero("Register for rugby tournaments", "Choose the right tournament, review divisions and travel needs, then open the team-entry or ticket route for the event.", button("Browse events", "/events", "secondary") + button("Submit tournament", "/submit", "primary"), localImageFor("tropical-7s", 5))}
       <section class="section light">
         <div class="section-head">
           <div>
@@ -1804,7 +1971,7 @@ function registerPage() {
 function submitPage() {
   return `
     <main class="page">
-      ${pageHero("Submit a tournament", "Send dates, venue, divisions, ticket links, registration links, media, and organizer contact details.", button("Email tournament details", "mailto:events@rugbymonkey.com?subject=Tournament%20submission", "primary", icons.external), imageFor("algarve-7s", 8))}
+      ${pageHero("Submit a tournament", "Send dates, venue, divisions, ticket links, registration links, media, and organizer contact details.", button("Email tournament details", "mailto:events@rugbymonkey.com?subject=Tournament%20submission", "primary", icons.external), localImageFor("algarve-7s", 8))}
       <section class="section light">
         <div class="split">
           <form class="form-card" data-contact-form>
@@ -1846,7 +2013,7 @@ function submitPage() {
 function profilesPage() {
   return `
     <main class="page">
-      ${pageHero("Rugby profiles", "Tournament organizers, governing bodies, travelling clubs, team managers, national squads, and player spotlights sit next to the events they shape.", button("Teams", "/teams", "secondary") + button("Events", "/events", "primary"), imageFor("grenada-rugby-world-7s", 7))}
+      ${pageHero("Rugby profiles", "Tournament organizers, governing bodies, travelling clubs, team managers, national squads, and player spotlights sit next to the events they shape.", button("Teams", "/teams", "secondary") + button("Events", "/events", "primary"), localImageFor("grenada-rugby-world-7s", 7))}
       <section class="section light">
         <div class="grid three">${profiles.map(profileCard).join("")}</div>
       </section>
@@ -1870,7 +2037,7 @@ function profileDetailPage(slug) {
   const events = profile.eventSlugs.map((eventSlug) => findEvent(eventSlug)).filter(Boolean);
   return `
     <main class="page">
-      ${pageHero(profile.title, profile.summary, button("Events", "/events", "secondary") + button("Open website", profile.url, "primary", isExternal(profile.url) ? icons.external : icons.arrow), events[0]?.image || imageFor("lit-7s", 1))}
+      ${pageHero(profile.title, profile.summary, button("Events", "/events", "secondary") + button("Open website", profile.url, "primary", isExternal(profile.url) ? icons.external : icons.arrow), events[0]?.image || localImageFor("lit-7s", 1))}
       <section class="section light">
         <div class="section-head">
           <div>
@@ -1888,7 +2055,7 @@ function profileDetailPage(slug) {
 function teamsPage() {
   return `
     <main class="page">
-      ${pageHero("Teams and rugby communities", "Find national squads, club teams, touring sides, university programs, and team managers connected to upcoming and past tournaments.", button("Register team", "/register", "primary") + button("Profiles", "/profiles", "secondary"), imageFor("alaska-midnight-sun-7s", 9))}
+      ${pageHero("Teams and rugby communities", "Find national squads, club teams, touring sides, university programs, and team managers connected to upcoming and past tournaments.", button("Register team", "/register", "primary") + button("Profiles", "/profiles", "secondary"), localImageFor("alaska-midnight-sun-7s", 9))}
       <section class="section light">
         <div class="grid three">${teams.map(teamCard).join("")}</div>
       </section>
@@ -1902,7 +2069,7 @@ function teamDetailPage(slug) {
   const events = team.eventSlugs.map((eventSlug) => findEvent(eventSlug)).filter(Boolean);
   return `
     <main class="page">
-      ${pageHero(team.title, team.summary, button("Related events", "/events", "primary"), events[0]?.image || imageFor("tropical-7s", 2))}
+      ${pageHero(team.title, team.summary, button("Related events", "/events", "primary"), events[0]?.image || localImageFor("tropical-7s", 2))}
       <section class="section light">
         <div class="grid three">${events.map(eventCard).join("")}</div>
       </section>
@@ -1912,14 +2079,14 @@ function teamDetailPage(slug) {
 
 function mediaPage() {
   const media = [
-    ["RugbyTown stadium weekend", "Tickets, teams, and full-event storytelling around Infinity Park.", imageFor("rugbytown-7s", 1), "/events/rugbytown-7s-2026"],
-    ["LIT7s London day", "Spectators, team entry, parking, VIP, music, and tournament media.", imageFor("lit-7s", 2), "/events/lit-7s-london-2026"],
-    ["Beach rugby destinations", "Coastal tournaments build repeat visits through team photos and event memory.", imageFor("figueira-beach-rugby", 3), "/beach"],
-    ["Dubai festival energy", "Rugby, live entertainment, tickets, and international travel in one profile.", imageFor("emirates-dubai-7s", 4), "/events/emirates-dubai-7s-2026"],
+    ["RugbyTown stadium weekend", "Tickets, teams, and full-event storytelling around Infinity Park.", localImageFor("rugbytown-7s", 1), "/events/rugbytown-7s-2026"],
+    ["LIT7s London day", "Spectators, team entry, parking, VIP, music, and tournament media.", localImageFor("lit-7s", 2), "/events/lit-7s-london-2026"],
+    ["Beach rugby destinations", "Coastal tournaments build repeat visits through team photos and event memory.", localImageFor("figueira-beach-rugby", 3), "/beach"],
+    ["Dubai festival energy", "Rugby, live entertainment, tickets, and international travel in one profile.", localImageFor("emirates-dubai-7s", 4), "/events/emirates-dubai-7s-2026"],
   ];
   return `
     <main class="page">
-      ${pageHero("Tournament media", "Photos, clips, destination cards, team shots, organizer notes, past-event media, registration links, and ticket links.", button("Past events", "/past-events", "primary") + button("Submit media", "/submit", "secondary"), imageFor("grenada-rugby-world-7s-2", 10))}
+      ${pageHero("Tournament media", "Photos, clips, destination cards, team shots, organizer notes, past-event media, registration links, and ticket links.", button("Past events", "/past-events", "primary") + button("Submit media", "/submit", "secondary"), localImageFor("grenada-rugby-world-7s-2", 10))}
       <section class="section">
         <div class="grid two">
           ${media.map(([title, copy, image, url]) => `
@@ -1938,7 +2105,7 @@ function pastEventsPage() {
   const past = sortedEvents(allEvents.filter((event) => phase(event) === "Past")).reverse();
   return `
     <main class="page">
-      ${pageHero("Past rugby events", "Browse previous editions by format, destination, team type, photos, organizer links, and available contact details.", button("Upcoming events", "/events?status=upcoming", "primary") + button("Media", "/media", "secondary"), imageFor("ameland-beach-rugby", 11))}
+      ${pageHero("Past rugby events", "Browse previous editions by format, destination, team type, photos, organizer links, and available contact details.", button("Upcoming events", "/events?status=upcoming", "primary") + button("Media", "/media", "secondary"), localImageFor("ameland-beach-rugby", 11))}
       <section class="section light">
         <div class="row-list">${past.slice(0, 70).map(rowCard).join("")}</div>
       </section>
@@ -1957,7 +2124,7 @@ function faqPage() {
   ];
   return `
     <main class="page">
-      ${pageHero("Rugbymonkey FAQ", "Answers for players, team managers, spectators, organizers, families, and rugby fans using the tournament calendar.", button("Browse events", "/events", "primary") + button("Submit tournament", "/submit", "secondary"), imageFor("tropical-7s", 12))}
+      ${pageHero("Rugbymonkey FAQ", "Answers for players, team managers, spectators, organizers, families, and rugby fans using the tournament calendar.", button("Browse events", "/events", "primary") + button("Submit tournament", "/submit", "secondary"), localImageFor("tropical-7s", 12))}
       <section class="section light">
         <div class="grid two">
           ${faqs.map(([title, copy]) => `<article class="faq-card"><h3>${safe(title)}</h3><p>${safe(copy)}</p></article>`).join("")}
@@ -1970,7 +2137,7 @@ function faqPage() {
 function notFoundPage() {
   return `
     <main class="page">
-      ${pageHero("Page not found", "Try the tournament calendar, format pages, teams, profiles, media, or FAQ.", button("Return home", "/", "primary"), imageFor("rugbytown-7s", 1))}
+      ${pageHero("Page not found", "Try the tournament calendar, format pages, teams, profiles, media, or FAQ.", button("Return home", "/", "primary"), localImageFor("rugbytown-7s", 1))}
     </main>
   `;
 }

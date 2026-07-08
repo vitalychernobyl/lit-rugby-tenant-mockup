@@ -7,7 +7,7 @@
     "dev": "npx wrangler dev --local --port 8787",
     "dev:rugbymonkey": "npx wrangler dev --config wrangler.rugbymonkey.jsonc --local --port 8788",
     "check:lit": "node --check public/app.js && node --check src/worker.js",
-    "check:rugbymonkey": "node --check rugbymonkey/public/app.js && node --check rugbymonkey/public/app-rm5.js && node --check rugbymonkey/public/data/archive-events.js && node --check rugbymonkey/public/data/archive-events-rm5.js && node --check rugbymonkey/src/worker.js",
+    "check:rugbymonkey": "node --check rugbymonkey/public/app.js && node --check rugbymonkey/public/app-rm5.js && node --check rugbymonkey/public/app-rm6.js && node --check rugbymonkey/public/data/archive-events.js && node --check rugbymonkey/public/data/archive-events-rm5.js && node --check rugbymonkey/src/worker.js",
     "check": "npm run check:lit && npm run check:rugbymonkey",
     "build": "npm run check",
     "test": "npm run check"
