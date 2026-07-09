@@ -15,7 +15,7 @@ const icons = {
 };
 
 const externalLinks = {
-  lit: "https://www.lit7s.com/lit-7s-london7s/",
+  lit: "https://www.lit7s.com/",
   litTickets: "https://ticketpass.org/event/EWDVGH/lit-super-sevens-series-2026-team-entry",
   rugbyTown: "https://rugbytownusa.com/calendar/",
   rugbyTownTickets: "https://www.infinityparkatglendale.com/events/rugbytown-7s-day-1/",
@@ -108,20 +108,23 @@ const currentEvents = [
   {
     slug: "lit-7s-london-2026",
     title: "LIT 7s London 2026",
+    featured: true,
     date: "July 18, 2026",
     dateSort: "2026-07-18",
-    location: "Wasps Rugby Club, West London",
+    location: "Wasps Rugby Club, Twyford Avenue Sports Ground, Acton, London W3 9QA",
     city: "London",
     region: "Europe",
     country: "United Kingdom",
     code: "7s",
     kind: "7s",
     level: "Elite and open",
-    divisions: ["Men", "Women", "Elite", "Open", "Social"],
-    amenities: ["Team entry", "Spectator tickets", "Parking", "VIP", "Food", "Bars", "Live music"],
+    divisions: ["Men's 7s", "Women's 7s", "Elite", "Open", "Social"],
+    amenities: ["70+ teams", "Team entry", "Spectator tickets", "Parking", "All-day bar", "Food", "Live music", "DJ", "Cheerleaders"],
     image: imageFor("lit-7s", 6),
     summary:
-      "The London LIT 7s flagship brings elite and amateur rugby, spectator tickets, parking, VIP packages, music, food, bars, and a full day of tournament media.",
+      "The 14th annual LIT7s brings 70+ amateur and elite men's and women's sevens teams to Wasps Rugby Club in West London on 18 July 2026.",
+    description:
+      "LIT 7s is the UK flagship LIT7s tournament and the finale of the LIT Super Sevens Series, with elite, open, and social divisions, team registration, spectator tickets, limited advance parking, all-day bars, food, live music, DJ sets, cheerleaders, and a full festival day around the rugby.",
     officialUrl: externalLinks.lit,
     registerUrl: externalLinks.litTickets,
     ticketUrl: externalLinks.litTickets,
@@ -1056,7 +1059,7 @@ const eventImageAssets = {
   "moonshine-7s": "/assets/events/moonshine-7s.png",
   "national-junior-touch-cup-2026": "/assets/events/national-junior-touch-cup-2026.webp",
   "national-pub-7s": "/assets/events/national-pub-7s.png",
-  "nations-championship-2026": "/assets/events/nations-championship-2026.webp",
+  "nations-championship-2026": "/assets/events/nations-championship-2026.jpg",
   "north-sea-beach-rugby": "/assets/events/north-sea-beach-rugby.png",
   "north-sea-beach-rugby-2026": "/assets/events/north-sea-beach-rugby-2026.png",
   "norwich-7s": "/assets/events/norwich-7s.png",
@@ -1122,7 +1125,7 @@ const eventImageAssets = {
   "weymouth-beach-rugby-fest": "/assets/events/weymouth-beach-rugby-fest.png",
   "whiskey-10s-rugby-tournament": "/assets/events/whiskey-10s-rugby-tournament.jpg",
   "wight-wave-beach-rugby-tournament": "/assets/events/wight-wave-beach-rugby-tournament.png",
-  "world-rugby-junior-championship-2026": "/assets/events/world-rugby-junior-championship-2026.webp",
+  "world-rugby-junior-championship-2026": "/assets/events/world-rugby-junior-championship-2026.jpg",
   "world-rugby-nations-cup-november-2026": "/assets/events/world-rugby-nations-cup-november-2026.webp",
   "worthing-rugby-7s": "/assets/events/worthing-rugby-7s.png",
   "wxv-global-series-challenger-2026": "/assets/events/wxv-global-series-challenger-2026.png",
@@ -1476,7 +1479,7 @@ function phase(event) {
 }
 
 function sortedEvents(events) {
-  return [...events].sort((a, b) => String(a.dateSort).localeCompare(String(b.dateSort)) || a.title.localeCompare(b.title));
+  return [...events].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || String(a.dateSort).localeCompare(String(b.dateSort)) || a.title.localeCompare(b.title));
 }
 
 function searchText(event) {
@@ -1579,6 +1582,7 @@ function eventCard(event) {
       </a>
       <div class="event-body">
         <div class="chip-list">
+          ${event.featured ? `<span class="tag tag-featured">Featured</span>` : ""}
           <span class="tag">${safe(p)}</span>
           <span class="tag">${safe(event.code)}</span>
           <span class="tag">${safe(event.region)}</span>
@@ -1607,6 +1611,7 @@ function rowCard(event) {
       ${image ? `<img class="row-thumb" src="${safe(image)}" alt="${safe(event.title)}" loading="lazy" />` : `<div class="row-thumb"></div>`}
       <div>
         <div class="chip-list">
+          ${event.featured ? `<span class="tag tag-featured">Featured</span>` : ""}
           <span class="tag">${safe(phase(event))}</span>
           <span class="tag">${safe(event.code)}</span>
           <span class="tag">${safe(event.region)}</span>
@@ -1912,6 +1917,7 @@ function eventDetailPage(slug) {
             <p>${safe(event.summary)}</p>
             ${event.description && event.description !== event.summary ? `<div class="rich-description"><h3>About this event</h3><p>${safe(event.description)}</p></div>` : ""}
             <div class="chip-list">
+              ${event.featured ? `<span class="tag tag-featured">Featured</span>` : ""}
               <span class="tag">${safe(phase(event))}</span>
               <span class="tag">${safe(event.level)}</span>
               <span class="tag">${safe(event.region)}</span>
@@ -2080,7 +2086,7 @@ function teamDetailPage(slug) {
 function mediaPage() {
   const media = [
     ["RugbyTown stadium weekend", "Tickets, teams, and full-event storytelling around Infinity Park.", localImageFor("rugbytown-7s", 1), "/events/rugbytown-7s-2026"],
-    ["LIT7s London day", "Spectators, team entry, parking, VIP, music, and tournament media.", localImageFor("lit-7s", 2), "/events/lit-7s-london-2026"],
+    ["LIT7s London day", "70+ teams, spectator tickets, team entry, parking, food, bars, DJ, cheerleaders, and tournament media at Wasps Rugby Club.", localImageFor("lit-7s-london-2026", 2), "/events/lit-7s-london-2026"],
     ["Beach rugby destinations", "Coastal tournaments build repeat visits through team photos and event memory.", localImageFor("figueira-beach-rugby", 3), "/beach"],
     ["Dubai festival energy", "Rugby, live entertainment, tickets, and international travel in one profile.", localImageFor("emirates-dubai-7s", 4), "/events/emirates-dubai-7s-2026"],
   ];

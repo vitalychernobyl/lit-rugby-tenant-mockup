@@ -29,11 +29,11 @@ function shellResponse() {
     <meta name="theme-color" content="#0b120d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/styles-rm6.css" />
+    <link rel="stylesheet" href="/styles-rm7.css" />
   </head>
   <body>
     <div id="app" class="site-shell" aria-live="polite"></div>
-    <script type="module" src="/app-rm6.js"></script>
+    <script type="module" src="/app-rm7.js"></script>
   </body>
 </html>`,
     {

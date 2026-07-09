@@ -400,6 +400,28 @@ textarea:focus {
   line-height: 1;
 }
 
+.light .event-card .pill,
+.light .event-card .tag,
+.light .profile-card .pill,
+.light .profile-card .tag,
+.light .team-card .pill,
+.light .team-card .tag,
+.light .row-card .pill,
+.light .row-card .tag {
+  border-color: rgba(84, 99, 70, 0.34);
+  background: #e7eadf;
+  color: #243025;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.tag-featured,
+.light .event-card .tag-featured,
+.light .row-card .tag-featured {
+  border-color: rgba(36, 48, 37, 0.36);
+  background: #26351f;
+  color: #f7f3e8;
+}
+
 .section {
   padding: 76px max(20px, calc((100vw - var(--max)) / 2));
 }
