@@ -1,4 +1,4 @@
-import { archiveEvents } from "./data/archive-events.js?v=20260709-rm9";
+import { archiveEvents } from "./data/archive-events.js?v=20260709-rm10";
 
 const today = new Date("2026-07-09T12:00:00-04:00");
 const app = document.querySelector("#app");
@@ -1811,7 +1811,7 @@ function header() {
   return `
     <header class="site-header" data-header>
       <a class="brand" href="/" aria-label="Rugbymonkey home">
-        <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm9.png" alt="" aria-hidden="true" /></span>
+        <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm10.png" alt="" aria-hidden="true" /></span>
         <span><strong>Rugbymonkey</strong><span class="brand-text">Rugby tournaments</span></span>
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
@@ -1828,7 +1828,7 @@ function footer() {
     <footer class="footer">
       <div class="footer-inner">
         <a class="brand" href="/">
-          <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm9.png" alt="" aria-hidden="true" /></span>
+          <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm10.png" alt="" aria-hidden="true" /></span>
           <span><strong>Rugbymonkey</strong><span class="brand-text">Global rugby calendar</span></span>
         </a>
         <div class="footer-links">
