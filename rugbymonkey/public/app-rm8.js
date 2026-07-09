@@ -762,7 +762,7 @@ const currentEvents = [
     divisions: ["Men", "Women", "Vets", "Elite", "Open"],
     amenities: ["Team packages", "Travel", "Festival", "International clubs"],
     image: imageFor("algarve-7s", 27),
-    summary: "Algarve 7s remains a destination tournament profile for elite, open, women's, men's, and vets teams in Portugal.",
+    summary: "Algarve 7s remains a destination tournament for elite, open, women's, men's, and vets teams in Portugal.",
     officialUrl: externalLinks.algarve,
     registerUrl: externalLinks.algarve,
     ticketUrl: externalLinks.algarve,
@@ -829,7 +829,7 @@ const recentEvents = [
     divisions: ["Beach rugby", "Men", "Women"],
     amenities: ["Beach rugby", "International teams", "Destination weekend"],
     image: imageFor("figueira-beach-rugby", 29),
-    summary: "Portugal's beach rugby tournament profile connects travelling clubs, coastal competition, and media from the beach rugby calendar.",
+    summary: "Portugal's beach rugby tournament connects travelling clubs, coastal competition, and media from the beach rugby calendar.",
     officialUrl: "https://www.portugalbeachrugby.com/",
     registerUrl: "https://www.portugalbeachrugby.com/",
     ticketUrl: "https://www.portugalbeachrugby.com/",
@@ -1295,7 +1295,7 @@ const profiles = [
     initials: "WR",
     focus: ["15s", "7s", "National teams", "Youth"],
     summary:
-      "World Rugby event profiles anchor national-team discovery, global championships, pathway tournaments, and major future tournament demand.",
+      "World Rugby events anchor national-team discovery, global championships, pathway tournaments, and major future tournament demand.",
     eventSlugs: ["nations-championship-2026", "world-rugby-junior-championship-2026", "wxv-global-series-challenger-2026", "mens-rugby-world-cup-2027"],
     url: "https://www.world.rugby/",
   },
@@ -1331,7 +1331,7 @@ const profiles = [
     initials: "D7",
     focus: ["7s", "Festival", "Invitational", "Travel"],
     summary:
-      "Dubai's tournament profile brings rugby, ticketing, team registration, live entertainment, travel, and mass-participation energy into one weekend.",
+      "Dubai's tournament weekend brings rugby, ticketing, team registration, live entertainment, travel, and mass-participation energy into one weekend.",
     eventSlugs: ["emirates-dubai-7s-2026"],
     url: externalLinks.dubai,
   },
@@ -1355,7 +1355,7 @@ const profiles = [
     initials: "TR",
     focus: ["Touch", "Tag", "Youth", "Masters"],
     summary:
-      "Touch and tag tournament profiles make it easier to find youth, open, mixed, senior, and masters events across rugby-adjacent formats.",
+      "Touch and tag tournaments make it easier to find youth, open, mixed, senior, and masters events across rugby-adjacent formats.",
     eventSlugs: ["european-touch-championships-2026", "european-youth-touch-championships-2026", "school-sport-australia-touch-football-2026", "tagfest-leeds-2026"],
     url: "/touch",
   },
@@ -1403,7 +1403,7 @@ const profiles = [
     initials: "TT",
     focus: ["Tag", "Mixed", "Social", "Community"],
     summary:
-      "Try Tag Rugby event profiles help social and competitive mixed teams find one-day tournaments and local community events.",
+      "Try Tag Rugby events help social and competitive mixed teams find one-day tournaments and local community events.",
     eventSlugs: ["tagfest-leeds-2026"],
     url: externalLinks.tryTagLeeds,
   },
@@ -1447,7 +1447,7 @@ const teams = [
     initials: "CAN",
     focus: ["15s", "Pacific", "National teams"],
     summary:
-      "Canada's tournament profile connects Pacific Nations Cup fixtures, national-team schedules, sevens pathways, and North American supporters.",
+      "Canada's tournament calendar connects Pacific Nations Cup fixtures, national-team schedules, sevens pathways, and North American supporters.",
     eventSlugs: ["pacific-nations-cup-2026"],
   },
   {
@@ -1518,7 +1518,6 @@ const nav = [
   ["Beach", "/beach"],
   ["Touch", "/touch"],
   ["Teams", "/teams"],
-  ["Profiles", "/profiles"],
   ["Media", "/media"],
   ["FAQ", "/faq"],
 ];
@@ -1557,6 +1556,25 @@ function formatDateBadge(event) {
   const date = new Date(`${event.dateSort}T12:00:00Z`);
   if (Number.isNaN(date.getTime())) return ["", "TBA"];
   return [date.toLocaleString("en-US", { month: "short" }), String(date.getUTCDate()).padStart(2, "0")];
+}
+
+function eventMonthValue(event) {
+  return /^\d{4}-\d{2}/.test(event.dateSort || "") ? event.dateSort.slice(0, 7) : "";
+}
+
+function monthLabel(month) {
+  const date = new Date(`${month}-01T12:00:00Z`);
+  return Number.isNaN(date.getTime()) ? month : date.toLocaleString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+function eventOverlapsMonth(event, month) {
+  if (!month) return true;
+  const start = new Date(`${event.dateSort || ""}T00:00:00Z`);
+  const end = new Date(`${event.endDateSort || event.dateSort || ""}T23:59:59Z`);
+  const monthStart = new Date(`${month}-01T00:00:00Z`);
+  const monthEnd = new Date(Date.UTC(monthStart.getUTCFullYear(), monthStart.getUTCMonth() + 1, 0, 23, 59, 59));
+  if ([start, end, monthStart, monthEnd].some((date) => Number.isNaN(date.getTime()))) return eventMonthValue(event) === month;
+  return start <= monthEnd && end >= monthStart;
 }
 
 function phase(event) {
@@ -1742,14 +1760,13 @@ function profileCard(profile) {
       <div class="profile-top">
         <div class="avatar">${safe(profile.initials)}</div>
         <div>
-          <h3><a href="/profiles/${safe(profile.slug)}">${safe(profile.title)}</a></h3>
+          <h3>${safe(profile.title)}</h3>
           <span class="tag">${safe(profile.type)}</span>
         </div>
       </div>
       <p>${safe(profile.summary)}</p>
       <div class="chip-list">${profile.focus.map((item) => `<span class="pill">${safe(item)}</span>`).join("")}</div>
       <div class="actions">
-        ${button("Profile", `/profiles/${profile.slug}`, "secondary")}
         ${events[0] ? button("Featured event", `/events/${events[0].slug}`, "primary") : ""}
       </div>
     </article>
@@ -1784,7 +1801,7 @@ function personCard(person) {
         </div>
       </div>
       <p>${safe(person.summary)}</p>
-      <div class="actions">${button("Related events", `/profiles`, "secondary")}</div>
+      <div class="actions">${button("Related events", `/events`, "secondary")}</div>
     </article>
   `;
 }
@@ -1794,7 +1811,7 @@ function header() {
   return `
     <header class="site-header" data-header>
       <a class="brand" href="/" aria-label="Rugbymonkey home">
-        <span class="brand-mark"><img src="/assets/rugbymonkey-logo.svg" alt="" aria-hidden="true" /></span>
+        <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm9.png" alt="" aria-hidden="true" /></span>
         <span><strong>Rugbymonkey</strong><span class="brand-text">Rugby tournaments</span></span>
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
@@ -1811,7 +1828,7 @@ function footer() {
     <footer class="footer">
       <div class="footer-inner">
         <a class="brand" href="/">
-          <span class="brand-mark"><img src="/assets/rugbymonkey-logo.svg" alt="" aria-hidden="true" /></span>
+          <span class="brand-mark"><img src="/assets/rugbymonkey-logo-rm9.png" alt="" aria-hidden="true" /></span>
           <span><strong>Rugbymonkey</strong><span class="brand-text">Global rugby calendar</span></span>
         </a>
         <div class="footer-links">
@@ -1850,7 +1867,7 @@ function homePage() {
           <div>
             <p class="eyebrow">Worldwide rugby tournament calendar</p>
             <h1>Find rugby tournaments worldwide</h1>
-            <p class="lead">Search 7s, 15s, beach rugby, touch, tag, youth, club, and national-team tournaments with team entry, spectator tickets, event media, and tournament profiles in one place.</p>
+            <p class="lead">Search 7s, 15s, beach rugby, touch, tag, youth, club, and national-team tournaments with team entry, spectator tickets, event media, and tournament details in one place.</p>
             <div class="hero-actions">
               ${button("Browse events", "/events", "primary")}
               ${button("Team registration", "/register", "secondary")}
@@ -1877,13 +1894,6 @@ function homePage() {
       </section>
 
       <section class="section light">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Upcoming</p>
-            <h2>Register, buy tickets, plan the weekend</h2>
-          </div>
-          <p>Upcoming events include dates, venues, divisions, ticket routes, team entry, travel notes, and tournament contacts.</p>
-        </div>
         <div class="grid three">${upcoming.map(eventCard).join("")}</div>
       </section>
 
@@ -1901,17 +1911,6 @@ function homePage() {
           ${formatTile("Beach", "Coastal and destination tournaments with team packages, media, repeat events, and social weekends.", "/beach")}
           ${formatTile("Touch and Tag", "Mixed, youth, senior, masters, and community tournaments for touch and tag teams.", "/touch")}
         </div>
-      </section>
-
-      <section class="section light">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Profiles</p>
-            <h2>Organizers, teams, players</h2>
-          </div>
-          <p>Tournament operators, national squads, touring clubs, sevens players, and team managers are grouped with their related events.</p>
-        </div>
-        <div class="grid three">${profiles.slice(0, 6).map(profileCard).join("")}</div>
       </section>
 
       <section class="section">
@@ -1948,6 +1947,9 @@ function filteredEventsFromUrl(defaultCode = "") {
   const level = params.get("level") || "";
   const division = params.get("division") || "";
   const scope = params.get("scope") || "";
+  const month = params.get("month") || "";
+  const venue = (params.get("venue") || "").trim().toLowerCase();
+  const organizer = params.get("organizer") || "";
   const filtered = allEvents.filter((event) => {
     const eventPhase = phase(event).toLowerCase();
     const codeMatch = !code || event.code.toLowerCase() === code.toLowerCase();
@@ -1957,8 +1959,12 @@ function filteredEventsFromUrl(defaultCode = "") {
     const levelMatch = !level || event.level === level;
     const divisionMatch = !division || (event.divisions || []).some((item) => item.toLowerCase().includes(division.toLowerCase()) || displayLabel(item).toLowerCase().includes(division.toLowerCase()));
     const scopeMatch = !scope || tournamentScope(event) === scope;
+    const monthMatch = eventOverlapsMonth(event, month);
+    const venueText = [event.location, event.city, event.country].join(" ").toLowerCase();
+    const venueMatch = !venue || venueText.includes(venue);
+    const organizerMatch = !organizer || event.profileSlug === organizer;
     const queryMatch = !query || searchText(event).includes(query);
-    return codeMatch && regionMatch && statusMatch && countryMatch && levelMatch && divisionMatch && scopeMatch && queryMatch;
+    return codeMatch && regionMatch && statusMatch && countryMatch && levelMatch && divisionMatch && scopeMatch && monthMatch && venueMatch && organizerMatch && queryMatch;
   });
   return {
     query,
@@ -1969,6 +1975,9 @@ function filteredEventsFromUrl(defaultCode = "") {
     level,
     division,
     scope,
+    month,
+    venue,
+    organizer,
     events: sortedEvents(filtered),
   };
 }
@@ -1978,7 +1987,11 @@ function filterBar(state, defaultCode = "") {
   const countries = [...new Set(allEvents.map((event) => event.country).filter(Boolean))].sort();
   const levels = [...new Set(allEvents.map((event) => event.level).filter(Boolean))].sort();
   const divisions = [...new Set(allEvents.flatMap((event) => event.divisions || []).map(displayLabel).filter(Boolean))].sort();
-  const advancedOpen = Boolean(state.region || state.country || state.level || state.division || state.scope);
+  const months = [...new Set(allEvents.map(eventMonthValue).filter(Boolean))].sort();
+  const organizers = profiles
+    .filter((profile) => allEvents.some((event) => event.profileSlug === profile.slug))
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const advancedOpen = Boolean(state.region || state.country || state.level || state.division || state.scope || state.month || state.venue || state.organizer);
   return `
     <form class="filter-shell${advancedOpen ? " is-expanded" : ""}" data-filter-form data-default-code="${safe(defaultCode)}">
       <div class="filter-primary">
@@ -1993,6 +2006,15 @@ function filterBar(state, defaultCode = "") {
         <button class="button secondary filter-toggle" type="button" data-advanced-toggle aria-expanded="${advancedOpen ? "true" : "false"}">Advanced ${icons.menu}</button>
       </div>
       <div class="filter-advanced" data-filter-advanced${advancedOpen ? "" : " hidden"}>
+        <select name="month" aria-label="Filter date">
+          <option value="">Any month</option>
+          ${months.map((month) => `<option value="${safe(month)}"${state.month === month ? " selected" : ""}>${safe(monthLabel(month))}</option>`).join("")}
+        </select>
+        <input name="venue" value="${safe(state.venue)}" placeholder="Venue or city" aria-label="Filter venue or city" />
+        <select name="organizer" aria-label="Filter organizer">
+          <option value="">All organizers</option>
+          ${organizers.map((profile) => `<option value="${safe(profile.slug)}"${state.organizer === profile.slug ? " selected" : ""}>${safe(profile.title)}</option>`).join("")}
+        </select>
         <select name="region" aria-label="Filter region">
           <option value="">All regions</option>
           ${regions.map((region) => `<option value="${safe(region)}"${state.region === region ? " selected" : ""}>${safe(region)}</option>`).join("")}
@@ -2023,7 +2045,7 @@ function filterBar(state, defaultCode = "") {
   `;
 }
 
-function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Search upcoming and past rugby events by format, region, division, team profile, and registration need.") {
+function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Search upcoming and past rugby events by format, region, division, team level, and registration need.") {
   const state = filteredEventsFromUrl(defaultCode);
   const events = state.events;
   const upcoming = events.filter((event) => phase(event) !== "Past");
@@ -2052,7 +2074,8 @@ function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Sea
 
 function factCard(label, value) {
   if (!value) return "";
-  return `<div class="fact-card"><span>${safe(label)}</span><strong>${safe(value)}</strong></div>`;
+  const wide = label === "Venue" || label === "Organizer" ? " is-wide" : "";
+  return `<div class="fact-card${wide}"><span>${safe(label)}</span><strong>${safe(value)}</strong></div>`;
 }
 
 function pillList(items = []) {
@@ -2076,7 +2099,7 @@ function overviewCopy(event, profile) {
   const p = phase(event).toLowerCase();
   const divisions = naturalList(event.divisions, 6);
   const amenities = naturalList(event.amenities, 5);
-  const organizer = profile?.title ? ` The tournament profile is connected with ${profile.title}.` : "";
+  const organizer = profile?.title ? ` Organizer: ${profile.title}.` : "";
   const divisionText = divisions ? ` It lists ${divisions} divisions or team categories.` : "";
   const amenityText = amenities ? ` Event-day notes include ${amenities}.` : "";
   return `${event.title} is a ${p} ${displayLabel(event.level)} ${displayLabel(event.code)} tournament listed for ${event.date} at ${event.location}.${divisionText}${amenityText}${organizer}`;
@@ -2118,14 +2141,6 @@ function spectatorInstructions(event) {
   return uniqueStrings(notes);
 }
 
-function mediaNotes(event) {
-  const notes = [...(event.mediaNotes || [])];
-  if (event.image) notes.push("Tournament media is available through the event profile image and official channels.");
-  if (event.socialLinks?.length) notes.push("Social media links are listed for photos, video, draws, fixtures, and event-week announcements.");
-  if (event.externalLinks?.length) notes.push("Additional event references are listed with official resources.");
-  return uniqueStrings(notes);
-}
-
 function eventFactGrid(event, profile) {
   return `
     <div class="fact-grid" aria-label="Tournament facts">
@@ -2154,7 +2169,6 @@ function eventDetailPage(slug) {
           <article class="detail-main">
             <p class="eyebrow">${safe(event.code)} tournament</p>
             <h2>${safe(event.title)}</h2>
-            <p>${safe(event.summary)}</p>
             ${eventFactGrid(event, profile)}
             ${event.description && event.description !== event.summary ? `<div class="rich-description"><h3>About this event</h3><p>${safe(event.description)}</p></div>` : ""}
             <div class="detail-section">
@@ -2179,7 +2193,6 @@ function eventDetailPage(slug) {
             ${detailList("Venue and travel", venueNotes(event))}
             ${detailList("Player and team instructions", playerInstructions(event))}
             ${detailList("Tickets and spectators", spectatorInstructions(event))}
-            ${detailList("Media and updates", mediaNotes(event))}
             ${eventResourcePanel(event)}
           </article>
           <aside class="detail-side">
@@ -2190,7 +2203,6 @@ function eventDetailPage(slug) {
               ${meta(icons.users, `${displayLabel(event.code)} - ${displayLabel(event.level)}`)}
             </ul>
             ${eventActionButtons(event)}
-            ${profile ? button(profile.title, `/profiles/${profile.slug}`, "secondary") : ""}
           </aside>
         </div>
       </section>
@@ -2314,7 +2326,7 @@ function profileDetailPage(slug) {
 function teamsPage() {
   return `
     <main class="page">
-      ${pageHero("Teams and rugby communities", "Find national squads, club teams, touring sides, university programs, and team managers connected to upcoming and past tournaments.", button("Register team", "/register", "primary") + button("Profiles", "/profiles", "secondary"), localImageFor("alaska-midnight-sun-7s", 9))}
+      ${pageHero("Teams and rugby communities", "Find national squads, club teams, touring sides, university programs, and team managers connected to upcoming and past tournaments.", button("Register team", "/register", "primary") + button("Events", "/events", "secondary"), localImageFor("alaska-midnight-sun-7s", 9))}
       <section class="section light">
         <div class="grid three">${teams.map(teamCard).join("")}</div>
       </section>
@@ -2341,7 +2353,7 @@ function mediaPage() {
     ["RugbyTown stadium weekend", "Tickets, teams, and full-event storytelling around Infinity Park.", localImageFor("rugbytown-7s", 1), "/events/rugbytown-7s-2026"],
     ["LIT7s London day", "70+ teams, spectator tickets, team entry, parking, food, bars, DJ, cheerleaders, and tournament media at Wasps Rugby Club.", localImageFor("lit-7s-london-2026", 2), "/events/lit-7s-london-2026"],
     ["Beach rugby destinations", "Coastal tournaments build repeat visits through team photos and event memory.", localImageFor("figueira-beach-rugby", 3), "/beach"],
-    ["Dubai festival energy", "Rugby, live entertainment, tickets, and international travel in one profile.", localImageFor("emirates-dubai-7s", 4), "/events/emirates-dubai-7s-2026"],
+    ["Dubai festival energy", "Rugby, live entertainment, tickets, and international travel in one event page.", localImageFor("emirates-dubai-7s", 4), "/events/emirates-dubai-7s-2026"],
   ];
   return `
     <main class="page">
@@ -2376,7 +2388,7 @@ function faqPage() {
   const faqs = [
     ["How do I enter a team?", "Open the event page, choose Team registration, and follow the tournament's entry route for divisions, squad size, pricing, and deadlines."],
     ["Can spectators buy tickets here?", "Event pages include ticket, parking, VIP, and official event links whenever they are available."],
-    ["Does Rugbymonkey cover 15s as well as 7s?", "Yes. The calendar includes 15s, 7s, beach rugby, touch, tag, youth, club, university, national-team, and destination tournament profiles."],
+    ["Does Rugbymonkey cover 15s as well as 7s?", "Yes. The calendar includes 15s, 7s, beach rugby, touch, tag, youth, club, university, national-team, and destination tournaments."],
     ["What can I find on past event pages?", "Past event pages include dates, venues, divisions, photos, organizer notes, available contact details, and related tournament links."],
     ["Can organizers add a tournament?", "Yes. Use Submit tournament to send dates, venue, divisions, official links, ticket links, registration links, and media details."],
     ["What should team managers check first?", "Confirm the date, venue, format, divisions, team-entry route, travel logistics, roster needs, and ticket options for supporters."],
@@ -2396,7 +2408,7 @@ function faqPage() {
 function notFoundPage() {
   return `
     <main class="page">
-      ${pageHero("Page not found", "Try the tournament calendar, format pages, teams, profiles, media, or FAQ.", button("Return home", "/", "primary"), localImageFor("rugbytown-7s", 1))}
+      ${pageHero("Page not found", "Try the tournament calendar, format pages, teams, media, or FAQ.", button("Return home", "/", "primary"), localImageFor("rugbytown-7s", 1))}
     </main>
   `;
 }
@@ -2406,14 +2418,12 @@ function pageForPath(path) {
   if (path === "/events" || path === "/tournaments") return eventsPage();
   if (path.startsWith("/events/")) return eventDetailPage(decodeURIComponent(path.split("/").pop()));
   if (path === "/sevens") return eventsPage("7s", "Rugby 7s tournaments", "Find elite, open, youth, destination, international, and club sevens events with registration and ticket routes.");
-  if (path === "/fifteens") return eventsPage("15s", "Rugby 15s tournaments", "Find international windows, World Cup profiles, national-team events, and full-field rugby tournament pages.");
+  if (path === "/fifteens") return eventsPage("15s", "Rugby 15s tournaments", "Find international windows, World Cup events, national-team events, and full-field rugby tournament pages.");
   if (path === "/beach") return eventsPage("Beach", "Beach rugby tournaments", "Find beach rugby weekends, destination tournaments, travel-heavy team events, and media-rich past editions.");
   if (path === "/touch") return eventsPage("Touch", "Touch and tag rugby tournaments", "Find touch, tag, mixed, youth, senior, masters, and community rugby-adjacent tournaments.");
   if (path === "/clubs") return teamsPage();
   if (path === "/register") return registerPage();
   if (path === "/submit") return submitPage();
-  if (path === "/profiles") return profilesPage();
-  if (path.startsWith("/profiles/")) return profileDetailPage(decodeURIComponent(path.split("/").pop()));
   if (path === "/teams") return teamsPage();
   if (path.startsWith("/teams/")) return teamDetailPage(decodeURIComponent(path.split("/").pop()));
   if (path === "/media") return mediaPage();

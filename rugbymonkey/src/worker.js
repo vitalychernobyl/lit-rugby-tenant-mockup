@@ -24,17 +24,17 @@ function shellResponse() {
     <title>Rugbymonkey - Rugby Tournaments Calendar</title>
     <meta
       name="description"
-      content="Find rugby tournaments, team entry, spectator tickets, media, and rugby event profiles across 7s, 15s, beach rugby, touch, tag, and youth competitions."
+      content="Find rugby tournaments, team entry, spectator tickets, media, and event details across 7s, 15s, beach rugby, touch, tag, and youth competitions."
     />
     <meta name="theme-color" content="#0b120d" />
-    <link rel="icon" href="/assets/rugbymonkey-logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/rugbymonkey-logo-rm9.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/styles-rm8.css" />
+    <link rel="stylesheet" href="/styles-rm9.css" />
   </head>
   <body>
     <div id="app" class="site-shell" aria-live="polite"></div>
-    <script type="module" src="/app-rm8.js"></script>
+    <script type="module" src="/app-rm9.js"></script>
   </body>
 </html>`,
     {
