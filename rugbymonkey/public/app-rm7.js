@@ -1,6 +1,6 @@
 import { archiveEvents } from "./data/archive-events-rm5.js";
 
-const today = new Date("2026-07-08T12:00:00-04:00");
+const today = new Date("2026-07-09T12:00:00-04:00");
 const app = document.querySelector("#app");
 
 const icons = {
@@ -33,7 +33,7 @@ const externalLinks = {
   tryTagLeeds: "https://www.trytagrugby.com/events/tagfest-leeds-2026/",
   britishIrishCup: "https://www.tagrugby.ie/post/host-for-2026-british-irish-cup-announced",
   britishIrishCupRegistration: "https://tagrugby.spawtz.com/Leagues/314/Registration/Team",
-  nationsChampionship: "https://www.world.rugby/beta/en/tournaments/nations-championship/2026",
+  nationsChampionship: "https://nationschampionshiprugby.com/en",
   worldRugbyNationsCup: "https://www.world.rugby/nations-cup/en",
   worldRugbyU20: "https://www.world.rugby/u20/en",
   pacificNationsCup: "https://www.world.rugby/news/1045109/dates-set-for-pacific-nations-cup-2026-as-asahi-super-dry-confirmed-as-title-partner",
@@ -906,12 +906,40 @@ const eventEnrichments = {
     image: "https://www.lit7s.com/wp-content/uploads/2024/04/image0-2.jpeg",
     socialLinks: socialSets.lit,
     externalLinks: [{ label: "LIT7s", url: externalLinks.lit }],
+    playerNotes: [
+      "Men's and women's elite, open, and social teams should use the LIT Super Sevens team-entry route for the 18 July 2026 tournament at Wasps Rugby Club.",
+      "Plan for a one-day sevens schedule with quick match turnarounds, team arrival time, parking, and manager updates confirmed through LIT7s.",
+    ],
+    spectatorNotes: [
+      "Spectator tickets and parking are sold through the official LIT7s ticketing route.",
+      "The event day includes bars, food, live music, DJ sets, cheerleaders, and a festival programme around the rugby.",
+    ],
+    venueNotes: [
+      "Wasps Rugby Club is listed by LIT7s as the West London host venue for the 14th annual event.",
+    ],
   },
   "world-rugby-junior-championship-2026": {
     image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2026/01/15/f7d52801-b8a7-41b1-a7e4-b682b7fdd3b3/JWC2026_Logo_RGB_Hor_SC_DarkRed.jpg?width=1200&height=630",
+    playerNotes: [
+      "National U20 teams should follow World Rugby match-centre, disciplinary, and squad communications for fixtures in Tbilisi and Kutaisi.",
+      "Supporters can follow live scores, updates, and schedule changes through the official World Rugby U20 tournament hub.",
+    ],
+    venueNotes: [
+      "The tournament is staged across the Georgian cities of Tbilisi and Kutaisi.",
+    ],
   },
   "nations-championship-2026": {
     image: "https://resources.world.rugby/photo-resources/2020/12/14/0bc19e91-bf74-4abb-b24d-46aa981048aa/WR_BM_LIN_FC_R_POS.png?width=1200&height=630",
+    playerNotes: [
+      "The championship links the July and November international windows across six rounds before Finals Weekend.",
+      "National teams compete in a Northern versus Southern Hemisphere format where every match contributes to the final table.",
+    ],
+    spectatorNotes: [
+      "Tickets and Finals Weekend information should be checked through the official Nations Championship ticketing route.",
+    ],
+    venueNotes: [
+      "Fixtures are played across northern and southern hemisphere venues, with the first Finals Weekend deciding the title.",
+    ],
   },
   "world-rugby-nations-cup-november-2026": {
     image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2026/03/05/824b67c5-ae31-48e6-b569-602bff466181/nations-cup-2026-logo.png?width=1200&height=630",
@@ -926,6 +954,17 @@ const eventEnrichments = {
     image: "https://rugbytownusa.com/wp-content/uploads/2025/04/RUGBYTOWN_USA_2022_RGB_Web-768x768.webp",
     socialLinks: socialSets.rugbyTown,
     externalLinks: [{ label: "RugbyTown USA", url: externalLinks.rugbyTown }],
+    playerNotes: [
+      "Invitational sevens teams should plan for three days of high-tempo stadium rugby at Infinity Park from 21-23 August 2026.",
+      "Match-day details, team announcements, and ticket updates are handled through RugbyTown USA and Infinity Park channels.",
+    ],
+    spectatorNotes: [
+      "RugbyTown USA lists the event as a full weekend of sevens rugby with tickets available for Infinity Park.",
+      "The Day 1 listing shows gates opening at 11:30 AM, with additional event-day timing published by Infinity Park.",
+    ],
+    venueNotes: [
+      "Infinity Park Stadium in Glendale is the home venue for RugbyTown 7s.",
+    ],
   },
   "european-touch-championships-2026": {
     socialLinks: socialSets.internationalTouch,
@@ -942,13 +981,35 @@ const eventEnrichments = {
   "emirates-dubai-7s-2026": {
     socialLinks: socialSets.dubai,
     contactEmails: ["guestservices@b9events.com", "ticketing@b9events.com"],
+    contactPhones: ["+971 4 234 8885"],
     externalLinks: [{ label: "Emirates Dubai 7s", url: externalLinks.dubai }],
+    playerNotes: [
+      "Team registration for the 2026 rugby tournament is open for expressions of interest, with selection and accreditation handled by the event.",
+      "Dubai lists the rugby, netball, and cricket tournament weekend for 27-29 November 2026 at The Sevens Stadium.",
+    ],
+    spectatorNotes: [
+      "Spectator ticketing, travel, FAQs, and event information are published through the Emirates Dubai 7s website.",
+    ],
+    venueNotes: [
+      "The Sevens Stadium is the listed venue for the Emirates Dubai 7s tournament weekend.",
+    ],
   },
   "tropical-7s-2027": {
     image: "https://static.wixstatic.com/media/ad99cf_95fa857bc9324789a9e0e889c5eccaef~mv2.png/v1/fit/w_2500,h_1330,al_c/ad99cf_95fa857bc9324789a9e0e889c5eccaef~mv2.png",
     socialLinks: socialSets.tropical,
     contactEmails: ["info@tropical7s.com"],
     externalLinks: [{ label: "Tropical 7s", url: externalLinks.tropical }],
+    playerNotes: [
+      "The 2027 tournament expands to four days, with U12, U14, and U16 competitions beginning Thursday and senior and U23 divisions later in the weekend.",
+      "Registered teams can reserve training time at the venue from Wednesday 24 March 2027.",
+      "The listed standard tournament registration fee is $995 USD per team, with a maximum of 15 players per registered team.",
+    ],
+    spectatorNotes: [
+      "The match schedule is expected near tournament week, with event updates published by Tropical 7s.",
+    ],
+    venueNotes: [
+      "Tropical 7s is held in Tampa, Florida, with team training available before competition days.",
+    ],
   },
   "mens-rugby-world-cup-2027": {
     image: "https://resources.worldrugby-rims.pulselive.com/photo-resources/2024/12/11/e3f535e2-78b6-48de-a000-f17413a5f883/WebbEllisCup_RWC27_Australia.png?width=1200&height=630",
@@ -1147,6 +1208,31 @@ function uniqueStrings(...groups) {
   return [...new Set(groups.flat().filter(Boolean))];
 }
 
+function displayLabel(value) {
+  return String(value ?? "")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/(\d+)([A-Za-z])/g, "$1 $2")
+    .replace(/\b7\s+S\b/gi, "7s")
+    .replace(/\b10\s+S\b/gi, "10s")
+    .replace(/\b7S\b/g, "7s")
+    .replace(/\b10S\b/g, "10s")
+    .replace(/\bMens\b/g, "Men's")
+    .replace(/\bWomens\b/g, "Women's")
+    .replace(/\bBbq\b/g, "BBQ")
+    .trim();
+}
+
+function displayItems(items = [], limit = items.length) {
+  return items.slice(0, limit).map(displayLabel).filter(Boolean);
+}
+
+function naturalList(items = [], limit = 5) {
+  const cleaned = displayItems(items, limit);
+  if (!cleaned.length) return "";
+  if (cleaned.length === 1) return cleaned[0];
+  return `${cleaned.slice(0, -1).join(", ")} and ${cleaned[cleaned.length - 1]}`;
+}
+
 function enrichEvent(event) {
   const shared = profileEventEnrichments[event.profileSlug] || {};
   const direct = eventEnrichments[event.slug] || {};
@@ -1158,6 +1244,10 @@ function enrichEvent(event) {
     externalLinks: uniqueLinks(shared.externalLinks || [], event.externalLinks || [], direct.externalLinks || []),
     contactEmails: uniqueStrings(shared.contactEmails || [], event.contactEmails || [], direct.contactEmails || []),
     contactPhones: uniqueStrings(shared.contactPhones || [], event.contactPhones || [], direct.contactPhones || []),
+    playerNotes: uniqueStrings(shared.playerNotes || [], event.playerNotes || [], direct.playerNotes || []),
+    spectatorNotes: uniqueStrings(shared.spectatorNotes || [], event.spectatorNotes || [], direct.spectatorNotes || []),
+    venueNotes: uniqueStrings(shared.venueNotes || [], event.venueNotes || [], direct.venueNotes || []),
+    mediaNotes: uniqueStrings(shared.mediaNotes || [], event.mediaNotes || [], direct.mediaNotes || []),
   };
 }
 
@@ -1499,11 +1589,30 @@ function searchText(event) {
     ...(event.contactPhones || []),
     ...(event.socialLinks || []).flatMap((link) => [link.label, link.url]),
     ...(event.externalLinks || []).flatMap((link) => [link.label, link.url]),
+    ...(event.playerNotes || []),
+    ...(event.spectatorNotes || []),
+    ...(event.venueNotes || []),
+    ...(event.mediaNotes || []),
     ...(event.divisions || []),
     ...(event.amenities || []),
   ]
     .join(" ")
     .toLowerCase();
+}
+
+function tournamentScope(event) {
+  const text = [
+    event.title,
+    event.region,
+    event.country,
+    event.level,
+    event.summary,
+    ...(event.divisions || []),
+    ...(event.amenities || []),
+  ].join(" ").toLowerCase();
+  if (event.region === "Global" || /world cup|world championship|global|multi-country|nations championship/.test(text)) return "Global";
+  if (/national team|international|championship|representative|olympic|world rugby|rugby europe/.test(text)) return "National";
+  return "Local";
 }
 
 function currentPath() {
@@ -1592,7 +1701,7 @@ function eventCard(event) {
         <ul class="meta-list">
           ${meta(icons.calendar, event.date)}
           ${meta(icons.pin, event.location)}
-          ${meta(icons.users, `${event.level} - ${(event.divisions || []).slice(0, 3).join(", ")}`)}
+          ${meta(icons.users, `${displayLabel(event.level)} - ${displayItems(event.divisions || [], 3).join(", ")}`)}
         </ul>
         <div class="event-actions">
           ${button("Details", route, "secondary")}
@@ -1685,7 +1794,7 @@ function header() {
   return `
     <header class="site-header" data-header>
       <a class="brand" href="/" aria-label="Rugbymonkey home">
-        <span class="brand-mark">RM</span>
+        <span class="brand-mark"><img src="/assets/rugbymonkey-logo.svg" alt="" aria-hidden="true" /></span>
         <span><strong>Rugbymonkey</strong><span class="brand-text">Rugby tournaments</span></span>
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
@@ -1702,7 +1811,7 @@ function footer() {
     <footer class="footer">
       <div class="footer-inner">
         <a class="brand" href="/">
-          <span class="brand-mark">RM</span>
+          <span class="brand-mark"><img src="/assets/rugbymonkey-logo.svg" alt="" aria-hidden="true" /></span>
           <span><strong>Rugbymonkey</strong><span class="brand-text">Global rugby calendar</span></span>
         </a>
         <div class="footer-links">
@@ -1835,39 +1944,81 @@ function filteredEventsFromUrl(defaultCode = "") {
   const code = params.get("code") || defaultCode;
   const region = params.get("region") || "";
   const status = params.get("status") || "";
+  const country = params.get("country") || "";
+  const level = params.get("level") || "";
+  const division = params.get("division") || "";
+  const scope = params.get("scope") || "";
   const filtered = allEvents.filter((event) => {
     const eventPhase = phase(event).toLowerCase();
     const codeMatch = !code || event.code.toLowerCase() === code.toLowerCase();
     const regionMatch = !region || event.region === region;
     const statusMatch = !status || eventPhase === status;
+    const countryMatch = !country || event.country === country;
+    const levelMatch = !level || event.level === level;
+    const divisionMatch = !division || (event.divisions || []).some((item) => item.toLowerCase().includes(division.toLowerCase()) || displayLabel(item).toLowerCase().includes(division.toLowerCase()));
+    const scopeMatch = !scope || tournamentScope(event) === scope;
     const queryMatch = !query || searchText(event).includes(query);
-    return codeMatch && regionMatch && statusMatch && queryMatch;
+    return codeMatch && regionMatch && statusMatch && countryMatch && levelMatch && divisionMatch && scopeMatch && queryMatch;
   });
   return {
     query,
     code,
     region,
     status,
+    country,
+    level,
+    division,
+    scope,
     events: sortedEvents(filtered),
   };
 }
 
 function filterBar(state, defaultCode = "") {
   const regions = [...new Set(allEvents.map((event) => event.region).filter(Boolean))].sort();
+  const countries = [...new Set(allEvents.map((event) => event.country).filter(Boolean))].sort();
+  const levels = [...new Set(allEvents.map((event) => event.level).filter(Boolean))].sort();
+  const divisions = [...new Set(allEvents.flatMap((event) => event.divisions || []).map(displayLabel).filter(Boolean))].sort();
+  const advancedOpen = Boolean(state.region || state.country || state.level || state.division || state.scope);
   return `
-    <form class="filter-bar" data-filter-form data-default-code="${safe(defaultCode)}">
-      <input name="q" value="${safe(state.query)}" placeholder="Search tournament, team, city, format..." aria-label="Search events" />
-      <select name="code" aria-label="Filter format">
-        ${["", "7s", "15s", "Beach", "Touch", "Tag"].map((code) => `<option value="${safe(code)}"${state.code === code ? " selected" : ""}>${safe(code || "All formats")}</option>`).join("")}
-      </select>
-      <select name="region" aria-label="Filter region">
-        <option value="">All regions</option>
-        ${regions.map((region) => `<option value="${safe(region)}"${state.region === region ? " selected" : ""}>${safe(region)}</option>`).join("")}
-      </select>
-      <select name="status" aria-label="Filter status">
-        ${["", "upcoming", "live", "past"].map((status) => `<option value="${safe(status)}"${state.status === status ? " selected" : ""}>${safe(status || "All dates")}</option>`).join("")}
-      </select>
-      <button class="button primary" type="submit">Search ${icons.search}</button>
+    <form class="filter-shell${advancedOpen ? " is-expanded" : ""}" data-filter-form data-default-code="${safe(defaultCode)}">
+      <div class="filter-primary">
+        <input name="q" value="${safe(state.query)}" placeholder="Search tournaments, teams, cities..." aria-label="Search events" />
+        <select name="code" aria-label="Filter format">
+          ${["", "7s", "15s", "Beach", "Touch", "Tag"].map((code) => `<option value="${safe(code)}"${state.code === code ? " selected" : ""}>${safe(code || "All formats")}</option>`).join("")}
+        </select>
+        <select name="status" aria-label="Filter status">
+          ${["", "upcoming", "live", "past"].map((status) => `<option value="${safe(status)}"${state.status === status ? " selected" : ""}>${safe(status || "All dates")}</option>`).join("")}
+        </select>
+        <button class="button primary" type="submit">Search ${icons.search}</button>
+        <button class="button secondary filter-toggle" type="button" data-advanced-toggle aria-expanded="${advancedOpen ? "true" : "false"}">Advanced ${icons.menu}</button>
+      </div>
+      <div class="filter-advanced" data-filter-advanced${advancedOpen ? "" : " hidden"}>
+        <select name="region" aria-label="Filter region">
+          <option value="">All regions</option>
+          ${regions.map((region) => `<option value="${safe(region)}"${state.region === region ? " selected" : ""}>${safe(region)}</option>`).join("")}
+        </select>
+        <select name="country" aria-label="Filter country">
+          <option value="">All countries</option>
+          ${countries.map((country) => `<option value="${safe(country)}"${state.country === country ? " selected" : ""}>${safe(country)}</option>`).join("")}
+        </select>
+        <select name="scope" aria-label="Filter tournament scope">
+          ${[
+            ["", "All scope"],
+            ["Local", "Local and club"],
+            ["National", "National teams"],
+            ["Global", "Global events"],
+          ].map(([value, label]) => `<option value="${safe(value)}"${state.scope === value ? " selected" : ""}>${safe(label)}</option>`).join("")}
+        </select>
+        <select name="level" aria-label="Filter level">
+          <option value="">All levels</option>
+          ${levels.map((level) => `<option value="${safe(level)}"${state.level === level ? " selected" : ""}>${safe(displayLabel(level))}</option>`).join("")}
+        </select>
+        <select name="division" aria-label="Filter division">
+          <option value="">All divisions</option>
+          ${divisions.map((division) => `<option value="${safe(division)}"${state.division === division ? " selected" : ""}>${safe(division)}</option>`).join("")}
+        </select>
+        <a class="button secondary" href="/events">Clear filters ${icons.arrow}</a>
+      </div>
     </form>
   `;
 }
@@ -1899,6 +2050,95 @@ function eventsPage(defaultCode = "", title = "Tournament calendar", copy = "Sea
   `;
 }
 
+function factCard(label, value) {
+  if (!value) return "";
+  return `<div class="fact-card"><span>${safe(label)}</span><strong>${safe(value)}</strong></div>`;
+}
+
+function pillList(items = []) {
+  return displayItems(items).map((item) => `<span class="pill">${safe(item)}</span>`).join("");
+}
+
+function detailList(title, items = []) {
+  const cleaned = uniqueStrings(items).filter(Boolean);
+  if (!cleaned.length) return "";
+  return `
+    <div class="detail-section">
+      <h3>${safe(title)}</h3>
+      <ul class="check-list">
+        ${cleaned.map((item) => `<li>${safe(item)}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+function overviewCopy(event, profile) {
+  const p = phase(event).toLowerCase();
+  const divisions = naturalList(event.divisions, 6);
+  const amenities = naturalList(event.amenities, 5);
+  const organizer = profile?.title ? ` The tournament profile is connected with ${profile.title}.` : "";
+  const divisionText = divisions ? ` It lists ${divisions} divisions or team categories.` : "";
+  const amenityText = amenities ? ` Event-day notes include ${amenities}.` : "";
+  return `${event.title} is a ${p} ${displayLabel(event.level)} ${displayLabel(event.code)} tournament listed for ${event.date} at ${event.location}.${divisionText}${amenityText}${organizer}`;
+}
+
+function venueNotes(event) {
+  const notes = [...(event.venueNotes || [])];
+  if (event.location) notes.push(`Venue: ${event.location}.`);
+  if (event.city && event.country) notes.push(`Destination: ${event.city}, ${event.country}.`);
+  if (/to be announced|tbc|multi-city|international venues/i.test(event.location)) {
+    notes.push("Check the official event route before booking travel, because fixture locations or host venues may be updated by the organiser.");
+  } else {
+    notes.push("Confirm arrival gates, parking, local transport, and venue entry rules with the organiser before travelling.");
+  }
+  return uniqueStrings(notes);
+}
+
+function playerInstructions(event) {
+  const p = phase(event);
+  const notes = [...(event.playerNotes || [])];
+  const divisions = naturalList(event.divisions, 8);
+  if (p !== "Past" && event.registerUrl) notes.push("Open team registration early and confirm entry status before arranging flights, hotels, or player availability.");
+  if (divisions) notes.push(`Confirm the correct playing category before submitting a team: ${divisions}.`);
+  if (event.code === "7s") notes.push("Prepare for short matches, fast substitutions, quick warm-ups, and short rest windows between fixtures.");
+  if (event.code === "15s") notes.push("Confirm squad size, match regulations, player eligibility, medical requirements, and team-sheet deadlines with the organiser or governing body.");
+  if (event.code === "Beach") notes.push("Check beach-specific footwear, playing area rules, weather plan, and team tent or social schedule before arrival.");
+  if (event.code === "Touch" || event.code === "Tag") notes.push("Confirm mixed, age-grade, and substitution rules before naming the squad.");
+  notes.push("Bring matching kit, alternate colours when available, player identification, insurance details, and any host-union paperwork requested by the tournament.");
+  return uniqueStrings(notes);
+}
+
+function spectatorInstructions(event) {
+  const p = phase(event);
+  const notes = [...(event.spectatorNotes || [])];
+  if (p !== "Past" && event.ticketUrl) notes.push("Use the official ticket route for spectator passes, parking, hospitality, or event-day access.");
+  if (p === "Past") notes.push("Use official and social links for photos, highlights, results, and repeat-edition updates.");
+  if ((event.amenities || []).length) notes.push(`Plan around the listed event-day features: ${naturalList(event.amenities, 6)}.`);
+  if (event.socialLinks?.length) notes.push("Follow the social channels for schedule changes, media, team announcements, and weather or venue updates.");
+  return uniqueStrings(notes);
+}
+
+function mediaNotes(event) {
+  const notes = [...(event.mediaNotes || [])];
+  if (event.image) notes.push("Tournament media is available through the event profile image and official channels.");
+  if (event.socialLinks?.length) notes.push("Social media links are listed for photos, video, draws, fixtures, and event-week announcements.");
+  if (event.externalLinks?.length) notes.push("Additional event references are listed with official resources.");
+  return uniqueStrings(notes);
+}
+
+function eventFactGrid(event, profile) {
+  return `
+    <div class="fact-grid" aria-label="Tournament facts">
+      ${factCard("Date", event.date)}
+      ${factCard("Venue", event.location)}
+      ${factCard("Format", displayLabel(event.code))}
+      ${factCard("Level", displayLabel(event.level))}
+      ${factCard("Scope", tournamentScope(event))}
+      ${factCard("Organizer", profile?.title || "Tournament organiser")}
+    </div>
+  `;
+}
+
 function eventDetailPage(slug) {
   const event = findEvent(slug);
   if (!event) return notFoundPage();
@@ -1915,18 +2155,31 @@ function eventDetailPage(slug) {
             <p class="eyebrow">${safe(event.code)} tournament</p>
             <h2>${safe(event.title)}</h2>
             <p>${safe(event.summary)}</p>
+            ${eventFactGrid(event, profile)}
             ${event.description && event.description !== event.summary ? `<div class="rich-description"><h3>About this event</h3><p>${safe(event.description)}</p></div>` : ""}
+            <div class="detail-section">
+              <h3>Tournament overview</h3>
+              <p>${safe(overviewCopy(event, profile))}</p>
+            </div>
             <div class="chip-list">
               ${event.featured ? `<span class="tag tag-featured">Featured</span>` : ""}
               <span class="tag">${safe(phase(event))}</span>
-              <span class="tag">${safe(event.level)}</span>
+              <span class="tag">${safe(displayLabel(event.level))}</span>
               <span class="tag">${safe(event.region)}</span>
               <span class="tag">${safe(event.country)}</span>
             </div>
-            <h3>Divisions</h3>
-            <div class="chip-list">${(event.divisions || []).map((item) => `<span class="pill">${safe(item)}</span>`).join("")}</div>
-            <h3>Event details</h3>
-            <div class="chip-list">${(event.amenities || []).map((item) => `<span class="pill">${safe(item)}</span>`).join("")}</div>
+            <div class="detail-section">
+              <h3>Divisions</h3>
+              <div class="chip-list">${pillList(event.divisions || [])}</div>
+            </div>
+            <div class="detail-section">
+              <h3>Event details</h3>
+              <div class="chip-list">${pillList(event.amenities || [])}</div>
+            </div>
+            ${detailList("Venue and travel", venueNotes(event))}
+            ${detailList("Player and team instructions", playerInstructions(event))}
+            ${detailList("Tickets and spectators", spectatorInstructions(event))}
+            ${detailList("Media and updates", mediaNotes(event))}
             ${eventResourcePanel(event)}
           </article>
           <aside class="detail-side">
@@ -1934,7 +2187,7 @@ function eventDetailPage(slug) {
             <ul class="meta-list">
               ${meta(icons.calendar, event.date)}
               ${meta(icons.pin, event.location)}
-              ${meta(icons.users, `${event.code} - ${event.level}`)}
+              ${meta(icons.users, `${displayLabel(event.code)} - ${displayLabel(event.level)}`)}
             </ul>
             ${eventActionButtons(event)}
             ${profile ? button(profile.title, `/profiles/${profile.slug}`, "secondary") : ""}
@@ -2192,6 +2445,15 @@ function bindInteractions() {
   filterForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     applyFilters(event.currentTarget);
+  });
+
+  filterForm?.querySelector("[data-advanced-toggle]")?.addEventListener("click", (event) => {
+    const panel = filterForm.querySelector("[data-filter-advanced]");
+    if (!panel) return;
+    const willOpen = panel.hasAttribute("hidden");
+    panel.toggleAttribute("hidden", !willOpen);
+    filterForm.classList.toggle("is-expanded", willOpen);
+    event.currentTarget.setAttribute("aria-expanded", String(willOpen));
   });
 
   filterForm?.querySelectorAll("select").forEach((select) => {
