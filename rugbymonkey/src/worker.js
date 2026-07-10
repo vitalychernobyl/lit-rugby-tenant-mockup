@@ -1,5 +1,5 @@
-import { eventSlugs, teamSlugs } from "../public/data/event-manifest-rm11.js";
-import { tenant } from "../public/data/tenant-rm11.js";
+import { eventSlugs, teamSlugs } from "../public/data/event-manifest-rm12.js";
+import { tenant } from "../public/data/tenant-rm12.js";
 
 const eventRoutes = new Set(eventSlugs);
 const teamRoutes = new Set(teamSlugs);
@@ -46,7 +46,7 @@ const metadata = {
 
 const securityHeaders = {
   "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' https://cloudflareinsights.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; upgrade-insecure-requests",
-  "permissions-policy": "camera=(), geolocation=(), microphone=()",
+  "permissions-policy": "camera=(), geolocation=(self), microphone=()",
   "referrer-policy": "strict-origin-when-cross-origin",
   "x-content-type-options": "nosniff",
   "x-frame-options": "DENY",

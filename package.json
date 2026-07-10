@@ -8,7 +8,7 @@
     "dev:rugbymonkey": "npx wrangler dev --config wrangler.rugbymonkey.jsonc --local --port 8788",
     "check:lit": "node --check public/app.js && node --check src/worker.js",
     "generate:rugbymonkey-manifest": "node scripts/build-rugbymonkey-manifest.mjs",
-    "check:rugbymonkey": "node scripts/build-rugbymonkey-manifest.mjs --check && node --check rugbymonkey/public/app-rm11.js && node --check rugbymonkey/public/data/archive-events-rm5.js && node --check rugbymonkey/public/data/event-manifest-rm11.js && node --check rugbymonkey/public/data/tenant-rm11.js && node --check rugbymonkey/src/worker.js",
+    "check:rugbymonkey": "node scripts/build-rugbymonkey-manifest.mjs --check && node --check rugbymonkey/public/app-rm12.js && node --check rugbymonkey/public/data/archive-events-rm5.js && node --check rugbymonkey/public/data/event-manifest-rm12.js && node --check rugbymonkey/public/data/tenant-rm12.js && node --check rugbymonkey/src/worker.js",
     "check": "npm run check:lit && npm run check:rugbymonkey",
     "build": "npm run check",
     "test": "npm run check"

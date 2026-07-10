@@ -5,8 +5,8 @@ import { dirname, join } from "node:path";
 import { archiveEvents } from "../rugbymonkey/public/data/archive-events-rm5.js";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const appPath = join(root, "rugbymonkey/public/app-rm11.js");
-const outputPath = join(root, "rugbymonkey/public/data/event-manifest-rm11.js");
+const appPath = join(root, "rugbymonkey/public/app-rm12.js");
+const outputPath = join(root, "rugbymonkey/public/data/event-manifest-rm12.js");
 const source = await readFile(appPath, "utf8");
 
 function section(start, end) {
