@@ -2,12 +2,23 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "lit-rugby-tenant",
   "main": "src/worker.js",
-  "compatibility_date": "2026-07-07",
+  "compatibility_date": "2026-07-10",
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
     "directory": "./public",
     "not_found_handling": "single-page-application",
     "run_worker_first": true
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.05
+    }
   },
   "routes": [
     {

@@ -1,3 +1,11 @@
+const securityHeaders = {
+  "content-security-policy": "default-src 'self'; base-uri 'self'; font-src 'self' https://fonts.gstatic.com; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; upgrade-insecure-requests",
+  "permissions-policy": "camera=(), geolocation=(), microphone=()",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "x-content-type-options": "nosniff",
+  "x-frame-options": "DENY",
+};
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -18,10 +26,10 @@ export default {
     const assetRequest = new Request(url.toString(), request);
     const response = await env.ASSETS.fetch(assetRequest);
 
-    if (!shouldServeShell) return response;
-
     const headers = new Headers(response.headers);
-    headers.set("Cache-Control", "no-store, must-revalidate");
+    for (const [name, value] of Object.entries(securityHeaders)) headers.set(name, value);
+    if (shouldServeShell) headers.set("cache-control", "no-store, must-revalidate");
+
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,

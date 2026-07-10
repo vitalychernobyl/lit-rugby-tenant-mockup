@@ -1233,6 +1233,12 @@ function navigate(path) {
   render();
 }
 
+function setMenuOpen(open) {
+  nav.classList.toggle("open", open);
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+}
+
 function html(strings, ...values) {
   return strings.reduce((out, string, index) => out + string + (values[index] ?? ""), "");
 }
@@ -2367,7 +2373,7 @@ function bindPage() {
   app.querySelectorAll("a[data-route]").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      nav.classList.remove("open");
+      setMenuOpen(false);
       navigate(new URL(link.href).pathname);
     });
   });
@@ -2445,13 +2451,12 @@ document.addEventListener("click", (event) => {
   if (!link || !document.body.contains(link)) return;
   if (link.closest("#app")) return;
   event.preventDefault();
-  nav.classList.remove("open");
+  setMenuOpen(false);
   navigate(new URL(link.href).pathname);
 });
 
 menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-label", nav.classList.contains("open") ? "Close navigation" : "Open navigation");
+  setMenuOpen(!nav.classList.contains("open"));
 });
 
 window.addEventListener("popstate", render);
