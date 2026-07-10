@@ -1,5 +1,5 @@
-import { eventSlugs, teamSlugs } from "../public/data/event-manifest-rm12.js";
-import { tenant } from "../public/data/tenant-rm12.js";
+import { eventSlugs, teamSlugs } from "../public/data/event-manifest-rm13.js";
+import { tenant } from "../public/data/tenant-rm13.js";
 
 const eventRoutes = new Set(eventSlugs);
 const teamRoutes = new Set(teamSlugs);
