@@ -2,12 +2,30 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "rugbymonkey-tenant",
   "main": "rugbymonkey/src/worker.js",
-  "compatibility_date": "2026-07-08",
+  "compatibility_date": "2026-07-09",
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
     "directory": "./rugbymonkey/public",
-    "not_found_handling": "single-page-application",
     "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "MOBILIS_DB",
+      "database_name": "rugbymonkey-mobilis",
+      "database_id": "25fda1c7-3bb5-46c2-aadf-6a45cb6ecd3d",
+      "migrations_dir": "./rugbymonkey/migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.05
+    }
   },
   "routes": [
     {

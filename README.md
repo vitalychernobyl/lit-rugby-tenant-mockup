@@ -44,3 +44,13 @@ npm run dev
 ```
 
 The Worker strips `/lit` before serving static assets, so local Worker routes and the deployed route can share the same SPA.
+
+## Rugbymonkey tenant
+
+Rugbymonkey runs as a separate Mobilis tenant on `rugbymonkey.com`. Its Worker, event assets, D1 migration, lead capture, and operations notes live under `rugbymonkey/` and [`docs/rugbymonkey-operations.md`](docs/rugbymonkey-operations.md).
+
+```bash
+npm run dev:rugbymonkey
+npx wrangler d1 migrations apply rugbymonkey-mobilis --remote --config wrangler.rugbymonkey.jsonc
+npx wrangler deploy --config wrangler.rugbymonkey.jsonc
+```
