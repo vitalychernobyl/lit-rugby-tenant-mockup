@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "lit7s-rugbymonkey",
+  "compatibility_date": "2026-07-09",
+  "routes": [
+    {
+      "pattern": "rugbymonkey.com/lit",
+      "zone_name": "rugbymonkey.com"
+    },
+    {
+      "pattern": "rugbymonkey.com/lit/*",
+      "zone_name": "rugbymonkey.com"
+    }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

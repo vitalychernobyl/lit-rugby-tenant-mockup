@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LIT7s is the London International Rugby Sevens tournament website for LIT7s London, the LIT Super Sevens Series, USA camps, media, tickets and team entry."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://rugbymonkey.com/lit/" />
+    <link rel="sitemap" type="application/xml" href="%BASE_URL%sitemap.xml" />
+    <link rel="preload" as="image" href="%BASE_URL%assets/hero-rugby.jpeg" fetchpriority="high" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LIT7s" />
+    <meta property="og:title" content="LIT7s | London International Rugby Sevens" />
+    <meta
+      property="og:description"
+      content="London International Rugby Sevens tournament information, LIT Super Sevens Series dates, USA camps, galleries, tickets and team entry."
+    />
+    <meta property="og:url" content="https://rugbymonkey.com/lit/" />
+    <meta property="og:image" content="https://rugbymonkey.com/lit/assets/hero-rugby.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LIT7s | London International Rugby Sevens" />
+    <meta
+      name="twitter:description"
+      content="LIT7s London, LIT Super Sevens Series dates, USA rugby 7s camps, media, spectator tickets and team entry."
+    />
+    <meta name="twitter:image" content="https://rugbymonkey.com/lit/assets/hero-rugby.jpeg" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <title>LIT7s | London International Rugby Sevens Tournament</title>
+    <script id="site-structured-data" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SportsOrganization",
+            "@id": "https://rugbymonkey.com/lit/#organization",
+            "name": "LIT7s",
+            "url": "https://rugbymonkey.com/lit/",
+            "sport": "Rugby sevens",
+            "sameAs": [
+              "https://www.instagram.com/lit7s/",
+              "https://www.instagram.com/lit7susa/",
+              "https://www.instagram.com/supersevensseriesuk/",
+              "https://www.facebook.com/LIT7s/",
+              "https://www.youtube.com/@LIT7s"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rugbymonkey.com/lit/#website",
+            "name": "LIT7s",
+            "url": "https://rugbymonkey.com/lit/",
+            "publisher": { "@id": "https://rugbymonkey.com/lit/#organization" }
+          },
+          {
+            "@type": "SportsEvent",
+            "@id": "https://rugbymonkey.com/lit/#lit7s-london-2026",
+            "name": "LIT7s London 2026",
+            "description": "London International Rugby Sevens tournament and LIT Super Sevens Series finale.",
+            "startDate": "2026-07-18",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "sport": "Rugby sevens",
+            "image": "https://rugbymonkey.com/lit/assets/hero-rugby.jpeg",
+            "url": "https://rugbymonkey.com/lit/event/lit7s-london/",
+            "organizer": { "@id": "https://rugbymonkey.com/lit/#organization" },
+            "location": {
+              "@type": "SportsActivityLocation",
+              "name": "Wasps FC",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Twyford Avenue Sports Ground, Twyford Ave",
+                "addressLocality": "Acton",
+                "addressRegion": "London",
+                "postalCode": "W3 9QA",
+                "addressCountry": "GB"
+              }
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://ticketpass.org/event/EYBIHR/london-international-7s-tournament-2026-lit7s",
+              "availability": "https://schema.org/InStock",
+              "category": "Spectator tickets"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://rugbymonkey.com/lit/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When is LIT7s London 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "LIT7s London 2026 is scheduled for Saturday 18 July 2026 and is the closing stop of the 2026 LIT Super Sevens Series."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is LIT7s London played?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The 2026 London tournament is listed for Wasps FC, Twyford Avenue Sports Ground, Twyford Ave, Acton, London W3 9QA."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can spectators buy tickets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Spectator ticket links are available throughout the LIT7s website for London tournament access."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
